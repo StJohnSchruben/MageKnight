@@ -1,0 +1,41 @@
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MageKnight2D.exe.config
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MageKnight2D.exe
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MageKnight2D.pdb
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MainWindow.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\App.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.cache
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.lref
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MainWindow.baml
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.g.resources
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.Properties.Resources.resources
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.csproj.GenerateResource.cache
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.csproj.CoreCompileInputs.cache
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.exe
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.pdb
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MKView.dll
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MKView.pdb
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MKViewModel.dll
+C:\Users\johns\source\repos\MageKnight2D\MageKnight2D\bin\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\App.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnight2D.exe.config
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnight2D.exe
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnight2D.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MKView.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MKView.dll.config
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MainWindow.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.lref
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MainWindow.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.g.resources
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.Properties.Resources.resources
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.csproj.GenerateResource.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.exe
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData_log.ldf

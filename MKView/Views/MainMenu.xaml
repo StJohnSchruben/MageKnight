@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MKView.Views.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView.Views"
+             xmlns:view="clr-namespace:MKView"
+             mc:Ignorable="d" 
+             d:DesignWidth="630" d:DesignHeight="465">
+    <UserControl.Resources>
+        <ImageBrush ImageSource="Dungeon.jpg" x:Key="background" />
+    </UserControl.Resources> 
+    <Grid Background="Gray" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"> 
+            <Button Content="Play" />
+            <Button Content="Build Army" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <RadioButton Content="Army 1"/>
+            <RadioButton Content="Army 2"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

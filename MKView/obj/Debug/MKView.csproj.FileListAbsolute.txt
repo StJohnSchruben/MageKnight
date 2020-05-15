@@ -1,0 +1,76 @@
+C:\Users\johns\source\repos\MageKnight2D\MKView\bin\Debug\MKView.dll
+C:\Users\johns\source\repos\MageKnight2D\MKView\bin\Debug\MKView.pdb
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MainView.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\BattleGround.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\UserControlFrame.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView_MarkupCompile.cache
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView_MarkupCompile.lref
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MainView.baml
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\BattleGround.baml
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\UserControlFrame.baml
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.g.resources
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.csproj.CoreCompileInputs.cache
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.dll
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.pdb
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.csprojAssemblyReference.cache
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\Dial.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\Dial.baml
+C:\Users\johns\source\repos\MageKnight2D\MKView\bin\Debug\MKViewModel.dll
+C:\Users\johns\source\repos\MageKnight2D\MKView\bin\Debug\MKViewModel.pdb
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\MKView.csproj.CopyComplete
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\MageKnight.g.cs
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\MageKnight.baml
+C:\Users\johns\source\repos\MageKnight2D\MKView\obj\Debug\Views\MainMenu.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MainView.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\ArmyBuilder.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\BattleGround.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\Dial.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MageKnight.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MageKnightGenerator.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MainMenu.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\UserControlFrame.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView_MarkupCompile.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView_MarkupCompile.lref
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MainView.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\ArmyBuilder.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\BattleGround.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\Dial.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MageKnight.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MainMenu.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\UserControlFrame.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MageKnightData_log.ldf
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKView.dll.config
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKView.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\CommonServiceLocator.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKViewModel.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\Unity.Abstractions.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\Unity.Container.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\Unity.Abstractions.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\bin\Debug\Unity.Container.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\Views\MageKnightGenerator.baml
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.g.resources
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.csproj.CopyComplete

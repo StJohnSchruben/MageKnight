@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MKView.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView"
+             xmlns:view="clr-namespace:MKView"
+             xmlns:views="clr-namespace:MKView.Views"
+             xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="1000" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <!--<DataTemplate DataType="{x:Type vm:IArmyBuilder}">
+            <views:ArmyBuilder/>
+        </DataTemplate>-->
+        <DataTemplate DataType="{x:Type vm:IMageKnightGenerator}">
+            <views:MageKnightGenerator/>
+        </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type vm:IMainMenu}">
+            <views:MainMenu/>
+        </DataTemplate>-->
+        <DataTemplate DataType="{x:Type vm:IBattleGround}">
+            <views:BattleGround/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+
+        <!--<ContentControl 
+                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
+                Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualHeight}"
+            Content="{Binding}"/>-->
+    </Grid>
+</UserControl>

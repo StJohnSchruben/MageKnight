@@ -1,0 +1,13 @@
+C:\Users\johns\source\repos\MageKnight2D\MKModel\bin\Debug\MKModel.dll
+C:\Users\johns\source\repos\MageKnight2D\MKModel\bin\Debug\MKModel.pdb
+C:\Users\johns\source\repos\MageKnight2D\MKModel\obj\Debug\MKModel.csproj.CoreCompileInputs.cache
+C:\Users\johns\source\repos\MageKnight2D\MKModel\obj\Debug\MKModel.dll
+C:\Users\johns\source\repos\MageKnight2D\MKModel\obj\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\bin\Debug\MageKnightData_log.ldf
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\bin\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.pdb
