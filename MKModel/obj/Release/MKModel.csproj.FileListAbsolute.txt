@@ -1,0 +1,11 @@
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\MageKnightData_log.ldf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\itextsharp.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Release\itextsharp.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Release\MKModel.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Release\MKModel.csproj.CopyComplete
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Release\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Release\MKModel.pdb

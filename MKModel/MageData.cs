@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MKModel
 {
@@ -13,15 +14,44 @@ namespace MKModel
         private int pointValue = 0;
         private int range = 0;
         private string set = string.Empty;
+        private int rarity = 0;
         private string faction = string.Empty;
         private int frontArc = 0;
-        private int rearArc = 0;
+        private int targets = 0;
         private int click = 0;
-        private IStats stats;
-        private IRank rank;
+        private string rank;
+        private Guid id;
+        private byte[] image;
+        private string priceValue;
+        private IDial dial;
 
         public MageData()
         {
+
+        }
+        public string PriceValue
+        {
+            get
+            {
+                return this.priceValue;
+            }
+
+            set
+            {
+                this.priceValue = value;
+            }
+        }
+        public byte[] ModelImage
+        {
+            get
+            {
+                return this.image;
+            }
+
+            set
+            {
+                this.image = value;
+            }
         }
 
         public string Name 
@@ -34,6 +64,19 @@ namespace MKModel
             set 
             {
                 this.name = value;
+            }
+        }
+
+        public int Rarity
+        {
+            get
+            {
+                return this.rarity;
+            }
+
+            set
+            {
+                this.rarity = value;
             }
         }
 
@@ -110,16 +153,16 @@ namespace MKModel
                 this.frontArc = value;
             }
         }
-        public int RearArc
+        public int Targets
         {
             get
             {
-                return this.rearArc;
+                return this.targets;
             }
 
             set
             {
-                this.rearArc = value;
+                this.targets = value;
             }
         }
         public int Click
@@ -134,21 +177,9 @@ namespace MKModel
                 this.click = value;
             }
         }
+        public IDial Dial { get => this.dial; set => this.dial = value; }
 
-        public IStats Stats
-        {
-            get
-            {
-                return this.stats;
-            }
-
-            set
-            {
-                this.stats = value;
-            }
-        }
-
-        public IRank Rank
+        public string Rank
         {
             get
             {
@@ -160,5 +191,19 @@ namespace MKModel
                 this.rank = value;
             }
         }
+
+        public Guid Id
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                this.id = value;
+            }
+        }
+
     }
 }

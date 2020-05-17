@@ -86,7 +86,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Container.cs" />
-    <Compile Include="Ctrls\DraggableExtender.cs" />
+    <Compile Include="Views\AbilityToColor.cs" />
+    <Compile Include="Views\DraggableExtender.cs" />
     <Compile Include="MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -104,17 +105,26 @@
     <Compile Include="Views\BattleGround.xaml.cs">
       <DependentUpon>BattleGround.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Click.xaml.cs">
+      <DependentUpon>Click.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dial.xaml.cs">
       <DependentUpon>Dial.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MageKnight.xaml.cs">
       <DependentUpon>MageKnight.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MageKnightBattleView.xaml.cs">
+      <DependentUpon>MageKnightBattleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MageKnightGenerator.xaml.cs">
       <DependentUpon>MageKnightGenerator.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stat.xaml.cs">
+      <DependentUpon>Stat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControlFrame.xaml.cs">
       <DependentUpon>UserControlFrame.xaml</DependentUpon>
@@ -133,11 +143,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Click.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Dial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MageKnight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MageKnightBattleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,13 +167,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Stat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControlFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
+    <Folder Include="Ctrls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MKModel\MKModel.csproj">

@@ -10,6 +10,7 @@ namespace MKViewModel
 {
     public interface IMageKnightGenerator
     {
+        IMageKnightModel SelectedMageKnight {get;set;}
         MageData Mage { get; set; }
         ICommand Enter { get; }
         ICommand Edit { get; }
@@ -20,9 +21,10 @@ namespace MKViewModel
         string Set { get; set; }
         string Faction { get; set; }
         int FrontArc { get; set; }
-        int RearArc { get; set; }
+        int Targets { get; set; }
         int Click { get; set; }
-        IStats Stats { get; set; }
-        IRank Rank { get; set; }
+        string Rank { get; set; }
+
+        List<IMageKnightModel> MageKnights { get; set; }
     }
 }

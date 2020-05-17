@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MKModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace MKView.Views
         public Dial()
         {
             InitializeComponent();
+            this.IsVisibleChanged += Dial_IsVisibleChanged;
+        }
+
+        private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var dial = this.DataContext as IDial;
         }
     }
 }

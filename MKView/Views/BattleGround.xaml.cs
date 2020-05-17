@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MKViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace MKView.Views
         public BattleGround()
         {
             InitializeComponent();
+            this.IsVisibleChanged += BattleGround_IsVisibleChanged;
+        }
+
+        private void BattleGround_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var user = this.DataContext as IUser;
+           // int count = this.models.Items.Count;
         }
     }
 }

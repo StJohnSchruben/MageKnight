@@ -1,4 +1,5 @@
-﻿using MKViewModel;
+﻿using MKModel;
+using MKViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,7 @@ namespace MKView
         public IStat Stat => this.container.Resolve<IStat>();
         public IMageKnightGenerator MageKnightGenerator => this.container.Resolve<IMageKnightGenerator>();
         public IMageKnightGenerator MainMenu => this.container.Resolve<IMageKnightGenerator>();
+        public IArmyBuilder ArmyBuilder => this.container.Resolve<IArmyBuilder>();
+        public IUser User => this.container.Resolve<IUser>();
     }
 }

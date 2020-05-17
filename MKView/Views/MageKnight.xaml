@@ -7,7 +7,7 @@
              mc:Ignorable="d" Height="100" Width="100"
              DataContext="{Binding}">
     <Grid MouseDown="Grid_MouseDown">
-        <local:Dial DataContext="{Binding Dial}"/>
-        <TextBlock Text="{Binding Name}"  Foreground="White" HorizontalAlignment="Center" />
+        <Image Source="{Binding ModelImage}" />
+       
     </Grid>
 </UserControl>

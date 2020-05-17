@@ -25,15 +25,20 @@ namespace MKModel
         public string Set => this.data.Set;
 
         public string Faction => this.data.Faction;
-         
+
+        public string PriceValue => this.data.PriceValue;
+
         public int FrontArc => this.data.FrontArc;
 
-        public int RearArc => this.data.RearArc;
+        public int Targets => this.data.Targets;
 
         public int Click => this.data.Click;
+        public int Rarity => this.data.Rarity;
 
-        public IStats Stats => this.data.Stats;
+        public string Rank => this.data.Rank;
 
-        public IRank Rank => this.data.Rank;
+        public IDial Dial => this.data.Dial;
+
+        public byte[] ModelImage => this.data.ModelImage;
     }
 }

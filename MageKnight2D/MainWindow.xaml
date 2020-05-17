@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:MageKnight2D"
         xmlns:View="clr-namespace:MKView;assembly=MKView" xmlns:View1="clr-namespace:MKView.Views;assembly=MKView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1000">
+        Title="MainWindow" Height="1000" Width="1500">
     <Grid>
-        <View:MainView />
+        <View:MainView Margin="5,1,-5,-1" />
     </Grid>
 </Window>

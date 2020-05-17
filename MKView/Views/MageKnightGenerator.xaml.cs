@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MKModel;
+using MKViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,18 @@ namespace MKView.Views
     /// </summary>
     public partial class MageKnightGenerator : UserControl
     {
+        private IMageKnightGenerator mk;
         public MageKnightGenerator()
         {
             InitializeComponent();
+            
+            
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mk = this.DataContext as IMageKnightGenerator;
+            mk.SelectedMageKnight = dg.SelectedItem as IMageKnightModel;
         }
     }
 }

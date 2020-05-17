@@ -9,17 +9,16 @@ namespace MKModel
     {
         string Name { get; }
         int Index { get; }
-        int PointValue { get; }
         int Range { get; }
         string Set { get; }
         string Faction { get; }
-
+        byte[] ModelImage { get; }
+        
         int FrontArc { get; }
-        int RearArc { get; }
+        int Targets { get; }
         int Click { get; }
+        IDial Dial { get; }
 
-        IStats Stats { get; }
-
-        IRank Rank { get;  }
+        string Rank { get;  }
     }
 }

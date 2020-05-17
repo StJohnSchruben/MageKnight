@@ -4,22 +4,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
+             xmlns:m="clr-namespace:MKModel;assembly=MKModel" 
+             xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel" 
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="1000" Width="1500">
     <UserControl.Resources>
         <ImageBrush ImageSource="ArmyBuilder.jpg" x:Key="background" />
+        <DataTemplate DataType="{x:Type vm:Army}">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+        <DataTemplate x:Key="MageKnight">
+            <local:MageKnight />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type m:IClick}">
+            <local:Click />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type m:MageKnight}">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
     </UserControl.Resources>
-    <Grid Background="{StaticResource background}">
-        <ListBox HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="105" Margin="30,105,0,0"/>
+    <Grid Background="DarkGray">
+        <ListBox SelectionChanged="ListBox_SelectionChanged" x:Name="lba" ItemsSource="{Binding User.Armies}" SelectedItem="{Binding SelectedArmy, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" HorizontalAlignment="Left" Height="775" VerticalAlignment="Top" Width="205" Margin="30,105,0,0"/>
         <Label Content="My Armies" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,69,0,0" Foreground="Red"/>
-        <ListBox HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="360" Margin="195,110,0,0"/>
-        <Label Content="Edit Army" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,70,0,0" Foreground="Red"/>
-        <ListBox HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="105" Margin="645,110,0,0"/>
-        <Label Content="My Pieces" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="655,75,0,0" Foreground="Red"/>
-        <Button Content="New" HorizontalAlignment="Left" Margin="45,410,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="&lt;-" HorizontalAlignment="Left" Margin="560,215,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="->" HorizontalAlignment="Left" Margin="560,250,0,0" VerticalAlignment="Top" Width="75"/>
-
+        <ListBox x:Name="models" ItemTemplate="{StaticResource MageKnight}" ItemsSource="{Binding CurrentModels, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  HorizontalAlignment="Left" Height="770" VerticalAlignment="Top" Width="670" Margin="275,105,0,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" MaxWidth="{Binding ActualWidth, ElementName=models}" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Label Content="Edit Army" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="284,74,0,0" Foreground="Red"/>
+        <ListBox SelectionChanged="ListBox_SelectionChanged_1" x:Name="lbm" ItemsSource="{Binding User.MageKnights}" SelectedItem="{Binding SelectedMageKnight}"  HorizontalAlignment="Left" Height="920" VerticalAlignment="Top" Width="210" Margin="1105,20,0,0"/>
+        <Label Content="My Pieces" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1017,25,0,0" Foreground="Red"/>
+        <Button Command="{Binding NewArmy}" Content="New" HorizontalAlignment="Left" Margin="35,900,0,0" VerticalAlignment="Top" Width="125" Height="80"/>
+        <Button Command="{Binding AddToArmy}" Content="&lt;-" HorizontalAlignment="Left" Margin="965,350,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding RemoveFromArmy}" Content="->" HorizontalAlignment="Left" Margin="965,385,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Army Builder" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,10,0,0" Foreground="Red" FontSize="24" Height="41" Width="150"/>
+        <Button Command="{Binding ApplyToBoard}" Content="Apply To Board" HorizontalAlignment="Left" Margin="275,880,0,0" VerticalAlignment="Top" Width="670" Height="25"/>
     </Grid>
 </UserControl>
  

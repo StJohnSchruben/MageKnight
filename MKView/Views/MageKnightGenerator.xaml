@@ -5,10 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:view="clr-namespace:MKView"
              xmlns:local="clr-namespace:MKView.Views"
+             xmlns:m="clr-namespace:MKModel;assembly=MKModel" 
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="1500">
     <UserControl.Resources>
         <ImageBrush ImageSource="../MageKnightGenerator.jpg" x:Key="background" />
+        <DataTemplate DataType="{x:Type m:IClick}">
+            <local:Click />
+        </DataTemplate>
     </UserControl.Resources>
     <Grid Background="DarkGray">
         <Grid.ColumnDefinitions>
@@ -17,34 +21,52 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!--<StackPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Content="Enter Mage" Command="{Binding Enter}"/>
             <TextBox Text="{Binding Name}" Width="144" />
 
             <Button Content="Edit Mage" Command="{Binding Edit}"/>
-        </StackPanel>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,30,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Set" HorizontalAlignment="Left" Margin="40,69,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,69,0,0" TextWrapping="Wrap" Text="{Binding Set}" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Index" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Foreground="Red" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,104,0,0" TextWrapping="Wrap" Text="{Binding Index}" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
-        <Label Content="PointValue" HorizontalAlignment="Left" Margin="40,29,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,29,0,0" TextWrapping="Wrap" Text="{Binding PointValue}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
-        <Label Content="Range" HorizontalAlignment="Left" Margin="40,64,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,64,0,0" TextWrapping="Wrap" Text="{Binding Range}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
-        <Label Content="Faction" HorizontalAlignment="Left" Margin="40,106,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,106,0,0" TextWrapping="Wrap" Text="{Binding Faction}" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.RowSpan="2"/>
-        <Label Content="FrontArc" HorizontalAlignment="Left" Margin="40,31,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,31,0,0" TextWrapping="Wrap" Text="{Binding FrontArc}" VerticalAlignment="Top" Width="120" Grid.Row="2"/>
-        <Label Content="RearArc" HorizontalAlignment="Left" Margin="40,78,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,78,0,0" TextWrapping="Wrap" Text="{Binding RearArc}" VerticalAlignment="Top" Width="120" Grid.Row="2"/>
-        <Label Content="Click" HorizontalAlignment="Left" Margin="40,4,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="115,4,0,0" TextWrapping="Wrap" Text="{Binding Click}" VerticalAlignment="Top" Width="120" Grid.Row="3"/>
+        </StackPanel>-->
+        <!--<Label Content="Name" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,10,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Set" HorizontalAlignment="Left" Margin="5,49,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,49,0,0" TextWrapping="Wrap" Text="{Binding Set}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Index" HorizontalAlignment="Left" Margin="5,84,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,84,0,0" TextWrapping="Wrap" Text="{Binding Index}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="PointValue" HorizontalAlignment="Left" Margin="5,9,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,9,0,0" TextWrapping="Wrap" Text="{Binding PointValue}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label Content="Range" HorizontalAlignment="Left" Margin="5,44,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,44,0,0" TextWrapping="Wrap" Text="{Binding Range}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label Content="Faction" HorizontalAlignment="Left" Margin="5,86,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,86,0,0" TextWrapping="Wrap" Text="{Binding Faction}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label Content="FrontArc" HorizontalAlignment="Left" Margin="5,11,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,11,0,0" TextWrapping="Wrap" Text="{Binding FrontArc}" VerticalAlignment="Top" Width="120" Grid.Row="2"/>
+        <Label Content="RearArc" HorizontalAlignment="Left" Margin="5,58,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,58,0,0" TextWrapping="Wrap" Text="{Binding RearArc}" VerticalAlignment="Top" Width="120" Grid.Row="2"/>
+        <Label Content="Click" HorizontalAlignment="Left" Margin="5,96,0,0" VerticalAlignment="Top" Foreground="Red" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="80,96,0,0" TextWrapping="Wrap" Text="{Binding Click}" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.RowSpan="2"/>-->
+        <DataGrid x:Name="dg" SelectionChanged="DataGrid_SelectionChanged" ItemsSource="{Binding MageKnights}" SelectedItem="{Binding SelectedMageKnight, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" HorizontalAlignment="Right" Height="935" Margin="0,5,135,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="790" Grid.ColumnSpan="2">
+        </DataGrid>
+        <ItemsControl ItemsSource="{Binding SelectedMageKnight.Dial.Clicks}" Background="LightBlue" Grid.Column="1" HorizontalAlignment="Left" Height="935" Margin="380,10,0,0" VerticalAlignment="Top" Width="340" Grid.RowSpan="5" Grid.ColumnSpan="2">
+            <ItemsControl.ItemsPanel >
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="340" Height="85">
+                        <local:Click />
+                    </Viewbox>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Image Grid.Column="2"  Source="{Binding SelectedMageKnight.ModelImage}" HorizontalAlignment="Left" Height="175" Margin="270,35,0,0" VerticalAlignment="Top" Width="160"/>
     </Grid>
 </UserControl>

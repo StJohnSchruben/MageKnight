@@ -27,3 +27,26 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKVie
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData_log.ldf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKViewModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\CommonServiceLocator.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.csproj.CopyComplete
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.pdb

@@ -14,16 +14,23 @@
             <ColumnDefinition Width="1.2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="35*" />
+            <RowDefinition Height="33*" />
+            <RowDefinition Height="37*" />
+            <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
-        <Ellipse Fill="Black" Grid.RowSpan="100" Grid.ColumnSpan="100"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Background="White" />
+        <Ellipse Fill="Black" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
+        <!--<TextBlock Grid.Row="1" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="2" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="3" Grid.Column="1" Background="White" />
-        <TextBlock Grid.Row="3" Grid.Column="2" Background="White" />
+        <TextBlock Grid.Row="3" Grid.Column="2" Background="White" />-->
+        <local:Stat Grid.Row="1" Grid.Column="1" DataContext="{Binding Click.Speed}" />
+
+        <local:Stat Grid.Row="2" Grid.Column="1" DataContext="{Binding Click.Attack}" />
+
+        <local:Stat Grid.Row="3" Grid.Column="1" DataContext="{Binding Click.Defense}" />
+
+        <local:Stat Grid.Row="3" Grid.Column="2" DataContext="{Binding Click.Damage}" />
     </Grid>
 </UserControl>

@@ -6,14 +6,14 @@
              xmlns:local="clr-namespace:MKView.Views"
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1000">
+             Height="1000" d:DesignWidth="1500">
     <UserControl.Resources>
-        <DataTemplate DataType="{x:Type vm:StandardMageKnight}">
-            <local:MageKnight />
+        <DataTemplate x:Key="MageKnight">
+            <local:MageKnightBattleView />
         </DataTemplate>
     </UserControl.Resources>
     <Grid Background="Green">
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -88,19 +88,28 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Canvas Grid.ColumnSpan="36" Grid.RowSpan="36" />
-        <ItemsControl x:Name="ic" ItemsSource="{Binding ActiveMageKnights}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" >
+        </Grid.RowDefinitions>-->
+        <!--<Canvas Background="Green" Grid.ColumnSpan="36" Grid.RowSpan="36" />-->
+        <!--<ListBox x:Name="models" ItemTemplate="{StaticResource MageKnight}" ItemsSource="{Binding ActiveArmy, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  HorizontalAlignment="Left" Height="770" VerticalAlignment="Top" Width="670" Margin="275,105,0,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" MaxWidth="{Binding ActualWidth, ElementName=models}" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>-->
+        <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <Canvas x:Name="renderCanvas" 
                                 IsItemsHost="True"
+                                  Background="Green"
                                 MaxWidth="{Binding Path=ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}}"
                                 Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemContainerStyle>
                 <Style TargetType="ContentPresenter">
+                    <Setter Property="local:DraggableExtender.CanDrag" Value="True" />
                     <Setter Property="Canvas.Left" Value="{Binding Path=XCord}" />
                     <Setter Property="Canvas.Top" Value="{Binding Path=YCord}" />
                 </Style>
