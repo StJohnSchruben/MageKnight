@@ -89,14 +89,6 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>-->
-        <!--<Canvas Background="Green" Grid.ColumnSpan="36" Grid.RowSpan="36" />-->
-        <!--<ListBox x:Name="models" ItemTemplate="{StaticResource MageKnight}" ItemsSource="{Binding ActiveArmy, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  HorizontalAlignment="Left" Height="770" VerticalAlignment="Top" Width="670" Margin="275,105,0,0">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel IsItemsHost="True" MaxWidth="{Binding ActualWidth, ElementName=models}" />
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>-->
         <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>

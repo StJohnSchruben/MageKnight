@@ -11,14 +11,17 @@ namespace MKModel
     {
         private List<IClick> clicks = new List<IClick>();
         private int clickIndex;
-
-        public Dial()
+        public MageData data;
+        public Dial(MageData data)
         {
+            this.data = data;
         }
 
         public List<IClick> Clicks { get => this.clicks; set => this.clicks = value; }
         public int ClickIndex { get => this.clickIndex; set => this.clickIndex = value; }
 
         public IClick Click => this.Clicks.First(x=>x.Index == this.clickIndex);
+
+        public string Name => this.data.Name;
     }
 }

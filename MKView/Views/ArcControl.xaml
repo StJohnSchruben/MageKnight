@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="MKView.Views.ArcControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView.Views"
+             mc:Ignorable="d" 
+               Width="800" Height="800" >
+    <Grid>
+
+        <Ellipse Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="800" Height="800" />
+        <Ellipse  StrokeThickness="4" Stroke="Blue" Width="800" Height="800" />
+        <Canvas>
+            <Canvas.Clip>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure StartPoint="0,800">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <LineSegment IsStroked="True"  Point="400,400" />
+                                        <LineSegment IsStroked="True" Point="800,800" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Canvas.Clip>
+
+            <Ellipse Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="800" Height="800" />
+            <Ellipse  StrokeThickness="4" Stroke="Lime"  Width="800" Height="800" />
+            <Ellipse  StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="346" Canvas.Top="345" Width="109" Height="109" />
+            <Line Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+
+            <Line Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+        </Canvas>
+        <Ellipse Height="6" Width="6" Fill="Red" />
+    </Grid>
+</UserControl>

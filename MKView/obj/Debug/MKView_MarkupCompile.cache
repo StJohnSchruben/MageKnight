@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-111628809476
+12-1351907623
 
-18809103893
+211167378588
 74811650667
-MainView.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dial.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;
+MainView.xaml;Views\ArcControl.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dial.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;
 
 False
 

@@ -18,7 +18,6 @@ namespace MKViewModel
 
         public MageKnightBase()
         {
-            this.Dial = new Dial();
         }
 
         public string Name { get => name; set => this.name = value; }

@@ -18,7 +18,7 @@ namespace MKViewModel
         private IUser user;
         private IMageKnightModel selectedMageKnight;
         private IArmy selectedArmy;
-        private ObservableCollection<IMageKnightModel> currentModels = new ObservableCollection<IMageKnightModel>();
+        private ObservableCollection<IMageKnightBattleViewModel> currentModels = new ObservableCollection<IMageKnightBattleViewModel>();
 
         public ArmyBuilder(IUser user)
         {
@@ -30,6 +30,12 @@ namespace MKViewModel
             //army.Name = "Army1";
             //this.user.Armies.Add(army);
             this.SelectedArmy = this.User.SelectedArmy;
+
+            this.SelectedMageKnight = user.MageKnights.First();
+            this.AddToArmyCllicked();
+            this.SelectedMageKnight = user.MageKnights.Last();
+            this.AddToArmyCllicked();
+            this.ApplyToBoardClicked();
         }
 
         public IUser User
@@ -75,8 +81,8 @@ namespace MKViewModel
 
         private void AddToArmyCllicked()
         {
-            this.selectedArmy.Units.Add(SelectedMageKnight);
-            this.CurrentModels.Add(SelectedMageKnight);
+            this.selectedArmy.Units.Add(new MageKnightBattleViewModel(SelectedMageKnight));
+            this.CurrentModels.Add(new MageKnightBattleViewModel(SelectedMageKnight));
 
             RaisePropertyChanged("CurrentModels");
         }
@@ -85,7 +91,7 @@ namespace MKViewModel
 
         public IMageKnightModel SelectedMageKnight { get => this.selectedMageKnight; set { this.Set(() => this.SelectedMageKnight, ref this.selectedMageKnight, value); } }
 
-        public ObservableCollection<IMageKnightModel> CurrentModels { get => this.currentModels; set { this.Set(() => this.CurrentModels, ref this.currentModels, value); } }
+        public ObservableCollection<IMageKnightBattleViewModel> CurrentModels { get => this.currentModels; set { this.Set(() => this.CurrentModels, ref this.currentModels, value); } }
 
         public ICommand ApplyToBoard => new RelayCommand(this.ApplyToBoardClicked);
 

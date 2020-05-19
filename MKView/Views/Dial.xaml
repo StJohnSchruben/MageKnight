@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="200">
+             Height="100" Width="100">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -25,6 +25,7 @@
         <TextBlock Grid.Row="2" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="3" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="3" Grid.Column="2" Background="White" />-->
+        <TextBlock Text="{Binding Name}"  Foreground="White" HorizontalAlignment="Center"  Grid.ColumnSpan="4" VerticalAlignment="Center"/>
         <local:Stat Grid.Row="1" Grid.Column="1" DataContext="{Binding Click.Speed}" />
 
         <local:Stat Grid.Row="2" Grid.Column="1" DataContext="{Binding Click.Attack}" />

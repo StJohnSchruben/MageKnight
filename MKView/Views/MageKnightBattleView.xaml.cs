@@ -1,4 +1,5 @@
 ﻿using MKModel;
+using MKViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,12 @@ namespace MKView.Views
         public MageKnightBattleView()
         {
             InitializeComponent();
-            this.IsVisibleChanged += MageKnightBattleView_IsVisibleChanged;
         }
 
-        private void MageKnightBattleView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void UserControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var dial = this.DataContext as IMageKnightModel;
+            var data = this.DataContext as IMageKnightBattleViewModel;
+            data.IsSelected = !data.IsSelected;
         }
     }
 }

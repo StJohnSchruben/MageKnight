@@ -87,6 +87,10 @@
   <ItemGroup>
     <Compile Include="Container.cs" />
     <Compile Include="Views\AbilityToColor.cs" />
+    <Compile Include="Views\ArcControl.xaml.cs">
+      <DependentUpon>ArcControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BoolToVisibility.cs" />
     <Compile Include="Views\DraggableExtender.cs" />
     <Compile Include="MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -111,6 +115,7 @@
     <Compile Include="Views\Dial.xaml.cs">
       <DependentUpon>Dial.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\HalfDouble.cs" />
     <Compile Include="Views\MageKnight.xaml.cs">
       <DependentUpon>MageKnight.xaml</DependentUpon>
     </Compile>
@@ -132,6 +137,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArcControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

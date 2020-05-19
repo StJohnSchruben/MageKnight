@@ -12,7 +12,7 @@ namespace MKView
         public MainView()
         {
             InitializeComponent();
-            this.mm.Visibility = Visibility.Visible;
+            this.bg.Visibility = Visibility.Visible;
         }
 
         private void mainMenu_Click(object sender, System.Windows.RoutedEventArgs e)

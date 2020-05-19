@@ -103,11 +103,13 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Abstr
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Container.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csprojAssemblyReference.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\BattleGround.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Click.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dial.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnight.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightGenerator.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MainMenu.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Stat.g.cs
@@ -116,11 +118,13 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\GeneratedIn
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView_MarkupCompile.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView_MarkupCompile.lref
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\BattleGround.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Click.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dial.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnight.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightGenerator.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MainMenu.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Stat.baml
@@ -130,5 +134,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.cspr
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.baml

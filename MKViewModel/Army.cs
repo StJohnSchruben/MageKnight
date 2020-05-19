@@ -10,7 +10,7 @@ namespace MKViewModel
 {
     public interface IArmy 
     {
-        List<IMageKnightModel> Units { get; set; }
+        List<IMageKnightBattleViewModel> Units { get; set; }
 
         int PointTotal { get; }
 
@@ -19,15 +19,15 @@ namespace MKViewModel
 
     public class Army : IArmy
     {
-        private List<IMageKnightModel> units;
+        private List<IMageKnightBattleViewModel> units;
         private int pointTotal;
         private string name;
         public Army()
         {
-            units = new List<IMageKnightModel>();
+            units = new List<IMageKnightBattleViewModel>();
         }
         
-        public List<IMageKnightModel> Units { get => this.units; set => this.units = value; }
+        public List<IMageKnightBattleViewModel> Units { get => this.units; set => this.units = value; }
         public int PointTotal { get => this.CalculatePointTotal(); }
         public string Name { get => this.name; set => this.name = value; }
 

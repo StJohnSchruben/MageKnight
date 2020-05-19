@@ -12,5 +12,7 @@ namespace MKModel
         int ClickIndex { get; set; }
 
         IClick Click { get; }
+
+        string Name { get; }
     }
 }

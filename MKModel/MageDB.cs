@@ -144,8 +144,9 @@ namespace MKModel
                     data.Targets = Int32.Parse(reader["Targets"].ToString());
                     data.Rank = reader["Rank"].ToString(); 
                     data.Faction = reader["Faction"].ToString();
-                    data.Dial = GetDialStats(data.Id);
                     data.ModelImage = reader["ModelImage"] as byte[];
+
+                    data.Dial = GetDialStats(data);
                     IMageKnightModel mage = new MageKnight(data);
                     mageKnights.Add(mage);
                 }
@@ -160,7 +161,7 @@ namespace MKModel
             return null;
         }
 
-        private static IDial GetDialStats(Guid id)
+        private static IDial GetDialStats(MageData data)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
             string selectStatement
@@ -168,8 +169,8 @@ namespace MKModel
                 + "FROM ClickValues "
                 + "WHERE Id = @Id";
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
-            selectCommand.Parameters.AddWithValue("@Id", id);
-            IDial dial = new Dial();
+            selectCommand.Parameters.AddWithValue("@Id", data.Id);
+            IDial dial = new Dial(data);
             try
             {
                 connection.Open();
@@ -191,7 +192,7 @@ namespace MKModel
                 }
                 
                 connection.Close();
-                return FillDialSpecialAbilities(dial, id);
+                return FillDialSpecialAbilities(dial, data.Id);
             }
             catch (Exception ex)
             {

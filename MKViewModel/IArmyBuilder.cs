@@ -18,7 +18,7 @@ namespace MKViewModel
         ICommand AddToArmy { get; }
         ICommand RemoveFromArmy { get; }
         ICommand ApplyToBoard { get; }
-        ObservableCollection<IMageKnightModel> CurrentModels { get; set; }
+        ObservableCollection<IMageKnightBattleViewModel> CurrentModels { get; set; }
 
         IMageKnightModel SelectedMageKnight { get; set; }
     }

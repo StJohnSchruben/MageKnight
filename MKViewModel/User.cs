@@ -13,23 +13,23 @@ namespace MKViewModel
         List<IArmy> Armies { get; set; }
         List<IMageKnightModel> MageKnights { get; set; }
 
-        ObservableCollection<IMageKnightModel> ActiveArmy { get; set; }
+        ObservableCollection<IMageKnightBattleViewModel> ActiveArmy { get; set; }
         IArmy SelectedArmy { get; set; }
     }
     public class User : IUser
     {
         private List<IArmy> armies;
         private List<IMageKnightModel> mageKnights;
-        private ObservableCollection<IMageKnightModel> activeArmy;
+        private ObservableCollection<IMageKnightBattleViewModel> activeArmy;
         private IArmy selectedArmy;
 
         public User()
         {
-            this.ActiveArmy = new ObservableCollection<IMageKnightModel>();
+            this.ActiveArmy = new ObservableCollection<IMageKnightBattleViewModel>();
             MageKnights = MageDB.GetMageKnights();
             Armies = new List<IArmy>();
             IArmy army = new Army();
-            army.Units = new List<IMageKnightModel>();
+            army.Units = new List<IMageKnightBattleViewModel>();
             army.Name = "Army1";
             this.SelectedArmy = army;
             Armies.Add(army);
@@ -37,7 +37,7 @@ namespace MKViewModel
 
         public List<IArmy> Armies { get => this.armies; set => this.armies = value; }
         public List<IMageKnightModel> MageKnights { get => this.mageKnights; set => this.mageKnights = value; }
-        public ObservableCollection<IMageKnightModel> ActiveArmy { get => this.activeArmy; set => this.activeArmy = value; }
+        public ObservableCollection<IMageKnightBattleViewModel> ActiveArmy { get => this.activeArmy; set => this.activeArmy = value; }
         public IArmy SelectedArmy { get => this.selectedArmy; set => this.selectedArmy = value; }
     }
 }
