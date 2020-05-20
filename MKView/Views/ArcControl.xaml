@@ -36,5 +36,8 @@
             <Line Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
         </Canvas>
         <Ellipse Height="6" Width="6" Fill="Red" />
+        <Grid.RenderTransform>
+            <RotateTransform CenterX="400" x:Name="Angle" CenterY="400" Angle="0"  />
+        </Grid.RenderTransform>
     </Grid>
 </UserControl>
