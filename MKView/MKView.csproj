@@ -90,6 +90,7 @@
     <Compile Include="Views\ArcControl.xaml.cs">
       <DependentUpon>ArcControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BattleCanvas.cs" />
     <Compile Include="Views\BoolToVisibility.cs" />
     <Compile Include="Views\DraggableExtender.cs" />
     <Compile Include="MainView.xaml.cs">

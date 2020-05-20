@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MKView.Views"
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              mc:Ignorable="d" 
-             Height="1000" d:DesignWidth="1500">
+             Height="40000" d:DesignWidth="40000">
     <UserControl.Resources>
         <DataTemplate x:Key="MageKnight">
             <local:MageKnightBattleView />
@@ -92,7 +92,7 @@
         <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <Canvas x:Name="renderCanvas" 
+                    <local:BattleCanvas x:Name="renderCanvas" 
                                 IsItemsHost="True"
                                   Background="Green"
                                 MaxWidth="{Binding Path=ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}}"
@@ -101,7 +101,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemContainerStyle>
                 <Style TargetType="ContentPresenter">
-                    <Setter Property="local:DraggableExtender.CanDrag" Value="True" />
+                    <!--<Setter Property="local:DraggableExtender.CanDrag" Value="True" />-->
                     <Setter Property="Canvas.Left" Value="{Binding Path=XCord}" />
                     <Setter Property="Canvas.Top" Value="{Binding Path=YCord}" />
                 </Style>
