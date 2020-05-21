@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="MKView.Views.RangeSector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView.Views"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <x:Static Member="local:SharedResourceDictionary.Instance" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid >
+        <Canvas >
+                <Canvas.Clip>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure x:Name="rangeStart" StartPoint="{Binding Model, Converter={StaticResource HighStatToPointStartToDouble}}">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <LineSegment x:Name="rangeMiddle" IsStroked="True"  Point="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  />
+                                            <LineSegment x:Name="rangeEnd" IsStroked="True" Point="{Binding Model, Converter={StaticResource HightStatToPointEndConverter}}" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Canvas.Clip>
+
+                <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" Canvas.Top="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" x:Name="rangeSector" Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}"/>
+                <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" Canvas.Top="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}"  x:Name="rangeBorder"  StrokeThickness="4" Stroke="Lime"  Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" />
+                <Ellipse  Name="dialProxy" StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Canvas.Top="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Width="109" Height="109" />
+                <!--<Line x:Name="leftSectorLine" Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+
+            <Line Name="rightSectorLine" Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>-->
+            </Canvas>
+    </Grid>
+</UserControl>

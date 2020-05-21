@@ -4,40 +4,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
-             mc:Ignorable="d" 
-               Width="800" Height="800" >
+             mc:Ignorable="d"  >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <x:Static Member="local:SharedResourceDictionary.Instance" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
-
-        <Ellipse Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="800" Height="800" />
-        <Ellipse  StrokeThickness="4" Stroke="Blue" Width="800" Height="800" />
-        <Canvas>
-            <Canvas.Clip>
+        <local:SpeedBoundary />
+        <local:RangeSector />
+        <!--<Ellipse  x:Name="speedCircle" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" />
+        <Ellipse  x:Name="speedBorder" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" StrokeThickness="4" Stroke="Blue" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}"/>--><!--
+        <Canvas Width="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Height="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Background="Red" Opacity=".4">
+            --><!--<Canvas.Clip>
                 <PathGeometry>
                     <PathGeometry.Figures>
                         <PathFigureCollection>
-                            <PathFigure StartPoint="0,800">
+                            <PathFigure x:Name="rangeStart" StartPoint="{Binding Model, Converter={StaticResource HighStatToPointStartToDouble}}">
                                 <PathFigure.Segments>
                                     <PathSegmentCollection>
-                                        <LineSegment IsStroked="True"  Point="400,400" />
-                                        <LineSegment IsStroked="True" Point="800,800" />
+                                        <LineSegment x:Name="rangeMiddle" IsStroked="True"  Point="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  />
+                                        <LineSegment x:Name="rangeEnd" IsStroked="True" Point="{Binding Model, Converter={StaticResource HightStatToPointEndConverter}}" />
                                     </PathSegmentCollection>
                                 </PathFigure.Segments>
                             </PathFigure>
                         </PathFigureCollection>
                     </PathGeometry.Figures>
                 </PathGeometry>
-            </Canvas.Clip>
+            </Canvas.Clip>--><!--
 
-            <Ellipse Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="800" Height="800" />
-            <Ellipse  StrokeThickness="4" Stroke="Lime"  Width="800" Height="800" />
-            <Ellipse  StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="346" Canvas.Top="345" Width="109" Height="109" />
-            <Line Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" x:Name="rangeSector" Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}"/>
+            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  x:Name="rangeBorder"  StrokeThickness="4" Stroke="Lime"  Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" />
+            <Ellipse  Name="dialProxy" StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Canvas.Top="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Width="109" Height="109" />
+            --><!--<Line x:Name="leftSectorLine" Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
 
-            <Line Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+            <Line Name="rightSectorLine" Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>--><!--
         </Canvas>
-        <Ellipse Height="6" Width="6" Fill="Red" />
+        <Ellipse Height="6" Width="6" Fill="Red" Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"/>
         <Grid.RenderTransform>
-            <RotateTransform CenterX="400" x:Name="Angle" CenterY="400" Angle="0"  />
+            <RotateTransform CenterX="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" x:Name="Angle" CenterY="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" Angle="0"  />
+        </Grid.RenderTransform>-->
+
+        <Grid.RenderTransform>
+            <RotateTransform CenterX="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" x:Name="Angle" CenterY="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" Angle="0"  />
         </Grid.RenderTransform>
     </Grid>
 </UserControl>

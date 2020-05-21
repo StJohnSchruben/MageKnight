@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="MKView.DesignViews.designSpeedBoundry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView.DesignViews"
+             mc:Ignorable="d" >
+    <Grid>
+        <Ellipse Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="1600" Height="1600" />
+        <Ellipse  StrokeThickness="4" Stroke="Blue" Width="1600" Height="1600" />
+    </Grid>
+</UserControl>

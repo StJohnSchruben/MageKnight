@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="MKView.DesignViews.designRangeSector10"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MKView.DesignViews"
+             mc:Ignorable="d" 
+             Height="1000" Width="1000"
+             >
+    <Grid>
+        <Canvas>
+            <Canvas.Clip>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure StartPoint="0,1000">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <LineSegment IsStroked="True"  Point="500,500" />
+                                        <LineSegment IsStroked="True" Point="1000,1000" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Canvas.Clip>
+
+            <Ellipse Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="1000" Height="1000" />
+            <Ellipse  StrokeThickness="4" Stroke="Lime"  Width="1000" Height="1000" />
+            <Ellipse  StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="346" Canvas.Top="345" Width="109" Height="109" />
+            <!--<Line Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
+
+            <Line Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>-->
+        </Canvas>
+    </Grid>
+</UserControl>

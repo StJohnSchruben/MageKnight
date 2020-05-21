@@ -39,6 +39,8 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageK
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.pdb
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData.mdf
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData_log.ldf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData_log.ldf
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe.config
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.pdb
@@ -72,5 +74,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData_log.ldf

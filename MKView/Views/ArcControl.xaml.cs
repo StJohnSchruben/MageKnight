@@ -21,9 +21,7 @@ namespace MKView.Views
     public partial class ArcControl : UserControl
     {
         protected bool isDragging;
-        private Point clickPosition;
-        private Point _lastMouseOverPoint;
-
+        double mouseDownAngle;
         public ArcControl()
         {
             InitializeComponent();
@@ -32,24 +30,25 @@ namespace MKView.Views
             this.MouseMove += new MouseEventHandler(Control_MouseMove);
         }
 
-        private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void ArcControl_MouseLeave(object sender, MouseEventArgs e)
         {
-           // var dial = this.DataContext as IDial;
+            isDragging = false;
+            var draggable = sender as UserControl;
+            draggable.ReleaseMouseCapture();
         }
+
         private void Control_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //object _selectedObject = sender;
-            isDragging = true;
-            //var draggableControl = sender as UserControl;
-            //clickPosition = e.GetPosition(this);
-            //draggableControl.CaptureMouse();
-            //var xCenter = (clickPosition.Point2.X - _selectedObject.Point1.X) / 2 + _selectedObject.Point1.X
-            //var yCenter = (_selectedObject.Point2.Y - _selectedObject.Point1.Y) / 2 + _selectedObject.Point1.Y
-            //_selectedObjectCenterPoint = new Point((double)xCenter, (double)yCenter);
+            var data = this.DataContext as MKViewModel.IMageKnightBattleViewModel;
+            if (!data.IsSelected)
+            {
+                return;
+            }
 
-            ////init set of last mouse over step with the mouse click point
-            //var clickPoint = eventargs.GetPosition(source);
-            //_lastMouseOverPoint = new Point(clickPosition.X, clickPosition.Y);
+            isDragging = true;
+            var draggableControl = this.FindAncestor<MageKnightBattleView>();
+            Point currentLocation = e.GetPosition(draggableControl as UIElement);
+            this.mouseDownAngle = this.GetAngle(currentLocation);
         }
 
         private void Control_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -61,15 +60,12 @@ namespace MKView.Views
         private double DegreeToRadian(double angle)
         {
             double a = Math.PI * angle / 180.0;
-        
-            Console.WriteLine(a);
             return a;
         }
 
         private double RadianToDegree(double angle)
         {
             double a = angle * (180.0 / Math.PI);
-            Console.WriteLine(a);
             return a;
         }
 
@@ -83,118 +79,67 @@ namespace MKView.Views
             {
                 // Get the current mouse position relative to the volume control
                 Point currentLocation = e.GetPosition(draggableControl as UIElement);
-                double mouseX = currentLocation.X;
-                double mouseY = currentLocation.Y;
-                double centerX = (this.ActualWidth / 2.0);
-                double centerY = (this.ActualHeight / 2.0);
-                double myX, myY;
+                double mouseMovedAngle = this.GetAngle(currentLocation);
+                double newAngle = mouseDownAngle - mouseMovedAngle;
 
-                if (mouseX > centerX)
-                {
-                    myX = mouseX - centerX;
-                }
-                else
-                {
-                    myX = centerX - mouseX;
-                    myX *= -1.0;
-                }
+                this.Angle.Angle = -newAngle;
+            }
+        }
 
-                if (mouseY > centerY)
-                {
-                    myY = mouseY - centerY;
-                    myY *= -1.0;
-                }
-                else
-                {
-                    myY = centerY - mouseY;
-                }
+        private double GetAngle(Point currentLocation)
+        {
+            double mouseX = currentLocation.X;
+            double mouseY = currentLocation.Y;
+            double centerX = (this.ActualWidth / 2.0);
+            double centerY = (this.ActualHeight / 2.0);
+            double myX, myY;
+            if (mouseX > centerX)
+            {
+                myX = mouseX - centerX;
+            }
+            else
+            {
+                myX = centerX - mouseX;
+                myX *= -1.0;
+            }
 
-
-
-                double a = myX * myX;
-
-                double b = myY * myY;
-
-                double h = Math.Sqrt(a + b);
-                double angle = 0;
-                if (myX < 0 && myY < 0)
-                {
-                    //3
-                    angle = (90.0 + RadianToDegree(Math.Atan((double)(-myY / myX))));
-                }
-                else if (myX > 0 && myY > 0)
-                {
-                    //1
-                    angle = -(90.0 + RadianToDegree(Math.Atan((double)(myY / myX))));
-                }
-                else if (myX > 0 && myY < 0)
-                {
-                    //4
-                    angle = -(RadianToDegree(Math.Acos((double)(-myX / h))) - 90.0);
-                }
-                else if (myX < 0 && myY > 0)
-                {
-                    //2
-                    angle = (90.0 + RadianToDegree(Math.Acos((double)(Math.Abs(myX) / h))));
-                }
-
-                this.Angle.Angle =- (angle -this.Angle.Angle) ;
-                // double dot = currentLocation.X * (this.ActualWidth / 2.0) + currentLocation.Y * (-this.ActualHeight / 2.0);
-
-                //double angle = Math.Atan((double)(Math.Abs(myX)/h));
-                // double angle = Math.Asin((double)(Math.Abs(myY)/ Math.Abs(myX))); // positive x?
-                //double angle = Math.Atan((double)(Math.Abs(myY)/ Math.Abs(myX))); //usual
-                //double angle = Math.Acos((double)(Math.Abs(myY)/ Math.Abs(myX)));
-                // double angle = Math.Sin((double)(Math.Abs(myY)/ Math.Abs(myX))); // positive x
-                //double angle = Math.Cos((double)(Math.Abs(myY)/ Math.Abs(myX))); 
-                //double angle = Math.Tan((double)(Math.Abs(myY)/ Math.Abs(myX)));
+            if (mouseY > centerY)
+            {
+                myY = mouseY - centerY;
+                myY *= -1.0;
+            }
+            else
+            {
+                myY = centerY - mouseY;
+            }
 
 
-                //double angle = Math.Tan((double)(Math.Abs(myX) / Math.Abs(myY)));
-                //double angle = Math.Tan((double)(Math.Abs(myX) / Math.Abs(myY)));
-                //double angle = Math.Tan((double)(Math.Abs(myX) / Math.Abs(myY)));
-                //double angle = Math.Tan((double)(Math.Abs(myX) / Math.Abs(myY)));
-                //double angle = Math.Tan((double)(Math.Abs(myX) / Math.Abs(myY)));
 
-                //double angle = Math.Atan((double)(Math.Abs(myX)/h));
-                //double angle = Math.Atan((double)(Math.Abs(myX)/h));
-                //double angle = Math.Atan((double)(Math.Abs(myX)/h));
-                //double angle = Math.Atan((double)(Math.Abs(myX)/h));
-                //double angle = Math.Atan((double)(Math.Abs(myX) / h));
+            double a = myX * myX;
 
-                //double angle = Math.Atan((double)(Math.Abs(myY) / h));
-                //double angle = Math.Atan((double)(Math.Abs(myY) / h));
-                //double angle = Math.Atan((double)(Math.Abs(myY) / h));
-                //double angle = Math.Atan((double)(Math.Abs(myY) / h));
-                //double angle = Math.Atan((double)(Math.Abs(myY) / h));
+            double b = myY * myY;
 
-                //double angle = Math.Atan((double)(h / Math.Abs(myX)));
-                //double angle = Math.Atan((double)(h / Math.Abs(myX)));
-                //double angle = Math.Atan((double)(h / Math.Abs(myX)));
-                //double angle = Math.Atan((double)(h / Math.Abs(myX)));
-                //double angle = Math.Atan((double)(h / Math.Abs(myX)));
-
-                //double angle = Math.Atan((double)( h/ Math.Abs(myY)));
-                //double angle = Math.Atan((double)( h/ Math.Abs(myY)));
-                //double angle = Math.Atan((double)( h/ Math.Abs(myY)));
-                //double angle = Math.Atan((double)(h / Math.Abs(myY)));
-                //double angle = Math.Atan((double)( h/ Math.Abs(myY)));
-
-                //this.Angle.Angle = -(270.0 + RadianToDegree(angle));
-                //// We want to rotate around the center of the knob, not the top corner
-                //Point knobCenter = new Point(this.ActualHeight / 2, this.ActualWidth / 2);
-
-                //// Calculate an angle
-                //double radians = Math.Atan((currentLocation.Y - knobCenter.Y) /
-                //                           (currentLocation.X - knobCenter.X));
-                //this.Angle = radians * 180 / Math.PI;
-
-                // Apply a 180 degree shift when X is negative so that we can rotate
-                // all of the way around
-                //if (currentLocation.X - knobCenter.X < 0)
-                //{
-                //    this.Angle += 180;
-                //}
+            double h = Math.Sqrt(a + b);
+            double angle = 0;
+            if (myX < 0 && myY < 0)
+            {
+                //3
+                return angle = (90.0 + RadianToDegree(Math.Atan((double)(-myY / myX))));
+            }
+            else if (myX > 0 && myY > 0)
+            {
+                //1
+                return angle = -(90.0 + RadianToDegree(Math.Atan((double)(myY / myX))));
+            }
+            else if (myX > 0 && myY < 0)
+            {
+                //4
+                return angle = -(RadianToDegree(Math.Acos((double)(-myX / h))) - 90.0);
+            }
+            else
+            {
+                //2
+                return angle = (90.0 + RadianToDegree(Math.Acos((double)(Math.Abs(myX) / h))));
             }
         }
     }

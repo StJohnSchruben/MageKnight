@@ -12,8 +12,8 @@ namespace MKViewModel
     public interface IMageKnightBattleViewModel 
     {
         bool IsSelected { get; set; }
-        IMageKnightModel Model { get; set; }
-
+        IMageKnightModel Model { get; }
+        IMageKnightBattleViewModel ViewModel { get; }
         int FacingAngle { get; set; }
     }
 
@@ -25,11 +25,11 @@ namespace MKViewModel
 
         public MageKnightBattleViewModel(IMageKnightModel model)
         {
-            this.Model = model;
+            this.model = model;
         }
 
         public bool IsSelected { get => this.isSelected; set { this.Set(() => this.IsSelected, ref this.isSelected, value); } }
-        public IMageKnightModel Model { get => this.model; set { this.Set(() => this.Model, ref this.model, value); } }
+        public IMageKnightModel Model { get => this.model; }
         public int FacingAngle { get => this.facingAngle; set { this.Set(() => this.FacingAngle, ref this.facingAngle, value); } }
 
         public string Name => model.Name;
@@ -52,6 +52,8 @@ namespace MKViewModel
 
         public string Rank => model.Rank;
 
-        string IMageKnightModel.Set => model.Set;
+        public IMageKnightBattleViewModel ViewModel => this;
+
+        string IMageKnightModel.Set => throw new NotImplementedException();
     }
 }

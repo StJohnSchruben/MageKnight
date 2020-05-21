@@ -24,10 +24,5 @@ namespace MKView.Views
         {
             InitializeComponent();
         }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }

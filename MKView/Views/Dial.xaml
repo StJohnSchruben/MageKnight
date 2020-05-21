@@ -20,7 +20,7 @@
             <RowDefinition Height="37*" />
             <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
-        <Ellipse Fill="Black" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
+        <Ellipse Fill="Black" Stroke="Blue" StrokeThickness=".5" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
         <!--<TextBlock Grid.Row="1" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="2" Grid.Column="1" Background="White" />
         <TextBlock Grid.Row="3" Grid.Column="1" Background="White" />

@@ -22,4 +22,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csprojAssemblyReference.cache

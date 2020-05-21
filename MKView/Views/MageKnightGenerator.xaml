@@ -53,7 +53,7 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="80,96,0,0" TextWrapping="Wrap" Text="{Binding Click}" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.RowSpan="2"/>-->
         <DataGrid x:Name="dg" SelectionChanged="DataGrid_SelectionChanged" ItemsSource="{Binding MageKnights}" SelectedItem="{Binding SelectedMageKnight, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" HorizontalAlignment="Right" Height="935" Margin="0,5,135,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="790" Grid.ColumnSpan="2">
         </DataGrid>
-        <ItemsControl ItemsSource="{Binding SelectedMageKnight.Dial.Clicks}" Background="LightBlue" Grid.Column="1" HorizontalAlignment="Left" Height="935" Margin="380,10,0,0" VerticalAlignment="Top" Width="340" Grid.RowSpan="5" Grid.ColumnSpan="2">
+        <ItemsControl ItemsSource="{Binding SelectedMageKnight.Dial.Clicks}" Background="LightBlue" Grid.Column="1" HorizontalAlignment="Left" Height="935" Margin="880,10,0,0" VerticalAlignment="Top" Width="340" Grid.RowSpan="5" Grid.ColumnSpan="2">
             <ItemsControl.ItemsPanel >
                 <ItemsPanelTemplate>
                     <StackPanel />

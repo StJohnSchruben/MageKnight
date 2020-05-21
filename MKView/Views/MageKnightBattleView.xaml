@@ -8,9 +8,10 @@
             MouseDoubleClick="UserControl_MouseDoubleClick">
     <UserControl.Resources>
         <local:BoolToVisibility x:Key="BoolToVisibility" />
+        <local:TotalWidthConverter x:Key="TotalWidthConverter" />
     </UserControl.Resources>
     <Grid >
-        <local:ArcControl Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}"/>
+        <local:ArcControl  Width="{Binding ViewModel, Converter={StaticResource TotalWidthConverter}}" Height="{Binding Model, Converter={StaticResource TotalWidthConverter}}" />
         <local:Dial x:Name="dial" DataContext="{Binding Dial}"/>
     </Grid>
 </UserControl>
