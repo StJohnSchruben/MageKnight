@@ -11,6 +11,8 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKMod
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.csproj.CoreCompileInputs.cache
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.dll
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKModel\obj\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData_log.ldf
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.dll.config
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.pdb
@@ -20,5 +22,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData_log.ldf

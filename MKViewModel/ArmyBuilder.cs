@@ -33,8 +33,8 @@ namespace MKViewModel
 
             this.SelectedMageKnight = user.MageKnights.First();
             this.AddToArmyCllicked();
-            this.SelectedMageKnight = user.MageKnights.Last();
-            this.AddToArmyCllicked();
+            //this.SelectedMageKnight = user.MageKnights.Last();
+            //this.AddToArmyCllicked();
             this.ApplyToBoardClicked();
         }
 

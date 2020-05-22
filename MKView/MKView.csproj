@@ -83,6 +83,9 @@
       <HintPath>..\packages\Unity.5.11.6\lib\net45\Unity.Container.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
+    <Reference Include="ZoomAndPan">
+      <HintPath>..\packages\ZoomAndPan\ZoomAndPan.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Container.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="DesignViews\designSpeedBoundry.xaml.cs">
       <DependentUpon>designSpeedBoundry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ScaleToPercentConverter.cs" />
     <Compile Include="Views\AbilityToColor.cs" />
     <Compile Include="Views\ArcControl.xaml.cs">
       <DependentUpon>ArcControl.xaml</DependentUpon>

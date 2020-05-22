@@ -61,13 +61,15 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKMod
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\App.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.cache
+C:\MageKnightDatabase\App\MageKnightData.mdf
+C:\MageKnightDatabase\App\MageKnightData_log.ldf
 C:\MageKnightDatabase\App\MageKnight2D.exe.config
 C:\MageKnightDatabase\App\MageKnight2D.exe
 C:\MageKnightDatabase\App\MageKnight2D.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MainWindow.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\App.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.lref
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MainWindow.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.g.resources
@@ -77,5 +79,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
-C:\MageKnightDatabase\App\MageKnightData.mdf
-C:\MageKnightDatabase\App\MageKnightData_log.ldf

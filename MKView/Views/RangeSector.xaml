@@ -20,8 +20,8 @@
                             <PathFigureCollection>
                                 <PathFigure x:Name="rangeStart" StartPoint="{Binding Model, Converter={StaticResource HighStatToPointStartToDouble}}">
                                     <PathFigure.Segments>
-                                        <PathSegmentCollection>
-                                            <LineSegment x:Name="rangeMiddle" IsStroked="True"  Point="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  />
+                                    <PathSegmentCollection>
+                                        <LineSegment x:Name="rangeMiddle" IsStroked="True"  Point="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  />
                                             <LineSegment x:Name="rangeEnd" IsStroked="True" Point="{Binding Model, Converter={StaticResource HightStatToPointEndConverter}}" />
                                         </PathSegmentCollection>
                                     </PathFigure.Segments>
@@ -33,7 +33,7 @@
 
                 <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" Canvas.Top="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" x:Name="rangeSector" Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}"/>
                 <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}" Canvas.Top="{Binding Model, Converter={StaticResource CenterRangePointToDouble}}"  x:Name="rangeBorder"  StrokeThickness="4" Stroke="Lime"  Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" />
-                <Ellipse  Name="dialProxy" StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Canvas.Top="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Width="109" Height="109" />
+                <Ellipse  Name="dialProxy" StrokeThickness="4" Fill="Transparent" Stroke="Lime" Canvas.Left="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Canvas.Top="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Width="109" Height="109" IsHitTestVisible="False" />
                 <!--<Line x:Name="leftSectorLine" Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
 
             <Line Name="rightSectorLine" Canvas.Left="400" Canvas.Top="400" X2="282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>-->

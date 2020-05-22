@@ -25,6 +25,14 @@ namespace MKView.Views
         public MageKnightBattleView()
         {
             InitializeComponent();
+            this.MouseDown += MageKnightBattleView_MouseDown;
+        }
+
+        private void MageKnightBattleView_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            int index = (int)this.GetValue(Canvas.ZIndexProperty);
+            Canvas.SetZIndex(this, ++index);
+            e.Handled = true;
         }
 
         private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

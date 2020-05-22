@@ -15,7 +15,7 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <Viewbox x:Name="vb"    Height="1000" Width="1000">
+    <!--<Viewbox x:Name="vb"    Height="1000" Width="1000">-->
         <Grid Height="4000" Width="4000">
 
             <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
@@ -43,6 +43,6 @@
             </Grid>
 
         </Grid>
-    </Viewbox>
+    <!--</Viewbox>-->
 
 </UserControl>
