@@ -1,6 +1,4 @@
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\DataManipulater.exe
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\MageKnightData_log.ldf
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\DataManipulater.deps.json
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\DataManipulater.runtimeconfig.json
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\DataManipulater.runtimeconfig.dev.json
@@ -17,3 +15,5 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\ne
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.genruntimeconfig.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\MageKnightData_log.ldf

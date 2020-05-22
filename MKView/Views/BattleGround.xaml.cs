@@ -32,5 +32,24 @@ namespace MKView.Views
             var user = this.DataContext as IUser;
            // int count = this.models.Items.Count;
         }
+
+        private void UserControl_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            //if (Keyboard.IsKeyDown(Key.LeftCtrl))
+            //{
+            //    try
+            //    {
+            //        //if (vb.Height > 400 || e.Delta > 0)
+            //        this.vb.Height += e.Delta;
+            //        this.vb.Width += this.vb.Height;
+            //        //this.Height = this.vb.Height;
+            //        //this.Width = this.Height;
+            //    }
+            //    catch
+            //    {
+            //        ;
+            //    }
+            //}
+        }
     }
 }

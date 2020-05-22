@@ -86,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Container.cs" />
+    <Compile Include="DesignViews\BattleCanvas.xaml.cs">
+      <DependentUpon>BattleCanvas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignViews\designArc.xaml.cs">
       <DependentUpon>designArc.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DesignViews\BattleCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignViews\designArc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -237,9 +244,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Ctrls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MKModel\MKModel.csproj">
       <Project>{FA8FA3F3-E09F-4CA7-A12B-8CF5E3D1A2A1}</Project>

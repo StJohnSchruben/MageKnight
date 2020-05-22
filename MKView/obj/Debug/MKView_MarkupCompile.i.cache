@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-19-1811574856
+20-1810297326
 
-32369203883
+33-2064480995
 74811650667
-DesignViews\designArc.xaml;DesignViews\designRangeSector10.xaml;DesignViews\designRangeSector4.xaml;DesignViews\designSpeedBoundry.xaml;MainView.xaml;Views\ArcControl.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dial.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\RangeSector.xaml;Views\SharedResourceDictionary.xaml;Views\SpeedBoundary.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;
+DesignViews\BattleCanvas.xaml;DesignViews\designArc.xaml;DesignViews\designRangeSector10.xaml;DesignViews\designRangeSector4.xaml;DesignViews\designSpeedBoundry.xaml;MainView.xaml;Views\ArcControl.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dial.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\RangeSector.xaml;Views\SharedResourceDictionary.xaml;Views\SpeedBoundary.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;
 
 True
 

@@ -74,8 +74,6 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKVie
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.g.resources
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.csproj.CoreCompileInputs.cache
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKView\obj\Debug\MKView.csproj.CopyComplete
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData_log.ldf
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.dll.config
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.pdb
@@ -148,3 +146,7 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.cspr
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\BattleCanvas.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\BattleCanvas.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData_log.ldf

@@ -130,9 +130,10 @@ namespace MKModel
                 connection.Open();
                
                 SqlDataReader reader = selectCommand.ExecuteReader();
+
+                MageData data = new MageData();
                 while (reader.Read())
                 {
-                    MageData data = new MageData();
                     data.Id = Guid.Parse(reader["Id"].ToString());
                     data.Index = Int32.Parse(reader["Index"].ToString());
                     data.Name = reader["Name"].ToString();
@@ -144,12 +145,14 @@ namespace MKModel
                     data.Targets = Int32.Parse(reader["Targets"].ToString());
                     data.Rank = reader["Rank"].ToString(); 
                     data.Faction = reader["Faction"].ToString();
-                    data.ModelImage = reader["ModelImage"] as byte[];
-
-                    data.Dial = GetDialStats(data);
-                    IMageKnightModel mage = new MageKnight(data);
-                    mageKnights.Add(mage);
+                    data.ModelImage = reader["ModelImage"] as byte[];        
                 }
+
+                data.Dial = GetDialStats(data);
+                IMageKnightModel mage = new MageKnight(data);
+                mageKnights.Add(mage);
+
+                connection.Close();
 
                 return mageKnights;
             }
@@ -225,7 +228,6 @@ namespace MKModel
                     click.Damage.Ability = reader["Damage"].ToString();
                 }
 
-                connection.Close();
                 return dial;
             }
             catch (Exception ex)
@@ -262,9 +264,11 @@ namespace MKModel
                     data.FrontArc = Int32.Parse(reader["FrontArc"].ToString());
                     data.Targets = Int32.Parse(reader["Targets"].ToString());
                     data.Rank = reader["Rank"].ToString();
-                    return new MageKnight(data);
                 }
 
+                connection.Close();
+
+                return new MageKnight(data);
             }
             catch (Exception ex)
             {

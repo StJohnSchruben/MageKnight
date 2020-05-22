@@ -27,8 +27,6 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKVie
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MKViewModel\obj\Debug\MKViewModel.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData_log.ldf
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MKViewModel.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\CommonServiceLocator.dll
@@ -50,3 +48,5 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKView
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData.mdf
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\bin\Debug\MageKnightData_log.ldf

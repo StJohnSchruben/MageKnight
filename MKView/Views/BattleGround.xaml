@@ -6,106 +6,43 @@
              xmlns:local="clr-namespace:MKView.Views"
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              mc:Ignorable="d" 
-             Height="40000" d:DesignWidth="40000">
+             Background="DimGray"
+             MouseWheel="UserControl_MouseWheel"
+>
     <UserControl.Resources>
         <DataTemplate x:Key="MageKnight">
             <local:MageKnightBattleView />
         </DataTemplate>
     </UserControl.Resources>
-    <Grid Background="Green">
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>-->
-        <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" >
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <local:BattleCanvas x:Name="renderCanvas" 
+
+    <Viewbox x:Name="vb"    Height="1000" Width="1000">
+        <Grid Height="4000" Width="4000">
+
+            <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <local:BattleCanvas x:Name="renderCanvas" 
                                 IsItemsHost="True"
                                   Background="Green"
                                 MaxWidth="{Binding Path=ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}}"
                                 Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemContainerStyle>
-                <Style TargetType="ContentPresenter">
-                    <!--<Setter Property="local:DraggableExtender.CanDrag" Value="True" />-->
-                    <Setter Property="Canvas.Left" Value="{Binding Path=XCord}" />
-                    <Setter Property="Canvas.Top" Value="{Binding Path=YCord}" />
-                </Style>
-            </ItemsControl.ItemContainerStyle>
-        </ItemsControl>
-    </Grid>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <!--<Setter Property="local:DraggableExtender.CanDrag" Value="True" />-->
+                        <Setter Property="Canvas.Left" Value="{Binding Path=XCord}" />
+                        <Setter Property="Canvas.Top" Value="{Binding Path=YCord}" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+            <Grid Height="3600" Width="3600">
+                <Border BorderBrush="Yellow" BorderThickness="5" />
+                <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Top"/>
+                <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Bottom"/>
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+
 </UserControl>

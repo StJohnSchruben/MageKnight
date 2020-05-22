@@ -8,8 +8,8 @@
              xmlns:views="clr-namespace:MKView.Views"
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              mc:Ignorable="d" 
-             
-             d:DesignHeight="1200" d:DesignWidth="1500">
+             MouseWheel="UserControl_MouseWheel"
+             Height="1000" Width="1000">
     <UserControl.Resources>
         <!--<DataTemplate DataType="{x:Type vm:IArmyBuilder}">
             <views:ArmyBuilder/>
@@ -33,8 +33,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="23*"/>
+            <RowDefinition />
+            <RowDefinition Height="59*"/>
         </Grid.RowDefinitions>
         <Button Grid.Column="0" x:Name="mainMenu" Click="mainMenu_Click">
             Main Menu
@@ -52,8 +52,13 @@
             Under Construction
         </Button>
         <views:MainMenu Grid.Row="1" Grid.ColumnSpan="5" x:Name="mm" Visibility="Hidden"/>
-        <views:BattleGround DataContext="{Binding User, Source={x:Static view:SharedResources.ViewModelLocator}}" x:Name="bg"  Grid.Row="1" Grid.ColumnSpan="5" Visibility="Hidden"/>
-        <views:ArmyBuilder Grid.Row="1" Grid.ColumnSpan="5" x:Name="ab" Visibility="Hidden" DataContext="{Binding ArmyBuilder, Source={x:Static view:SharedResources.ViewModelLocator}}"/>
+        <ScrollViewer Height="1000" Width="1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="auto" x:Name="bg"  Grid.Row="1" Grid.ColumnSpan="5" Visibility="Hidden" Margin="0,0,0,-45">
+            <Viewbox x:Name="vb" Height="1000" Width="1000" >
+                <views:BattleGround    Grid.Row="1" Grid.ColumnSpan="5" DataContext="{Binding User, Source={x:Static view:SharedResources.ViewModelLocator}}"/>
+            </Viewbox>
+
+        </ScrollViewer>
+        <views:ArmyBuilder Grid.Row="1" Grid.ColumnSpan="5" x:Name="ab" Visibility="Hidden" DataContext="{Binding ArmyBuilder, Source={x:Static view:SharedResources.ViewModelLocator}}" Height="Auto" Margin="0,77,-300,78" Width="Auto"/>
         <views:MageKnightGenerator x:Name="mkg" Grid.Row="1" Grid.ColumnSpan="5" Visibility="Hidden" DataContext="{Binding MageKnightGenerator, Source={x:Static view:SharedResources.ViewModelLocator}}"/>
         <!--<ContentControl 
                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
