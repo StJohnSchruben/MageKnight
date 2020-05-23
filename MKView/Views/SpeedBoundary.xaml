@@ -14,7 +14,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <Ellipse  x:Name="speedCircle" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" />
-        <Ellipse  x:Name="speedBorder" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" StrokeThickness="4" Stroke="Blue" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}"/>
+        <Ellipse  x:Name="speedCircle" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}" Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" />
+        <Ellipse  x:Name="speedBorder" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}" StrokeThickness="4" Stroke="Blue" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}"/>
     </Grid>
 </UserControl>

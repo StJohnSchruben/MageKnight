@@ -36,7 +36,19 @@ namespace MKView.Views
 
         private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            var dial = this.DataContext as IDial;
+            //var dial = this.DataContext as IDial;
+            //Canvas canvas = this.FindAncestor<Canvas>();
+            //var draggableControl = this.FindAncestor<MageKnightBattleView>();
+            //var transform = draggableControl.RenderTransform as TranslateTransform;
+            //if (transform == null)
+            //{
+            //    transform = new TranslateTransform();
+            //    draggableControl.RenderTransform = transform;
+            //}
+            //double offsetX = draggableControl.ActualWidth - this.ActualWidth;
+            //double offsetY = draggableControl.ActualHeight - this.ActualHeight;
+            //transform.X = 1850;
+            //transform.Y = 200;
         }
         private void Control_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -44,6 +56,7 @@ namespace MKView.Views
             var draggableControl = sender as UserControl;
             clickPosition = e.GetPosition(this);
             draggableControl.CaptureMouse();
+            e.Handled = true;
         }
 
         private void Control_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -71,8 +84,21 @@ namespace MKView.Views
 
                 double offsetX = draggableControl.ActualWidth - this.ActualWidth;
                 double offsetY = draggableControl.ActualHeight - this.ActualHeight;
-                transform.X = currentCanvasPosition.X - clickPosition.X - (offsetX/2.0);
-                transform.Y = currentCanvasPosition.Y - clickPosition.Y - (offsetY/2.0);
+                double xOffset = currentCanvasPosition.X - clickPosition.X - (offsetX / 2.0);
+                double yOffset = currentCanvasPosition.Y - clickPosition.Y - (offsetY / 2.0);
+                double top = currentCanvasPosition.Y - currentControlPosition.Y;
+                double left = currentCanvasPosition.X - currentControlPosition.X;
+                if (!(top <= 3750 ) && !(top > 200))
+                {
+                    transform.Y = yOffset;
+                }
+
+                if (!(left <= 3750) && !(left > 200))
+                {
+                    transform.X = xOffset;
+                }
+                double t = (double)draggableControl.GetValue(Canvas.TopProperty);
+                var p = draggableControl.Parent as Canvas;
             }
         }
     }

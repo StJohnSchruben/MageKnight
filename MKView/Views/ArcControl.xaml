@@ -15,8 +15,8 @@
     <Grid>
         <local:SpeedBoundary />
         <local:RangeSector />
-        <!--<Ellipse  x:Name="speedCircle" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" />
-        <Ellipse  x:Name="speedBorder" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" StrokeThickness="4" Stroke="Blue" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}"/>--><!--
+        <!--<Ellipse  x:Name="speedCircle" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}" Fill="Blue" StrokeThickness="4" Stroke="Blue"  Opacity=".3" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" />
+        <Ellipse  x:Name="speedBorder" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}" StrokeThickness="4" Stroke="Blue" Width="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource SpeedForWidthToDouble}}"/>--><!--
         <Canvas Width="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Height="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Background="Red" Opacity=".4">
             --><!--<Canvas.Clip>
                 <PathGeometry>
@@ -35,8 +35,8 @@
                 </PathGeometry>
             </Canvas.Clip>--><!--
 
-            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" x:Name="rangeSector" Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}"/>
-            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  x:Name="rangeBorder"  StrokeThickness="4" Stroke="Lime"  Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibility}}" />
+            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" x:Name="rangeSector" Fill="Lime" StrokeThickness="4" Stroke="Lime"  Opacity=".4" Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}"/>
+            <Ellipse Canvas.Left="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}" Canvas.Top="{Binding Model, Converter={StaticResource HightStatToPointCenterConverter}}"  x:Name="rangeBorder"  StrokeThickness="4" Stroke="Lime"  Width="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Height="{Binding Model, Converter={StaticResource RangeForWidthToDouble}}" Visibility="{Binding ToggleRangeView, Converter={StaticResource BoolToVisibility}}" />
             <Ellipse  Name="dialProxy" StrokeThickness="4" Fill="Black" Stroke="Lime" Canvas.Left="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Canvas.Top="{Binding Model, Converter={StaticResource HighStatCenterWithDialOffsetToDouble }}" Width="109" Height="109" />
             --><!--<Line x:Name="leftSectorLine" Canvas.Left="400" Canvas.Top="400" X2="-282.843" Y2="282.843" StrokeThickness="5" Stroke="Lime"/>
 

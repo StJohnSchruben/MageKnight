@@ -23,18 +23,18 @@ namespace MKViewModel
         public ArmyBuilder(IUser user)
         {
             this.User = user;
-            //this.user.MageKnights = MageDB.GetMageKnights();
-            //this.user.Armies = new List<IArmy>();
-            //IArmy army = new Army();
-            //army.Units = new List<IMageKnightModel>();
-            //army.Name = "Army1";
-            //this.user.Armies.Add(army);
             this.SelectedArmy = this.User.SelectedArmy;
+            foreach(var m in user.MageKnights)
+            {
+                if (m.Rank == "Unique")
+                {
+                    this.SelectedMageKnight = m;
+                    this.AddToArmyClicked();
+                }
+            }
 
-            this.SelectedMageKnight = user.MageKnights.First();
-            this.AddToArmyCllicked();
-            //this.SelectedMageKnight = user.MageKnights.Last();
-            //this.AddToArmyCllicked();
+
+
             this.ApplyToBoardClicked();
         }
 
@@ -77,9 +77,9 @@ namespace MKViewModel
         {
         }
 
-        public ICommand AddToArmy => new RelayCommand(this.AddToArmyCllicked);
+        public ICommand AddToArmy => new RelayCommand(this.AddToArmyClicked);
 
-        private void AddToArmyCllicked()
+        private void AddToArmyClicked()
         {
             this.selectedArmy.Units.Add(new MageKnightBattleViewModel(SelectedMageKnight));
             this.CurrentModels.Add(new MageKnightBattleViewModel(SelectedMageKnight));

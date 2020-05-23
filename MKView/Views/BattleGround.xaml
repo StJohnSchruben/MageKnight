@@ -7,7 +7,6 @@
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              mc:Ignorable="d" 
              Background="DimGray"
-             MouseWheel="UserControl_MouseWheel"
 >
     <UserControl.Resources>
         <DataTemplate x:Key="MageKnight">
@@ -15,34 +14,30 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <!--<Viewbox x:Name="vb"    Height="1000" Width="1000">-->
-        <Grid Height="4000" Width="4000">
+    <Grid Height="4000" Width="4000">
 
-            <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <local:BattleCanvas x:Name="renderCanvas" 
+        <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <local:BattleCanvas x:Name="renderCanvas" 
                                 IsItemsHost="True"
                                   Background="Green"
                                 MaxWidth="{Binding Path=ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}}"
                                 Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemContainerStyle>
-                    <Style TargetType="ContentPresenter">
-                        <!--<Setter Property="local:DraggableExtender.CanDrag" Value="True" />-->
-                        <Setter Property="Canvas.Left" Value="{Binding Path=XCord}" />
-                        <Setter Property="Canvas.Top" Value="{Binding Path=YCord}" />
-                    </Style>
-                </ItemsControl.ItemContainerStyle>
-            </ItemsControl>
-            <Grid Height="3600" Width="3600">
-                <Border BorderBrush="Yellow" BorderThickness="5" />
-                <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Top"/>
-                <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Bottom"/>
-            </Grid>
-
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding Path=XCord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Path=YCord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
+        <Grid Height="3600" Width="3600">
+            <Border BorderBrush="Yellow" BorderThickness="5" />
+            <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Top"/>
+            <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Bottom"/>
         </Grid>
-    <!--</Viewbox>-->
 
+    </Grid>
 </UserControl>

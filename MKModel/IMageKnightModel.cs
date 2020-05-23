@@ -20,5 +20,6 @@ namespace MKModel
         IDial Dial { get; }
 
         string Rank { get;  }
+        int PointValue { get;  }
     }
 }

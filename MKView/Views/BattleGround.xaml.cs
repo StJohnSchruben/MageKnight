@@ -30,26 +30,18 @@ namespace MKView.Views
         private void BattleGround_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             var user = this.DataContext as IUser;
-           // int count = this.models.Items.Count;
+            foreach(var m in user.ActiveArmy)
+            {
+                m.PropertyChanged += M_PropertyChanged;
+            }
         }
 
-        private void UserControl_MouseWheel(object sender, MouseWheelEventArgs e)
+        private void M_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            //if (Keyboard.IsKeyDown(Key.LeftCtrl))
-            //{
-            //    try
-            //    {
-            //        //if (vb.Height > 400 || e.Delta > 0)
-            //        this.vb.Height += e.Delta;
-            //        this.vb.Width += this.vb.Height;
-            //        //this.Height = this.vb.Height;
-            //        //this.Width = this.Height;
-            //    }
-            //    catch
-            //    {
-            //        ;
-            //    }
-            //}
+            if (e.PropertyName == "XCord")
+            {
+                ;
+            }
         }
     }
 }

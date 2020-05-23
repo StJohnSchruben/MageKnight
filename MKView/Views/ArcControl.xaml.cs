@@ -28,10 +28,18 @@ namespace MKView.Views
             this.MouseLeftButtonDown += new MouseButtonEventHandler(Control_MouseLeftButtonDown);
             this.MouseLeftButtonUp += new MouseButtonEventHandler(Control_MouseLeftButtonUp);
             this.MouseMove += new MouseEventHandler(Control_MouseMove);
+            this.MouseLeave += ArcControl_MouseLeave;
         }
 
         private void ArcControl_MouseLeave(object sender, MouseEventArgs e)
         {
+            Point p = e.GetPosition(this);
+
+            if (p.X > ((this.Width / 2) - 50) && p.X < ((this.Width/2)+50) && p.Y > ((this.Height / 2) - 50) && p.Y < ((this.Height/2 )+ 50))
+            {
+                return;
+            }
+
             isDragging = false;
             var draggable = sender as UserControl;
             draggable.ReleaseMouseCapture();
@@ -40,7 +48,7 @@ namespace MKView.Views
         private void Control_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var data = this.DataContext as MKViewModel.IMageKnightBattleViewModel;
-            if (!data.IsSelected)
+            if (!data.ToggleRangeView)
             {
                 return;
             }
@@ -49,6 +57,7 @@ namespace MKView.Views
             var draggableControl = this.FindAncestor<MageKnightBattleView>();
             Point currentLocation = e.GetPosition(draggableControl as UIElement);
             this.mouseDownAngle = this.GetAngle(currentLocation);
+            e.Handled = true;
         }
 
         private void Control_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

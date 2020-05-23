@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Shapes;
 using ZoomAndPan;
+using System.Windows.Media;
 
 namespace MKView
 {
@@ -264,11 +265,11 @@ namespace MKView
         /// </summary>
         private void zoomAndPanControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if ((Keyboard.Modifiers & ModifierKeys.Shift) == 0)
-            {
-                Point doubleClickPoint = e.GetPosition(this.content);
-                zoomAndPanControl.AnimatedSnapTo(doubleClickPoint);
-            }
+            //if ((Keyboard.Modifiers & ModifierKeys.Shift) == 0)
+            //{
+            //    Point doubleClickPoint = e.GetPosition(this.content);
+            //    zoomAndPanControl.AnimatedSnapTo(doubleClickPoint);
+            //}
         }
 
       
@@ -335,12 +336,56 @@ namespace MKView
 
                 e.Handled = true;
             }
+            else if (mouseHandlingMode == MouseHandlingMode.None)
+            {
+                if (selectionBorder != null)
+                {
+                    Point curContentMousePoint = e.GetPosition(this.selectionCanvas);
+
+                    if (curContentMousePoint.X <= selectionPoint.X && curContentMousePoint.Y <= selectionPoint.Y) 
+                    {
+                        selectionBorder.Height = selectionPoint.Y - curContentMousePoint.Y;
+                        selectionBorder.Width = selectionPoint.X - curContentMousePoint.X;
+                        selectionBorder.SetValue(Canvas.LeftProperty, curContentMousePoint.X);
+                        selectionBorder.SetValue(Canvas.TopProperty, curContentMousePoint.Y);
+                        return;
+                    }
+                    else if (curContentMousePoint.Y <= selectionPoint.Y)
+                    {
+                        selectionBorder.Height = selectionPoint.Y - curContentMousePoint.Y;
+                        selectionBorder.Width = curContentMousePoint.X - selectionPoint.X;
+                        selectionBorder.SetValue(Canvas.LeftProperty, curContentMousePoint.X);
+                        selectionBorder.SetValue(Canvas.TopProperty, curContentMousePoint.Y);
+                        return;
+                    }
+                    else if (curContentMousePoint.X <= selectionPoint.X)
+                    {
+                        selectionBorder.Height = curContentMousePoint.Y - selectionPoint.Y;
+                        selectionBorder.Width = selectionPoint.X - curContentMousePoint.X;
+                        selectionBorder.SetValue(Canvas.LeftProperty, curContentMousePoint.X);
+                        selectionBorder.SetValue(Canvas.TopProperty, curContentMousePoint.Y);
+                        return;
+                    }
+
+                    try
+                    {
+
+                        selectionBorder.Height = curContentMousePoint.Y- selectionPoint.Y;
+                        selectionBorder.Width = curContentMousePoint.X - selectionPoint.X;
+                    }
+                    catch 
+                    {
+                        ;
+                    }
+                }
+            }
         }
 
         private void zoomAndPanControl_MouseUp(object sender, MouseButtonEventArgs e)
         {
             if (mouseHandlingMode != MouseHandlingMode.None)
             {
+                
                 if (mouseHandlingMode == MouseHandlingMode.Zooming)
                 {
                     if (mouseButtonDown == MouseButton.Left)
@@ -364,8 +409,15 @@ namespace MKView
                 mouseHandlingMode = MouseHandlingMode.None;
                 e.Handled = true;
             }
-        }
+            else
+            {
+                this.selectionCanvas.Children.Remove(selectionBorder);
 
+                this.selectionBorder = null;
+            }
+        }
+        Point selectionPoint;
+        Border selectionBorder;
         private void zoomAndPanControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.content.Focus();
@@ -382,7 +434,7 @@ namespace MKView
                 // Shift + left- or right-down initiates zooming mode.
                 mouseHandlingMode = MouseHandlingMode.Zooming;
             }
-            else if (mouseButtonDown == MouseButton.Left)
+            else if (mouseButtonDown == MouseButton.Right)
             {
                 // Just a plain old left-down initiates panning mode.
                 mouseHandlingMode = MouseHandlingMode.Panning;
@@ -390,9 +442,25 @@ namespace MKView
 
             if (mouseHandlingMode != MouseHandlingMode.None)
             {
-                // Capture the mouse so that we eventually receive the mouse up event.
-                zoomAndPanControl.CaptureMouse();
+                // Capture the mouse so that we eventually receive
+                //zoomAndPanControl.CaptureMouse();
+
                 e.Handled = true;
+            }
+            else
+            {
+                selectionPoint = e.GetPosition(this.selectionCanvas);
+                selectionBorder = new Border();
+                selectionBorder.Background = Brushes.Blue;
+                selectionBorder.Opacity = .4;
+                selectionBorder.BorderBrush = Brushes.Blue;
+                selectionBorder.Height = 1.0;
+                selectionBorder.Width = 1.0;
+                selectionBorder.BorderThickness = new Thickness(1);
+
+                this.selectionCanvas.Children.Add(selectionBorder);
+                selectionBorder.SetValue(Canvas.LeftProperty, origZoomAndPanControlMouseDownPoint.X);
+                selectionBorder.SetValue(Canvas.TopProperty, origZoomAndPanControlMouseDownPoint.Y);
             }
         }
 
