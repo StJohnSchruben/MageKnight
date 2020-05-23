@@ -24,6 +24,7 @@ namespace MKView
             this.Container.RegisterType<IArmyBuilder, ArmyBuilder>(new ContainerControlledLifetimeManager());
             this.Container.RegisterType<IBattleGround, BattleGround>(new ContainerControlledLifetimeManager());
             this.Container.RegisterType<IUser, User>(new ContainerControlledLifetimeManager());
+            this.Container.RegisterType<IUserViewModel, UserViewModel>(new ContainerControlledLifetimeManager());
         }
     }
 }

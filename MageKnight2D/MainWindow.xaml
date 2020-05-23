@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MageKnight2D"
-        xmlns:View="clr-namespace:MKView;assembly=MKView" xmlns:Views="clr-namespace:MKView.Views;assembly=MKView"
+        xmlns:view="clr-namespace:MKView;assembly=MKView" xmlns:views="clr-namespace:MKView.Views;assembly=MKView"
         mc:Ignorable="d"
         Title="MainWindow" >
     <Grid>
-        <View:MainView />
+        <view:GameDashboard />
     </Grid>
 </Window>

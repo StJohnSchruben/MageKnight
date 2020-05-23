@@ -31,5 +31,7 @@ namespace MKView
         public IMageKnightGenerator MainMenu => this.container.Resolve<IMageKnightGenerator>();
         public IArmyBuilder ArmyBuilder => this.container.Resolve<IArmyBuilder>();
         public IUser User => this.container.Resolve<IUser>();
+        public IUserViewModel GameUser => this.container.Resolve<IUserViewModel>();
+
     }
 }
