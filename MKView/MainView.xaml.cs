@@ -340,7 +340,7 @@ namespace MKView
             {
                 if (selectionBorder != null)
                 {
-                    Point curContentMousePoint = e.GetPosition(this.selectionCanvas);
+                    Point curContentMousePoint = e.GetPosition(this.content);
 
                     if (curContentMousePoint.X <= selectionPoint.X && curContentMousePoint.Y <= selectionPoint.Y) 
                     {
@@ -409,12 +409,12 @@ namespace MKView
                 mouseHandlingMode = MouseHandlingMode.None;
                 e.Handled = true;
             }
-            else
-            {
-                this.selectionCanvas.Children.Remove(selectionBorder);
+            //else
+            //{
+            //    this.content.Children.Remove(selectionBorder);
 
-                this.selectionBorder = null;
-            }
+            //    this.selectionBorder = null;
+            //}
         }
         Point selectionPoint;
         Border selectionBorder;
@@ -447,21 +447,21 @@ namespace MKView
 
                 e.Handled = true;
             }
-            else
-            {
-                selectionPoint = e.GetPosition(this.selectionCanvas);
-                selectionBorder = new Border();
-                selectionBorder.Background = Brushes.Blue;
-                selectionBorder.Opacity = .4;
-                selectionBorder.BorderBrush = Brushes.Blue;
-                selectionBorder.Height = 1.0;
-                selectionBorder.Width = 1.0;
-                selectionBorder.BorderThickness = new Thickness(1);
+            //else
+            //{
+            //    selectionPoint = e.GetPosition(this.content);
+            //    selectionBorder = new Border();
+            //    selectionBorder.Background = Brushes.Blue;
+            //    selectionBorder.Opacity = .4;
+            //    selectionBorder.BorderBrush = Brushes.Blue;
+            //    selectionBorder.Height = 1.0;
+            //    selectionBorder.Width = 1.0;
+            //    selectionBorder.BorderThickness = new Thickness(1);
 
-                this.selectionCanvas.Children.Add(selectionBorder);
-                selectionBorder.SetValue(Canvas.LeftProperty, origZoomAndPanControlMouseDownPoint.X);
-                selectionBorder.SetValue(Canvas.TopProperty, origZoomAndPanControlMouseDownPoint.Y);
-            }
+            //    this.content.Children.Add(selectionBorder);
+            //    selectionBorder.SetValue(Canvas.LeftProperty, origZoomAndPanControlMouseDownPoint.X);
+            //    selectionBorder.SetValue(Canvas.TopProperty, origZoomAndPanControlMouseDownPoint.Y);
+            //}
         }
 
 

@@ -104,6 +104,9 @@
     <Compile Include="DesignViews\designSpeedBoundry.xaml.cs">
       <DependentUpon>designSpeedBoundry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MageDataView.xaml.cs">
+      <DependentUpon>MageDataView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScaleToPercentConverter.cs" />
     <Compile Include="Views\AbilityToColor.cs" />
     <Compile Include="Views\ArcControl.xaml.cs">
@@ -208,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Dial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MageDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

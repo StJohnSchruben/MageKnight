@@ -57,64 +57,64 @@ namespace MKViewModel
 
         private void FillMageKnights()
         {
-            string path = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionText.txt";
-            string imagePath = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionImages\\";
-            string[] lines = System.IO.File.ReadAllLines(path);
+            //string path = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionText.txt";
+            //string imagePath = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionImages\\";
+            //string[] lines = System.IO.File.ReadAllLines(path);
 
-            foreach (string line in lines)
-            {
-                MageData mage = new MageData();
-                mage.Id = Guid.NewGuid();
-                mage.Set = "Rebellion";
-                if (line.StartsWith("/"))
-                {
-                    continue;
-                }
+            //foreach (string line in lines)
+            //{
+            //    MageData mage = new MageData();
+            //    mage.Id = Guid.NewGuid();
+            //    mage.Set = "Rebellion";
+            //    if (line.StartsWith("/"))
+            //    {
+            //        continue;
+            //    }
 
-                var data = line.Split('|');
-                int i = 0;
-                foreach (var l in data)
-                {
-                    i++;
-                    switch (i)
-                    {
-                        case 1:
-                            mage.Name = l.TrimEnd().TrimStart();
-                            break;
-                        case 2:
-                            mage.PriceValue = l.TrimEnd().TrimStart();
-                            break;
-                        case 3:
-                            mage.Rank = l.TrimEnd().TrimStart();
-                            break;
-                        case 4:
-                            mage.PointValue = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                        case 5:
-                            mage.Index = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                        case 6:
-                            mage.Rarity = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                        case 7:
-                            mage.Faction = l.TrimEnd().TrimStart();
-                            break;
-                        case 8:
-                            mage.Range = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                        case 9:
-                            mage.FrontArc = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                        case 10:
-                            mage.Targets = Int32.Parse(l.TrimEnd().TrimStart());
-                            break;
-                    }
+            //    var data = line.Split('|');
+            //    int i = 0;
+            //    foreach (var l in data)
+            //    {
+            //        i++;
+            //        switch (i)
+            //        {
+            //            case 1:
+            //                mage.Name = l.TrimEnd().TrimStart();
+            //                break;
+            //            case 2:
+            //                mage.PriceValue = l.TrimEnd().TrimStart();
+            //                break;
+            //            case 3:
+            //                mage.Rank = l.TrimEnd().TrimStart();
+            //                break;
+            //            case 4:
+            //                mage.PointValue = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //            case 5:
+            //                mage.Index = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //            case 6:
+            //                mage.Rarity = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //            case 7:
+            //                mage.Faction = l.TrimEnd().TrimStart();
+            //                break;
+            //            case 8:
+            //                mage.Range = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //            case 9:
+            //                mage.FrontArc = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //            case 10:
+            //                mage.Targets = Int32.Parse(l.TrimEnd().TrimStart());
+            //                break;
+            //        }
 
-                 //   mage.ModelImage = imagePath + mage.Name + ".jpg";
-                }
+            //     //   mage.ModelImage = imagePath + mage.Name + ".jpg";
+            //    }
 
-                MageDB.GenerateMageKnight(mage);
-            }
+            //    MageDB.GenerateMageKnight(mage);
+            //}
         }
 
         public static void ProcessDirectory(string targetDirectory)

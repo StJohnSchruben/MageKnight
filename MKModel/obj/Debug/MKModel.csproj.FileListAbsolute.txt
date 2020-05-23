@@ -22,3 +22,15 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.pdb
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData.mdf
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MageKnightData_log.ldf
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.dll.config
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.pdb
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\itextsharp.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\itextsharp.xml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csprojAssemblyReference.cache
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CoreCompileInputs.cache
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CopyComplete
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.pdb

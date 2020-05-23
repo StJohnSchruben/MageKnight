@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary x:Class="MKView.Views.SharedResourceDictionary"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                      xmlns:local="clr-namespace:MKView.Views"
+                    xmlns:m="clr-namespace:MKModel;assembly=MKModel" 
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary >
@@ -13,6 +14,10 @@
             <local:HighStatToPointStartToDouble x:Key="HighStatToPointStartToDouble" />
             <local:HightStatToPointEndConverter x:Key="HightStatToPointEndConverter" />
             <local:HighStatCenterOffsetToDouble x:Key="HighStatCenterOffsetToDouble" />
+            <ImageBrush ImageSource="../MageKnightGenerator.jpg" x:Key="background" />
+            <DataTemplate DataType="{x:Type m:IClick}">
+                <local:Click />
+            </DataTemplate>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

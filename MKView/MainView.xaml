@@ -220,11 +220,11 @@
                     Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
                     Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
                     >
-                        <Canvas x:Name="selectionCanvas">
+                        <!--<Canvas x:Name="selectionCanvas">-->
                             <Viewbox x:Name="content">
                                 <views:BattleGround  DataContext="{Binding}" />
                             </Viewbox>
-                        </Canvas>
+                        <!--</Canvas>-->
 
                         <Canvas
                         x:Name="dragZoomCanvas"
