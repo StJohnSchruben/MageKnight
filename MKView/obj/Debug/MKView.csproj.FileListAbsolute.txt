@@ -232,3 +232,5 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.g.cs
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.baml

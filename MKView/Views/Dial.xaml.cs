@@ -86,21 +86,18 @@ namespace MKView.Views
                 double offsetY = draggableControl.ActualHeight - this.ActualHeight;
                 double xOffset = currentCanvasPosition.X - clickPosition.X - (offsetX / 2.0);
                 double yOffset = currentCanvasPosition.Y - clickPosition.Y - (offsetY / 2.0);
-                //double top = draggableControl.RenderTransform.Value.OffsetY;
-                //double left = draggableControl.RenderTransform.Value.OffsetX;
-                double top = currentCanvasPosition.Y + clickPosition.Y -50;//+ draggableControl.ActualHeight/2 - 50;
-                double left = draggableControl.RenderTransform.Value.OffsetX;
-                if (/*!(top <= 3750 ) && */!(top <= 200))
+                double top = currentCanvasPosition.Y - clickPosition.Y;
+                double bottom = currentCanvasPosition.Y + 100;    
+                double left = currentCanvasPosition.X - clickPosition.X;
+                double right = currentCanvasPosition.X + 100;
+                if (!(top <= 200) && !(bottom >= 3800))
                 {
-                    Console.WriteLine(yOffset);
-
                     transform.Y = yOffset;
                 }
-                transform.X = xOffset;
-                //if (!(left <= 3750) && !(left > 200))
-                //{
-                    
-                //}
+                if (!(left <= 200) && !(right >= 3800))
+                {
+                    transform.X = xOffset;
+                }
             }
         }
     }
