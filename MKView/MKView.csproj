@@ -107,11 +107,11 @@
     <Compile Include="GameDashboard.xaml.cs">
       <DependentUpon>GameDashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MageDataView.xaml.cs">
       <DependentUpon>MageDataView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MKDataView.xaml.cs">
-      <DependentUpon>MKDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ScaleToPercentConverter.cs" />
     <Compile Include="Views\AbilityToColor.cs" />
@@ -171,11 +171,11 @@
       <DependentUpon>Stat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StatToDoubleReturnHighConverter.cs" />
-    <Compile Include="Views\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\UserControlFrame.xaml.cs">
       <DependentUpon>UserControlFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ZoomControl.xaml.cs">
+      <DependentUpon>ZoomControl.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +223,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Dial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,10 +251,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MKDataView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\RangeSector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -267,11 +267,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UserControl1.xaml">
+    <Page Include="Views\UserControlFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UserControlFrame.xaml">
+    <Page Include="Views\ZoomControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

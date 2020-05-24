@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" >
     <Grid>
-        <view:GameDashboard />
+        <views:Dashboard />
     </Grid>
 </Window>

@@ -47,7 +47,7 @@ namespace MKViewModel
         public List<IMageKnightModel> MageKnights { get => model.MageKnights; set => throw new NotImplementedException(); }
         public ObservableCollection<IMageKnightBattleViewModel> ActiveArmy { get => model.ActiveArmy; set => throw new NotImplementedException(); }
         public IArmy SelectedArmy { get => model.SelectedArmy; set => throw new NotImplementedException(); }
-        public  IMageKnightBattleViewModel SelectedMageKnight { get => selectedMageKnight; set => selectedMageKnight = value; }
+        public IMageKnightBattleViewModel SelectedMageKnight { get => selectedMageKnight; set { this.Set(() => this.SelectedMageKnight, ref this.selectedMageKnight, value); } }
 
         public IUser Model => this.model;
     }
