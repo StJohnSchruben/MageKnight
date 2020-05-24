@@ -238,3 +238,5 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.cspr
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml

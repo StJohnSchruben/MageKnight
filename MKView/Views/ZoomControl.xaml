@@ -17,43 +17,6 @@
         <RoutedUICommand x:Key="Commands.JumpBackToPrevZoom" />
         <RoutedUICommand x:Key="Commands.Fill" />
         <RoutedUICommand x:Key="Commands.OneHundredPercent" />
-
-        <!--
-        Defines the UI for an instance of RectangleData.
-        -->
-        <!--<DataTemplate 
-            DataType="{x:Type local:RectangleData}"
-            >
-            <Rectangle
-                Width="{Binding Width}"
-                Height="{Binding Height}"
-                Fill="{Binding Color, Converter={StaticResource colorToBrushConverter}}"
-                Cursor="Hand"
-                MouseDown="Rectangle_MouseDown"
-                MouseUp="Rectangle_MouseUp"
-                MouseMove="Rectangle_MouseMove"
-                />
-        </DataTemplate>-->
-
-        <!--<Style x:Key="canvasStyle" TargetType="Canvas">
-            <Setter >
-
-                <Setter.Value>
-                    <ControlTemplate TargetType="Canvas">
-                        <Grid Background="Green" Width="40000" Height="40000">
-                            <Border Height="3600" Width="3600" BorderBrush="Yellow" BorderThickness="4"/>
-                            <Border Height="1800" Width="1800" BorderBrush="Yellow" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                            <Border Height="1800" Width="1800" BorderBrush="Yellow" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-
-        </Style>-->
-
-
-
         <views:BoolToVisibility x:Key="BoolToVisibility" />
         <views:TotalWidthConverter x:Key="TotalWidthConverter" />
         <DataTemplate DataType="{x:Type vm:MageKnightBattleViewModel}">
@@ -84,9 +47,6 @@
 
     <UserControl.CommandBindings>
 
-        <!--
-        Bind commands to event handlers.
-        -->
         <CommandBinding 
             Command="{StaticResource Commands.ZoomOut}" 
             Executed="ZoomOut_Executed" 
@@ -217,14 +177,10 @@
 
                     <Grid
                     Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
-                    Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
-                    >
-                        <!--<Canvas x:Name="selectionCanvas">-->
+                    Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}" >
                         <Viewbox x:Name="content">
                             <views:BattleGround  DataContext="{Binding}" />
                         </Viewbox>
-                        <!--</Canvas>-->
-
                         <Canvas
                         x:Name="dragZoomCanvas"
                         Visibility="Collapsed"

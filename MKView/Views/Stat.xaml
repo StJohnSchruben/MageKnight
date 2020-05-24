@@ -8,11 +8,12 @@
              >
     <UserControl.Resources>
         <local:AbilityToColor x:Key="AbilityToColor" />
+        <local:AbilityToTextColor x:Key="AbilityToTextColor" />
     </UserControl.Resources>
     <Viewbox >
         <Grid Height="10" Width="10" Background="{Binding Ability, Converter={StaticResource AbilityToColor}}">
             <Border BorderBrush="Black" BorderThickness="1">
-                <TextBlock Text="{Binding Value}" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="Text" Text="{Binding Value}" Foreground="{Binding Ability, Converter={StaticResource AbilityToTextColor}}"  FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                 </TextBlock>
             </Border>

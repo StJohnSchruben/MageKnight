@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using MKModel;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MKViewModel
 {
@@ -16,16 +18,19 @@ namespace MKViewModel
         IMageKnightModel Model { get; }
         IMageKnightBattleViewModel ViewModel { get; }
         int FacingAngle { get; set; }
-
+        int ClickIndex { get; set; }
         double XCord { get; set; }
         double YCord { get; set; }
+        ICommand ClickUp { get; }
+        ICommand ClickDoun { get; }
+
     }
 
     public class MageKnightBattleViewModel : ViewModelBase, IMageKnightBattleViewModel, IMageKnightModel
     {
         bool toggleRangeView;
         IMageKnightModel model;
-        int facingAngle;
+        int facingAngle, clickIndex;
         double xCord, yCord;
         public MageKnightBattleViewModel(IMageKnightModel model)
         {
@@ -60,6 +65,24 @@ namespace MKViewModel
 
         public double XCord { get => this.xCord; set { this.Set(() => this.XCord, ref this.xCord, value); } }
         public double YCord { get => this.yCord; set { this.Set(() => this.YCord, ref this.yCord, value); } }
+
+        public int ClickIndex { get => this.clickIndex; set { this.Set(() => this.ClickIndex, ref this.clickIndex, value); } }
+
+        public ICommand ClickUp => new RelayCommand(this.ClickUpClicked);
+
+        private void ClickUpClicked()
+        {
+            this.Dial.ClickIndex++;
+            this.RaisePropertyChanged(nameof(this.Dial.ClickIndex));
+        }
+
+        public ICommand ClickDoun => new RelayCommand(this.ClickDounClicked);
+
+        private void ClickDounClicked()
+        {
+            this.Dial.ClickIndex--;
+            this.RaisePropertyChanged(nameof(this.Dial.ClickIndex));
+        }
 
         string IMageKnightModel.Set => throw new NotImplementedException();
     }

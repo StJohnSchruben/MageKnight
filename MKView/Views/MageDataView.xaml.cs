@@ -24,18 +24,6 @@ namespace MKView.Views
         public MageDataView()
         {
             InitializeComponent();
-            this.DataContextChanged += MageDataView_DataContextChanged;
-            this.Loaded += MageDataView_Loaded;
-        }
-
-        private void MageDataView_Loaded(object sender, RoutedEventArgs e)
-        {
-            var data = this.DataContext as IUserViewModel;
-        }
-
-        private void MageDataView_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            
         }
     }
 }

@@ -15,7 +15,8 @@
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <local:ZoomControl />
+        <local:ZoomControl Grid.RowSpan="2" />
         <local:MageDataView Grid.Column="2"/>
+        <local:DiceControl Grid.Column="1" Grid.Row="2"/>
     </Grid>
 </UserControl>

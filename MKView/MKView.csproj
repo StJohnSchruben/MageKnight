@@ -107,6 +107,9 @@
     <Compile Include="Views\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DiceControl.xaml.cs">
+      <DependentUpon>DiceControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MageDataView.xaml.cs">
       <DependentUpon>MageDataView.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Dial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

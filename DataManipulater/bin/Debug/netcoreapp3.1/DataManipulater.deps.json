@@ -18,6 +18,14 @@
         "runtime": {
           "MKModel.dll": {}
         }
+      },
+      "GalaSoft.MvvmLight/5.4.1.0": {
+        "runtime": {
+          "GalaSoft.MvvmLight.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          }
+        }
       }
     }
   },
@@ -29,6 +37,11 @@
     },
     "MKModel/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GalaSoft.MvvmLight/5.4.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

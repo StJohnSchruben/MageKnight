@@ -17,3 +17,6 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\ne
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Debug\netcoreapp3.1\DataManipulater.genruntimeconfig.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.xml

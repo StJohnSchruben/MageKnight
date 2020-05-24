@@ -35,7 +35,7 @@ namespace MKView.Views
         {
             Point p = e.GetPosition(this);
 
-            if (p.X > ((this.Width / 2) - 50) && p.X < ((this.Width/2)+50) && p.Y > ((this.Height / 2) - 50) && p.Y < ((this.Height/2 )+ 50))
+            if (p.X < this.Width && p.X > 0 && p.Y > 0 && p.Y < this.Height)
             {
                 return;
             }
