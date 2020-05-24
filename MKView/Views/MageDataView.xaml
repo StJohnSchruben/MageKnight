@@ -12,6 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <x:Static Member="local:SharedResourceDictionary.Instance" />
             </ResourceDictionary.MergedDictionaries>
+            <local:AbilityToVisibility x:Key="AbilityToVisibility" />
         </ResourceDictionary>
     </UserControl.Resources>
     <Viewbox Stretch="UniformToFill">
@@ -52,11 +53,18 @@
                         <Label Content="ClickIndex: " HorizontalAlignment="Left"  />
                         <Label Content="{Binding Dial.ClickIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, Mode=TwoWay}" HorizontalAlignment="Right"  />
                         <Button Content="Click Down" Command="{Binding ClickUp}" />
-                        <Button Content="Click Up" Command="{Binding ClickDoun}"/>
+                        <Button Content="Click Up" Command="{Binding ClickDown}"/>
                     </StackPanel>
 
                     <Button Content="Move" />
                     <Button Content="Attack" />
+                    <ListBox ItemsSource="{Binding Dial.Click.Stats}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding Path=Ability}" Visibility="{Binding Path=Ability, Converter={StaticResource AbilityToVisibility}}" Click="Button_Click" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </StackPanel>
                 
             </Grid>

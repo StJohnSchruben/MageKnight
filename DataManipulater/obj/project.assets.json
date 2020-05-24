@@ -26,19 +26,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\johns\\.nuget\\packages\\": {}
+    "C:\\Users\\hipai\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\DataManipulater.csproj",
+      "projectUniqueName": "C:\\Users\\hipai\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\DataManipulater.csproj",
       "projectName": "DataManipulater",
-      "projectPath": "C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\DataManipulater.csproj",
-      "packagesPath": "C:\\Users\\johns\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\obj\\",
+      "projectPath": "C:\\Users\\hipai\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\DataManipulater.csproj",
+      "packagesPath": "C:\\Users\\hipai\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hipai\\OneDrive\\Documents\\GitHub\\MageKnight\\DataManipulater\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\johns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hipai\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +55,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\MKModel\\MKModel.csproj": {
-              "projectPath": "C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\MKModel\\MKModel.csproj"
+            "C:\\Users\\hipai\\OneDrive\\Documents\\GitHub\\MageKnight\\MKModel\\MKModel.csproj": {
+              "projectPath": "C:\\Users\\hipai\\OneDrive\\Documents\\GitHub\\MageKnight\\MKModel\\MKModel.csproj"
             }
           }
         }
@@ -75,12 +79,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

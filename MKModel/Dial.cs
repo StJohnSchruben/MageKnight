@@ -24,7 +24,8 @@ namespace MKModel
             get => this.clickIndex;
             set
             {
-                this.Set(() => this.ClickIndex, ref this.clickIndex, value);
+                if (!(value >= this.Clicks.Count) && !(value < 0))
+                    this.Set(() => this.ClickIndex, ref this.clickIndex, value);
                 this.RaisePropertyChanged(nameof(this.Click));
             }
         }

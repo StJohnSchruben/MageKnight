@@ -240,3 +240,9 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.baml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.baml

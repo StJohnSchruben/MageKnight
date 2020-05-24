@@ -18,7 +18,6 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.dl
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\MKModel.pdb
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\itextsharp.dll
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\itextsharp.xml
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csprojAssemblyReference.cache
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CoreCompileInputs.cache
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csproj.CopyComplete
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.dll
@@ -46,3 +45,14 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.M
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\CommonServiceLocator.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.xml

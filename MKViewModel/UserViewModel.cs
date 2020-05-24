@@ -14,14 +14,20 @@ namespace MKViewModel
    public  interface IUserViewModel : INotifyPropertyChanged
     {
         IMageKnightBattleViewModel SelectedMageKnight { get; set; }
+        IMageKnightBattleViewModel TargetedMageKnight { get; set; }
 
         IUser Model { get; }
 
+        int Actions { get; set; }
+
     }
+
     public class UserViewModel : ViewModelBase, IUserViewModel, IUser
     {
         private IUser model;
+        int actions;
         IMageKnightBattleViewModel selectedMageKnight;
+        IMageKnightBattleViewModel targetedMageKnight;
         public UserViewModel(IUser model)
         {
             this.model = model;
@@ -48,7 +54,9 @@ namespace MKViewModel
         public ObservableCollection<IMageKnightBattleViewModel> ActiveArmy { get => model.ActiveArmy; set => throw new NotImplementedException(); }
         public IArmy SelectedArmy { get => model.SelectedArmy; set => throw new NotImplementedException(); }
         public IMageKnightBattleViewModel SelectedMageKnight { get => selectedMageKnight; set { this.Set(() => this.SelectedMageKnight, ref this.selectedMageKnight, value); } }
-
         public IUser Model => this.model;
+        public int Actions { get => actions; set { this.Set(() => this.Actions, ref this.actions, value); } }
+
+        public IMageKnightBattleViewModel TargetedMageKnight { get => targetedMageKnight; set { this.Set(() => this.TargetedMageKnight, ref this.targetedMageKnight, value); } }
     }
 }
