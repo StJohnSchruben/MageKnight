@@ -189,7 +189,6 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\GameDashboard.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.g.cs
@@ -216,7 +215,6 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.baml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\GameDashboard.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.baml

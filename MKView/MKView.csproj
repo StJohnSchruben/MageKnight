@@ -104,9 +104,6 @@
     <Compile Include="DesignViews\designSpeedBoundry.xaml.cs">
       <DependentUpon>designSpeedBoundry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GameDashboard.xaml.cs">
-      <DependentUpon>GameDashboard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
@@ -196,10 +193,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DesignViews\designSpeedBoundry.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GameDashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
