@@ -56,3 +56,4 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.M
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKModel\obj\Debug\MKModel.csprojAssemblyReference.cache
