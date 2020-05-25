@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\
 MKView
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 24-997331163
 
 37685350095
-75-68076962
+75-2025093427
 DesignViews\BattleCanvas.xaml;DesignViews\designArc.xaml;DesignViews\designRangeSector10.xaml;DesignViews\designRangeSector4.xaml;DesignViews\designSpeedBoundry.xaml;MainView.xaml;Views\ArcControl.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dashboard.xaml;Views\Dial.xaml;Views\DiceControl.xaml;Views\MageDataView.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\RangeSector.xaml;Views\SharedResourceDictionary.xaml;Views\SpeedBoundary.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;Views\ZoomControl.xaml;
 
 False
