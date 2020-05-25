@@ -35,7 +35,7 @@ namespace MKView.Views
                     return new SolidColorBrush(Colors.Red);
 
                 case "Magic Levitation":
-                case "Magic Enhancment":
+                case "Magic Enhancement":
                 case "Magic Blast":
                 case "Magic Immunity":
                     return new SolidColorBrush(Colors.Blue);
@@ -79,7 +79,7 @@ namespace MKView.Views
                 case "Battle Armor":
                 case "Healing":
                 case "Magic Levitation":
-                case "Magic Enhancment":
+                case "Magic Enhancement":
                 case "Magic Blast":
                 case "Magic Immunity":
                 case "Regeneration":

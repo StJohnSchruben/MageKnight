@@ -102,38 +102,123 @@ namespace MKViewModel
 
         string IMageKnightModel.Set => throw new NotImplementedException();
 
-        public ICommand Attack => throw new NotImplementedException();
+        public ICommand Attack => new RelayCommand(this.AttackClicked);
 
-        public ICommand Move => throw new NotImplementedException();
+        private void AttackClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand Flight => throw new NotImplementedException();
+        public ICommand Move => new RelayCommand(this.MoveClicked);
 
-        public ICommand FlameLightining => throw new NotImplementedException();
+        private void MoveClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand Charge => throw new NotImplementedException();
+        public ICommand Flight => new RelayCommand(this.FlightClicked);
 
-        public ICommand Healing => throw new NotImplementedException();
+        private void FlightClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand WheaponMaster => throw new NotImplementedException();
+        public ICommand FlameLightining => new RelayCommand(this.FlameLightiningClicked);
 
-        public ICommand MagicLevitation => throw new NotImplementedException();
+        private void FlameLightiningClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand MagicBlast => throw new NotImplementedException();
+        public ICommand Charge => new RelayCommand(this.ChargeClicked);
 
-        public ICommand ShockWave => throw new NotImplementedException();
+        private void ChargeClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand Aquatic => throw new NotImplementedException();
+        public ICommand Healing => new RelayCommand(this.HealingClicked);
 
-        public ICommand Command => throw new NotImplementedException();
+        private void HealingClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand MagicHealing => throw new NotImplementedException();
+        public ICommand WheaponMaster => new RelayCommand(this.WheaponMasterClicked);
 
-        public ICommand Bound => throw new NotImplementedException();
+        private void WheaponMasterClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand Stealth => throw new NotImplementedException();
+        public ICommand MagicLevitation => new RelayCommand(this.MagicLevitationClicked);
 
-        public ICommand Necromancy => throw new NotImplementedException();
+        private void MagicLevitationClicked()
+        {
+            throw new NotImplementedException();
+        }
 
-        public ICommand Capture => throw new NotImplementedException();
+        public ICommand MagicBlast => new RelayCommand(this.MagicBlastClicked);
+
+        private void MagicBlastClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand ShockWave => new RelayCommand(this.ShockWaveClicked);
+
+        private void ShockWaveClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Aquatic => new RelayCommand(this.AquaticClicked);
+
+        private void AquaticClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Command => new RelayCommand(this.CommandClicked);
+
+        private void CommandClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand MagicHealing => new RelayCommand(this.MagicHealingClicked);
+
+        private void MagicHealingClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Bound => new RelayCommand(this.BoundClicked);
+
+        private void BoundClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Stealth => new RelayCommand(this.StealthClicked);
+
+        private void StealthClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Necromancy => new RelayCommand(this.NecromancyClicked);
+
+        private void NecromancyClicked()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand Capture => new RelayCommand(this.CaptureClicked);
+
+        private void CaptureClicked()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
