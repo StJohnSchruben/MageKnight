@@ -22,8 +22,24 @@ namespace MKViewModel
         double XCord { get; set; }
         double YCord { get; set; }
         ICommand ClickUp { get; }
-        ICommand ClickDoun { get; }
-
+        ICommand ClickDown { get; }
+        ICommand Attack { get; }
+        ICommand Move { get; }
+        ICommand Capture { get; }
+        ICommand Flight { get; }
+        ICommand FlameLightining { get; }
+        ICommand Charge { get; }  
+        ICommand Healing { get; }
+        ICommand WheaponMaster { get; }
+        ICommand MagicLevitation { get; }
+        ICommand MagicBlast { get; }
+        ICommand ShockWave { get; }
+        ICommand Aquatic { get; }
+        ICommand Command { get; }
+        ICommand MagicHealing { get; }
+        ICommand Bound { get; }
+        ICommand Stealth { get; }
+        ICommand Necromancy { get; }
     }
 
     public class MageKnightBattleViewModel : ViewModelBase, IMageKnightBattleViewModel, IMageKnightModel
@@ -76,7 +92,7 @@ namespace MKViewModel
             this.RaisePropertyChanged(nameof(this.Dial.ClickIndex));
         }
 
-        public ICommand ClickDoun => new RelayCommand(this.ClickDounClicked);
+        public ICommand ClickDown => new RelayCommand(this.ClickDounClicked);
 
         private void ClickDounClicked()
         {
@@ -85,5 +101,39 @@ namespace MKViewModel
         }
 
         string IMageKnightModel.Set => throw new NotImplementedException();
+
+        public ICommand Attack => throw new NotImplementedException();
+
+        public ICommand Move => throw new NotImplementedException();
+
+        public ICommand Flight => throw new NotImplementedException();
+
+        public ICommand FlameLightining => throw new NotImplementedException();
+
+        public ICommand Charge => throw new NotImplementedException();
+
+        public ICommand Healing => throw new NotImplementedException();
+
+        public ICommand WheaponMaster => throw new NotImplementedException();
+
+        public ICommand MagicLevitation => throw new NotImplementedException();
+
+        public ICommand MagicBlast => throw new NotImplementedException();
+
+        public ICommand ShockWave => throw new NotImplementedException();
+
+        public ICommand Aquatic => throw new NotImplementedException();
+
+        public ICommand Command => throw new NotImplementedException();
+
+        public ICommand MagicHealing => throw new NotImplementedException();
+
+        public ICommand Bound => throw new NotImplementedException();
+
+        public ICommand Stealth => throw new NotImplementedException();
+
+        public ICommand Necromancy => throw new NotImplementedException();
+
+        public ICommand Capture => throw new NotImplementedException();
     }
 }

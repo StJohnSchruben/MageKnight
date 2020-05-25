@@ -52,11 +52,12 @@
                         <Label Content="ClickIndex: " HorizontalAlignment="Left"  />
                         <Label Content="{Binding Dial.ClickIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, Mode=TwoWay}" HorizontalAlignment="Right"  />
                         <Button Content="Click Down" Command="{Binding ClickUp}" />
-                        <Button Content="Click Up" Command="{Binding ClickDoun}"/>
+                        <Button Content="Click Up" Command="{Binding ClickDown}"/>
                     </StackPanel>
 
                     <Button Content="Move" />
                     <Button Content="Attack" />
+                            </DataTemplate>
                 </StackPanel>
                 
             </Grid>

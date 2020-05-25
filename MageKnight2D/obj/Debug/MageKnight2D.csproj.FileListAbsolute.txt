@@ -74,8 +74,6 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
-C:\MageKnightDatabase\App\MageKnightData.mdf
-C:\MageKnightDatabase\App\MageKnightData_log.ldf
 C:\MageKnightDatabase\App\MageKnight2D.exe.config
 C:\MageKnightDatabase\App\MageKnight2D.exe
 C:\MageKnightDatabase\App\MageKnight2D.pdb
@@ -92,3 +90,5 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
+C:\MageKnightDatabase\App\MageKnightData.mdf
+C:\MageKnightDatabase\App\MageKnightData_log.ldf

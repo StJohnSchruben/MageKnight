@@ -14,6 +14,7 @@
             <local:HighStatToPointStartToDouble x:Key="HighStatToPointStartToDouble" />
             <local:HightStatToPointEndConverter x:Key="HightStatToPointEndConverter" />
             <local:HighStatCenterOffsetToDouble x:Key="HighStatCenterOffsetToDouble" />
+            <local:AbilityToVisibility x:Key="AbilityToVisibility" />
             <ImageBrush ImageSource="../MageKnightGenerator.jpg" x:Key="background" />
             <DataTemplate DataType="{x:Type m:IClick}">
                 <local:Click />
