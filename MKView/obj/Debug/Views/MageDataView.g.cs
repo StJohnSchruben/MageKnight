@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\Views\MageDataView.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "E118E0C2526254889F4CB573D9A85CA6CBCB9C43255C59B1A3148568FCFC8743"
+=======
+﻿#pragma checksum "..\..\..\Views\MageDataView.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "536D761E73F2AB319A57CE49B9DDD3D9F7F1AFB3"
+>>>>>>> parent of 1d516d8... h
 =======
 ﻿#pragma checksum "..\..\..\Views\MageDataView.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "536D761E73F2AB319A57CE49B9DDD3D9F7F1AFB3"
 >>>>>>> parent of 1d516d8... h
