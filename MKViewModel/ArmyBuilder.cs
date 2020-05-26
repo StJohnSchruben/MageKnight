@@ -22,9 +22,10 @@ namespace MKViewModel
 
         public ArmyBuilder(IUser user)
         {
+
             this.User = user;
             this.SelectedArmy = this.User.SelectedArmy;
-            foreach(var m in user.MageKnights)
+            foreach (var m in user.MageKnights)
             {
                 if (m.Rank == "Unique")
                 {

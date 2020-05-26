@@ -45,76 +45,88 @@ namespace MKViewModel
 
         private void EnterClicked()
         {
+           
            this.MageKnights = MageDB.GetMageKnights();
         }
 
-        private void FillDataBase()
+        public void FillDataBase()
         {
-            //    MageDB.ResetDB();
-            // this.FillMageKnights();
-            //ProcessDirectory("C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionDialsFormattedData");
+            MageDB.ResetDB();
+            this.FillMageKnights();
+            try
+            {
+                ProcessDirectory("C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionDialsFormattedData");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+            this.EnterClicked();
         }
 
         private void FillMageKnights()
         {
-            //string path = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionText.txt";
-            //string imagePath = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionImages\\";
-            //string[] lines = System.IO.File.ReadAllLines(path);
+            string path = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionText.txt";
+            string imagePath = "C:\\MageKnightDatabase\\MKData\\Rebellion\\RebellionImages\\";
+            string[] lines = System.IO.File.ReadAllLines(path);
 
-            //foreach (string line in lines)
-            //{
-            //    MageData mage = new MageData();
-            //    mage.Id = Guid.NewGuid();
-            //    mage.Set = "Rebellion";
-            //    if (line.StartsWith("/"))
-            //    {
-            //        continue;
-            //    }
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("/"))
+                {
+                    continue;
+                }
 
-            //    var data = line.Split('|');
-            //    int i = 0;
-            //    foreach (var l in data)
-            //    {
-            //        i++;
-            //        switch (i)
-            //        {
-            //            case 1:
-            //                mage.Name = l.TrimEnd().TrimStart();
-            //                break;
-            //            case 2:
-            //                mage.PriceValue = l.TrimEnd().TrimStart();
-            //                break;
-            //            case 3:
-            //                mage.Rank = l.TrimEnd().TrimStart();
-            //                break;
-            //            case 4:
-            //                mage.PointValue = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //            case 5:
-            //                mage.Index = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //            case 6:
-            //                mage.Rarity = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //            case 7:
-            //                mage.Faction = l.TrimEnd().TrimStart();
-            //                break;
-            //            case 8:
-            //                mage.Range = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //            case 9:
-            //                mage.FrontArc = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //            case 10:
-            //                mage.Targets = Int32.Parse(l.TrimEnd().TrimStart());
-            //                break;
-            //        }
+                MageData mage = new MageData();
+                mage.Id = Guid.NewGuid();
+                mage.Set = "Rebellion";
+                
 
-            //     //   mage.ModelImage = imagePath + mage.Name + ".jpg";
-            //    }
+                var data = line.Split('|');
+                int i = 0;
+                foreach (var l in data)
+                {
+                    i++;
+                    switch (i)
+                    {
+                        case 1:
+                            mage.Name = l.TrimEnd().TrimStart();
+                            break;
+                        case 2:
+                            mage.PriceValue = l.TrimEnd().TrimStart();
+                            break;
+                        case 3:
+                            mage.Rank = l.TrimEnd().TrimStart();
+                            break;
+                        case 4:
+                            mage.PointValue = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                        case 5:
+                            mage.Index = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                        case 6:
+                            mage.Rarity = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                        case 7:
+                            mage.Faction = l.TrimEnd().TrimStart();
+                            break;
+                        case 8:
+                            mage.Range = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                        case 9:
+                            mage.FrontArc = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                        case 10:
+                            mage.Targets = Int32.Parse(l.TrimEnd().TrimStart());
+                            break;
+                    }
 
-            //    MageDB.GenerateMageKnight(mage);
-            //}
+                     mage.ModelImage = File.ReadAllBytes(imagePath + mage.Name + ".jpg");
+                }
+
+                MageDB.GenerateMageKnight(mage);
+            }
         }
 
         public static void ProcessDirectory(string targetDirectory)
@@ -157,40 +169,29 @@ namespace MKViewModel
                             //click number
                             break;
                         case 2:
-                            //speed
-                            speedStat.StatType = StatType.Speed;
-                            if (c == "----")
-                            {
-                                ;
-                            }
-                            speedStat.Value = Int32.Parse(c);
-                            break;
-                        case 3:
-                            //speed special ability
-                            if (c != "----")
-                                speedStat.Ability = c.TrimEnd();
-                            break;
-                        case 4:
                             //attack
                             attackStat.StatType = StatType.Attack;
-                            if (c == "----")
-                            {
-                                ;
-                            }
                             attackStat.Value = Int32.Parse(c);
                             break;
-                        case 5:
+                        case 3:
                             //attack special ability
                             if (c != "----")
                                 attackStat.Ability = c.TrimEnd();
                             break;
+                        case 4:
+                            //speed
+                            speedStat.StatType = StatType.Speed;
+                            speedStat.Value = Int32.Parse(c);
+                            break;
+                        case 5:
+                            //speed special ability
+                            if (c != "----")
+                                speedStat.Ability = c.TrimEnd();
+
+                            break;
                         case 6:
                             //defence
                             defenseStat.StatType = StatType.Defense;
-                            if (c == "----")
-                            {
-                                ;
-                            }
                             defenseStat.Value = Int32.Parse(c);
                             break;
                         case 7:
@@ -201,10 +202,6 @@ namespace MKViewModel
                         case 8:
                             //damage
                             damageStat.StatType = StatType.Damage;
-                            if (c == "----")
-                            {
-                                ;
-                            }
                             damageStat.Value = Int32.Parse(c);
                             break;
                         case 9:

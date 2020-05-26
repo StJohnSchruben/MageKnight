@@ -31,7 +31,7 @@ namespace MKViewModel
         public UserViewModel(IUser model)
         {
             this.model = model;
-            foreach(var mage in this.ActiveArmy)
+            foreach (var mage in this.ActiveArmy)
             {
                 mage.PropertyChanged += Mage_PropertyChanged;
             }

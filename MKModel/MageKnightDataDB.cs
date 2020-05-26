@@ -13,7 +13,8 @@ namespace MKModel
         {
             // If necessary, change the following connection string
             // so it works for your system
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MageKnightData.mdf;Integrated Security=True";
+         //  string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MageKnightData.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\johns\\OneDrive\\Documents\\GitHub\\MageKnight\\MKModel\\MageKnightData.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection connection =
             new SqlConnection(connectionString);
             return connection;

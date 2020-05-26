@@ -67,8 +67,18 @@
     <Compile Include="IMainMenu.cs" />
     <Compile Include="MageKnightBase.cs" />
     <Compile Include="MageKnightBattleViewModel.cs" />
+    <Compile Include="MageKnightDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MageKnightDataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MageKnightGenerator.cs" />
     <Compile Include="MainMenu.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Provider.cs" />
     <Compile Include="NewGame.cs" />
     <Compile Include="Player.cs" />
@@ -78,8 +88,24 @@
     <Compile Include="UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="MageKnightDataDataSet.xsc">
+      <DependentUpon>MageKnightDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MageKnightDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MageKnightDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MageKnightDataDataSet.xss">
+      <DependentUpon>MageKnightDataDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MKModel\MKModel.csproj">

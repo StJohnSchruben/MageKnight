@@ -27,7 +27,21 @@ namespace MKView.Views
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return ((string)value != string.Empty) ? Visibility.Visible : Visibility.Collapsed;
+            string v = value as string;
+            return (v != string.Empty &&
+                v != "Toughness" &&
+                v != "Magic Enhancement" &&
+                v != "Magic Immunity" &&
+                v != "Berserk" &&
+                v != "Defend" &&
+                v != "Aquatic" &&
+                v != "Demoralized" &&
+                v != "Regeneration" &&
+                v != "Vampirism" &&
+                v != "Invulnerability" &&
+                v != "Pole Arm" &&
+                v != "Battle Armor" &&
+                v != "Battle Fury") ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

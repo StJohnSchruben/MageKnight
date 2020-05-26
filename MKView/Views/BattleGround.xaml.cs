@@ -30,7 +30,7 @@ namespace MKView.Views
         private void BattleGround_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             var user = this.DataContext as IUser;
-            foreach(var m in user.ActiveArmy)
+            foreach (var m in user.ActiveArmy)
             {
                 m.PropertyChanged += M_PropertyChanged;
             }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,10 +57,6 @@ namespace MKModel
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
             insertCommand.Parameters.AddWithValue(
                 "@Id", data.Id);
-            if (data.Index == 41)
-            {
-                ;
-            }
 
             insertCommand.Parameters.AddWithValue(
                 "@Index", data.Index);
@@ -86,8 +83,8 @@ namespace MKModel
             //Byte[] bindata = new byte[Convert.ToInt32(fs.Length)];
             //fs.Read(bindata, 0, Convert.ToInt32(fs.Length));
 
-            //insertCommand.Parameters.AddWithValue(
-            //    "@ModelImage", bindata);
+            insertCommand.Parameters.AddWithValue(
+                "@ModelImage", data.ModelImage);
             insertCommand.Parameters.AddWithValue(
                 "@PriceValue", data.PriceValue);
 
@@ -101,7 +98,7 @@ namespace MKModel
                 }
                 else
                 {
-                    return GetMageKnight(data.Name);
+                    return GetMageKnight(data.Id);
                 }
             }
             catch (SqlException ex)
@@ -113,6 +110,156 @@ namespace MKModel
             {
                 connection.Close();
             }
+        }
+
+        public static void update()
+        {
+            SqlConnection connection = MageKnightDataDB.GetConnection();
+            string selectStatement1
+                   = "SELECT Speed, Attack, Defense, Damage, Id "
+                   + "FROM ClickValues ";
+            SqlCommand selectCommand1 = new SqlCommand(selectStatement1, connection);
+            string selectStatement2
+                 = "SELECT Speed, Attack, Defense, Damage, Id "
+                 + "FROM ClickValues ";
+            SqlCommand selectCommand2= new SqlCommand(selectStatement2, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = selectCommand1.ExecuteReader();
+
+
+                List<int> speeds = new List<int>();
+                List<int> attacks = new List<int>();
+                List<Guid> guids = new List<Guid>();
+                while (reader.Read())
+                {
+                    speeds.Add(Int32.Parse(reader["Speed"].ToString()));
+                    attacks.Add(Int32.Parse(reader["Speed"].ToString()));
+                    guids.Add(Guid.Parse(reader["Id"].ToString()));
+                }
+
+                connection.Close();
+
+                foreach (Guid g in guids)
+                {
+                    foreach (int s in speeds)
+                    {
+                        foreach (int a in attacks)
+                        {
+                            UpdateClickValues(a, s, g);
+
+                            break;
+                        }
+
+                        break;
+                    }
+                }
+
+                connection.Open();
+                SqlDataReader reader2 = selectCommand2.ExecuteReader();
+                List<string> speedAbilities = new List<string>();
+                List<string> attackAbilities = new List<string>();
+                while (reader2.Read())
+                {
+
+                    speedAbilities.Add(reader2["Speed"].ToString());
+                    attackAbilities.Add(reader2["Attack"].ToString());
+                }
+
+                connection.Close();
+                foreach (Guid g in guids)
+                {
+                    foreach (string s in speedAbilities)
+                    {
+                        foreach (string a in attackAbilities)
+                        {
+
+                            UpdateClickAbilities(a, s, g);
+                            break;
+                        }
+
+                        break;
+                    }
+                }
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"something is wrong GetMageKnight:{ex.ToString()}");
+            }
+        }
+
+        private static void UpdateClickValues(int speed, int attack, Guid id)
+        {
+            SqlConnection connection = MageKnightDataDB.GetConnection();
+            string updateStatement =
+                           "UPDATE ClickValues SET " +
+                           "Speed = @Speed, " +
+                           "Attack = @Attack " +
+                           "WHERE Id = @Id";
+
+            SqlCommand insertCommand = new SqlCommand(updateStatement, connection);
+            insertCommand.Parameters.AddWithValue(
+                "@Id", id);
+            insertCommand.Parameters.AddWithValue(
+                "@Speed", speed);
+            insertCommand.Parameters.AddWithValue(
+                "@Attack", attack);
+
+
+                try
+                {
+                    connection.Open();
+                    int count = insertCommand.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            
+        }
+        private static void UpdateClickAbilities(string speedAblity, string attackAbility, Guid id)
+        {
+            SqlConnection connection = MageKnightDataDB.GetConnection();
+
+            string updateStatement =
+                           "UPDATE ClickAbilities SET " +
+                           "Speed = @Speed, " +
+                           "Attack = @Attack " +
+                           "WHERE Id = @Id";
+
+            SqlCommand insertCommand = new SqlCommand(updateStatement, connection);
+            insertCommand.Parameters.AddWithValue(
+                "@Id", id);
+            insertCommand.Parameters.AddWithValue(
+                "@Speed", speedAblity);
+            insertCommand.Parameters.AddWithValue(
+                "@Attack", attackAbility);
+
+            try
+            {
+                connection.Open();
+                int count = insertCommand.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
         }
 
         public static List<IMageKnightModel> GetMageKnights()
@@ -240,15 +387,15 @@ namespace MKModel
             return null;
         }
 
-        public static MageKnight GetMageKnight(string Name)
+        public static MageKnight GetMageKnight(Guid Id)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
             string selectStatement
                 = "SELECT Id, [Index], [Set], Name, PointValue, Faction, FrontArc, Targets, Range, Rank, Rarity "
                 + "FROM AllMageKnights "
-                + "WHERE Name = @Name";
+                + "WHERE Id = @Id";
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
-            selectCommand.Parameters.AddWithValue("@Name", Name);
+            selectCommand.Parameters.AddWithValue("@Id", Id);
 
             try
             {
@@ -266,6 +413,7 @@ namespace MKModel
                     data.FrontArc = Int32.Parse(reader["FrontArc"].ToString());
                     data.Targets = Int32.Parse(reader["Targets"].ToString());
                     data.Rank = reader["Rank"].ToString();
+                    data.Id = Guid.Parse(reader["Id"].ToString());
                 }
 
                 connection.Close();
@@ -293,10 +441,7 @@ namespace MKModel
                 + "WHERE [Index] = @number";
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
             selectCommand.Parameters.AddWithValue("@number", number);
-            if (number == 41)
-            {
-                ;
-            }
+
             try
             {
                 connection.Open();

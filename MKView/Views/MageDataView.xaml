@@ -29,26 +29,42 @@
                     <RowDefinition Height="37*"/>
                 </Grid.RowDefinitions>
 
-                    <Viewbox Stretch="None" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top"> 
+                <Viewbox Stretch="None" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top">
                     <ItemsControl ItemsSource="{Binding Dial.Clicks}" Background="Red">
-                            <ItemsControl.ItemsPanel >
-                                <ItemsPanelTemplate>
-                                    <StackPanel />
-                                </ItemsPanelTemplate>
-                            </ItemsControl.ItemsPanel>
-                            <ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel >
+                            <ItemsPanelTemplate>
+                                <StackPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <Viewbox Height="40">
                                     <local:Click />
                                 </Viewbox>
                             </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </Viewbox>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Viewbox>
 
                 <Image  Source="{Binding ModelImage}"  VerticalAlignment="Top" Grid.Column="2"  HorizontalAlignment="Left"/>
                 <StackPanel Grid.Row="2" Grid.Column="3" >
                     <Label Content="{Binding Name}" Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Targets: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
+                        <Label Content="{Binding Targets}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Point Value: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
+                        <Label Content="{Binding PointValue}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Faction: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
+                        <Label Content="{Binding Faction}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Rank: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
+                        <Label Content="{Binding Rank}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="ClickIndex: " HorizontalAlignment="Left"  />
                         <Label Content="{Binding Dial.ClickIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, Mode=TwoWay}" HorizontalAlignment="Right"  />
@@ -56,17 +72,29 @@
                         <Button Content="Click Up" Command="{Binding ClickDown}"/>
                     </StackPanel>
 
-                    <Button Content="Move" />
-                    <Button Content="Attack" />
+                    <Button Content="Move" Command="{Binding Move}"/>
+                    <Button Content="Attack" Command="{Binding Attack}"/>
+                    <Button Content="Capture" Command="{Binding Capture}"/>
                     <ListBox ItemsSource="{Binding Dial.Click.Stats}">
+                        <ListBox.Style>
+                            <Style TargetType="ListBox">
+                                <Setter Property="ItemsPanel">
+                                    <Setter.Value>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.Style>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Button Content="{Binding Path=Ability}" Visibility="{Binding Path=Ability, Converter={StaticResource AbilityToVisibility}}" Click="Button_Click" />
+                                <Label Content="{Binding Path=Ability}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="{Binding Path=Ability, Converter={StaticResource AbilityToVisibility}}" MouseDown="Button_Click" />
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
-                
+
             </Grid>
 
         </Grid>
