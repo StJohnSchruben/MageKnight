@@ -1,0 +1,113 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MageKnightData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MageKnightData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKUserData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKUserData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKService.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKService.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\CommonServiceLocator.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\System.Windows.Interactivity.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\MKModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.Contract.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\Service.Contract.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\obj\Debug\MKService.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\obj\Debug\MKService.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\obj\Debug\MKService.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\obj\Debug\MKService.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKService\obj\Debug\MKService.pdb
+D:\MageKnight\MKService\bin\Debug\MageKnightData.mdf
+D:\MageKnight\MKService\bin\Debug\MageKnightData_log.ldf
+D:\MageKnight\MKService\bin\Debug\MKUserData.mdf
+D:\MageKnight\MKService\bin\Debug\MKUserData_log.ldf
+D:\MageKnight\MKService\bin\Debug\MKService.dll
+D:\MageKnight\MKService\bin\Debug\MKService.pdb
+D:\MageKnight\MKService\bin\Debug\CommonServiceLocator.dll
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.dll
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\MageKnight\MKService\bin\Debug\log4net.dll
+D:\MageKnight\MKService\bin\Debug\MKModel.dll
+D:\MageKnight\MKService\bin\Debug\Service.Contract.dll
+D:\MageKnight\MKService\bin\Debug\Service.dll
+D:\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\MageKnight\MKService\bin\Debug\System.Windows.Interactivity.dll
+D:\MageKnight\MKService\bin\Debug\MKModel.pdb
+D:\MageKnight\MKService\bin\Debug\MKModel.dll.config
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.xml
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+D:\MageKnight\MKService\bin\Debug\log4net.xml
+D:\MageKnight\MKService\bin\Debug\Service.pdb
+D:\MageKnight\MKService\bin\Debug\Service.xml
+D:\MageKnight\MKService\bin\Debug\Service.Contract.pdb
+D:\MageKnight\MKService\bin\Debug\Service.Contract.xml
+D:\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\MageKnight\MKService\obj\Debug\MKService.csprojAssemblyReference.cache
+D:\MageKnight\MKService\obj\Debug\MKService.csproj.CoreCompileInputs.cache
+D:\MageKnight\MKService\obj\Debug\MKService.csproj.CopyComplete
+D:\MageKnight\MKService\obj\Debug\MKService.dll
+D:\MageKnight\MKService\obj\Debug\MKService.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\MKService.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\MKService.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\CommonServiceLocator.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\log4net.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\ReDefNet.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\log4net.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\ReDefNet.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\Service.Contract.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\obj\Debug\MKService.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\obj\Debug\MKService.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\obj\Debug\MKService.csproj.CopyComplete
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\obj\Debug\MKService.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKService\obj\Debug\MKService.pdb

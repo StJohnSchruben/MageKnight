@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MKModel</RootNamespace>
     <AssemblyName>MKModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -27,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,6 +63,9 @@
       <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
+    <Reference Include="ReDefNet">
+      <HintPath>..\ReDefNet\bin\Release\ReDefNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -75,16 +79,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Click.cs" />
-    <Compile Include="Dial.cs" />
+    <Compile Include="BoosterPack.cs" />
+    <Compile Include="DialData.cs" />
+    <Compile Include="IGameModel.cs" />
     <Compile Include="IClick.cs" />
     <Compile Include="IDial.cs" />
+    <Compile Include="IGameModels.cs" />
     <Compile Include="IStat.cs" />
+    <Compile Include="IUserCollection.cs" />
     <Compile Include="MageData.cs" />
     <Compile Include="IMageKnightModel.cs" />
+    <Compile Include="MKUserDataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MKUserDataDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Rank.cs" />
     <Compile Include="IStats.cs" />
-    <Compile Include="MageKnight.cs" />
+    <Compile Include="MageKnightData.cs" />
     <Compile Include="MageKnightDataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,10 +110,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Stat.cs" />
     <Compile Include="StatType.cs" />
     <Compile Include="TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserData.cs" />
+    <Compile Include="UserDataDB.cs" />
+    <Compile Include="UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -116,6 +130,17 @@
     </None>
     <None Include="MageKnightDataDataSet.xss">
       <DependentUpon>MageKnightDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MKUserDataDataSet1.xsc">
+      <DependentUpon>MKUserDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MKUserDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MKUserDataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MKUserDataDataSet1.xss">
+      <DependentUpon>MKUserDataDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -136,12 +161,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MageKnightData.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="MageKnightData.mdf" />
     <Content Include="MageKnightData_log.ldf">
       <DependentUpon>MageKnightData.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MKUserData.mdf" />
+    <Content Include="MKUserData_log.ldf">
+      <DependentUpon>MKUserData.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

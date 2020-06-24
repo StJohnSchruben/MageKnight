@@ -1,11 +1,28 @@
-﻿C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\GeneratedInternalTypeHelper.g.cs
+﻿\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\GeneratedInternalTypeHelper.g.cs
 
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\MainView.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\ArmyBuilder.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\BattleGround.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\Dial.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\MageKnight.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\MageKnightGenerator.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\MainMenu.xaml;;
-FC:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\Views\UserControlFrame.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\DesignViews\BattleCanvas.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\DesignViews\designArc.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\DesignViews\designRangeSector10.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\DesignViews\designRangeSector4.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\DesignViews\designSpeedBoundry.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\MainView.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\ArcControl.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\ArmyBuilder.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\BattleGround.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\Click.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\Dashboard.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\Dial.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\DiceControl.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\LoginView.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\MageDataView.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\MageKnight.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\MageKnightBattleView.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\MageKnightGenerator.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\MainMenu.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\RangeSector.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\SharedResourceDictionary.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\SpeedBoundary.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\Stat.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\UserControlFrame.xaml;;
+F\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\Views\ZoomControl.xaml;;
 

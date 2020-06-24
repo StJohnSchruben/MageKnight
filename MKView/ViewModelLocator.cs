@@ -1,12 +1,11 @@
-﻿using MKModel;
+﻿using Microsoft.Practices.Unity;
+using MKModel;
 using MKViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Unity;
-
 namespace MKView
 {
     public class ViewModelLocator
@@ -30,8 +29,9 @@ namespace MKView
         public IMageKnightGenerator MageKnightGenerator => this.container.Resolve<IMageKnightGenerator>();
         public IMageKnightGenerator MainMenu => this.container.Resolve<IMageKnightGenerator>();
         public IArmyBuilder ArmyBuilder => this.container.Resolve<IArmyBuilder>();
-        public IUser User => this.container.Resolve<IUser>();
+        public IUserViewModel UserViewModel => this.container.Resolve<IUserViewModel>();
         public IUserViewModel GameUser => this.container.Resolve<IUserViewModel>();
-
+        public ILoginViewModel LoginViewModel => this.container.Resolve<ILoginViewModel>();
+        public IGameViewModel GameViewModel => this.container.Resolve<IGameViewModel>();
     }
 }

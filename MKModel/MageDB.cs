@@ -1,4 +1,4 @@
-﻿using MKViewModel;
+﻿
 using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
@@ -22,6 +22,7 @@ namespace MKModel
             DeleteTable("ClickAbilities");
             DeleteTable("ClickValues");
         }
+
         public static void DeleteTable(string table)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
@@ -46,7 +47,7 @@ namespace MKModel
         }
 
 
-        public static MageKnight GenerateMageKnight(MageData data)
+        public static MageKnightData GenerateMageKnight(MageData data)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
             string insertStatement =
@@ -193,6 +194,103 @@ namespace MKModel
             }
         }
 
+        static Random rand = new Random();
+
+        static object syncLock = new object();
+
+        public static int RandomNumber(int min, int max)
+        {
+            lock (syncLock)
+            {
+                return rand.Next(min, max);
+            }
+        }
+
+        public static MageKnightData GetRandomMage(BoosterPack set)
+        {
+            int rarityFilter = RandomNumber(1, 1000);
+            int rarity = 1;
+            if (rarityFilter < 250) //  %25 chance of pulling rarity 1
+            {
+                rarity = 1;
+            }
+            else if (rarityFilter >= 250 && rarityFilter < 450) //  %20 chance of pulling rarity 2
+            {
+                rarity = 2;
+            }
+            else if (rarityFilter >= 450 && rarityFilter < 620) // %17
+            {
+                rarity = 3;
+            }
+            else if (rarityFilter >= 620 && rarityFilter < 760)// %14
+            {
+                rarity = 4;
+            }
+            else if (rarityFilter >= 760 && rarityFilter < 890)//  %13
+            {
+                rarity = 5;
+            }
+            else if (rarityFilter >= 500 && rarityFilter < 980)//  %9
+            {
+                rarity = 6;
+            }
+            else if (rarityFilter >= 980 && rarityFilter <= 1000)//  %2
+            {
+                rarity = 7 ;
+            }
+
+            SqlConnection connection = MageKnightDataDB.GetConnection();
+            string selectStatement
+                = "SELECT Id, [Index], [Set], Name, PointValue, Faction, FrontArc, Targets, Range, Rank, Rarity, ModelImage "
+                + "FROM AllMageKnights "
+                + "WHERE Rarity = @Rarity";
+
+            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+
+            selectCommand.Parameters.AddWithValue(
+                "@Rarity", rarity);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = selectCommand.ExecuteReader();
+
+                List<MageData> mages = new List<MageData>();
+                while (reader.Read())
+                {
+                    MageData data = new MageData();
+                    data.Id = Guid.Parse(reader["Id"].ToString());
+                    data.Index = Int32.Parse(reader["Index"].ToString());
+                    data.Name = reader["Name"].ToString();
+                    data.Faction = reader["Faction"].ToString();
+                    data.Set = reader["Set"].ToString();
+                    data.PointValue = Int32.Parse(reader["PointValue"].ToString());
+                    data.Range = Int32.Parse(reader["Range"].ToString());
+                    data.FrontArc = Int32.Parse(reader["FrontArc"].ToString());
+                    data.Targets = Int32.Parse(reader["Targets"].ToString());
+                    data.Rank = reader["Rank"].ToString();
+                    data.Faction = reader["Faction"].ToString();
+                    data.ModelImage = reader["ModelImage"] as byte[];
+                    data.Dial = GetDialStats(data);
+                    mages.Add(data);
+                }
+
+                int randomlySelectedIndex = RandomNumber(0, mages.Count - 1);
+
+                connection.Close();
+
+                MageKnightData mage = new MageKnightData(mages.ElementAt(randomlySelectedIndex));
+                return mage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"something is wrong GetMageKnight:{ex.ToString()}");
+            }
+
+            return null;
+        }
+
         private static void UpdateClickValues(int speed, int attack, Guid id)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
@@ -225,8 +323,8 @@ namespace MKModel
                 {
                     connection.Close();
                 }
-            
         }
+
         private static void UpdateClickAbilities(string speedAblity, string attackAbility, Guid id)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
@@ -262,9 +360,9 @@ namespace MKModel
 
         }
 
-        public static List<IMageKnightModel> GetMageKnights()
+        public static List<MageKnightData> GetMageKnights()
         {
-            List<IMageKnightModel> mageKnights = new List<IMageKnightModel>();
+            List<MageKnightData> mageKnights = new List<MageKnightData>();
 
               SqlConnection connection = MageKnightDataDB.GetConnection();
             string selectStatement
@@ -295,7 +393,7 @@ namespace MKModel
                     data.Faction = reader["Faction"].ToString();
                     data.ModelImage = reader["ModelImage"] as byte[];
                     data.Dial = GetDialStats(data);
-                    IMageKnightModel mage = new MageKnight(data);
+                    MageKnightData mage = new MageKnightData(data);
                     mageKnights.Add(mage);
                 }
 
@@ -313,7 +411,7 @@ namespace MKModel
             return null;
         }
 
-        private static IDial GetDialStats(MageData data)
+        private static DialData GetDialStats(MageData data)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
             string selectStatement
@@ -322,24 +420,24 @@ namespace MKModel
                 + "WHERE Id = @Id";
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
             selectCommand.Parameters.AddWithValue("@Id", data.Id);
-            IDial dial = new Dial(data);
+            DialData dial = new DialData(data);
             try
             {
                 connection.Open();
                 SqlDataReader reader = selectCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    IStat speed = new Stat(StatType.Speed);
-                    IStat attack = new Stat(StatType.Attack);
-                    IStat defense = new Stat(StatType.Defense);
-                    IStat damage = new Stat(StatType.Damage);
+                    StatData speed = new StatData(StatType.Speed);
+                    StatData attack = new StatData(StatType.Attack);
+                    StatData defense = new StatData(StatType.Defense);
+                    StatData damage = new StatData(StatType.Damage);
 
                     speed.Value = Int32.Parse(reader["Speed"].ToString());
                     attack.Value = Int32.Parse(reader["Attack"].ToString());
                     defense.Value = Int32.Parse(reader["Defense"].ToString());
                     damage.Value = Int32.Parse(reader["Damage"].ToString());
                     int index = Int32.Parse(reader["Index"].ToString());
-                    IClick click = new Click(speed, attack, defense, damage, index);
+                    ClickData click = new ClickData(speed, attack, defense, damage, index);
                     dial.Clicks.Add(click);
                 }
                 
@@ -354,7 +452,7 @@ namespace MKModel
             return null;
         }
 
-        private static IDial FillDialSpecialAbilities(IDial dial, Guid id)
+        private static DialData FillDialSpecialAbilities(DialData dial, Guid id)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
             string selectStatement
@@ -370,7 +468,7 @@ namespace MKModel
                 while (reader.Read())
                 {
                     int index = Int32.Parse(reader["Index"].ToString());
-                    IClick click = dial.Clicks.First(x => x.Index == index);
+                    ClickData click = dial.Clicks.First(x => x.Index == index);
                     click.Speed.Ability = reader["Speed"].ToString();
                     click.Attack.Ability = reader["Attack"].ToString();
                     click.Defense.Ability = reader["Defense"].ToString();
@@ -387,15 +485,66 @@ namespace MKModel
             return null;
         }
 
-        public static MageKnight GetMageKnight(Guid Id)
+        public static MageKnightData GetMageKnight(int index)
         {
             SqlConnection connection = MageKnightDataDB.GetConnection();
-            string selectStatement
-                = "SELECT Id, [Index], [Set], Name, PointValue, Faction, FrontArc, Targets, Range, Rank, Rarity "
+            string selectStatment
+               = "SELECT Id, [Index], [Set], Name, PointValue, Faction, FrontArc, Targets, Range, Rank, Rarity, ModelImage "
+                + "FROM AllMageKnights "
+                + "WHERE [Index] = @Index";
+            SqlCommand selectCommand = new SqlCommand(selectStatment, connection);
+            selectCommand.Parameters.AddWithValue("@Index", index);
+
+            try
+            {
+                connection.Open();
+                MageData data = new MageData();
+                MageKnightData mage = null;
+                SqlDataReader reader = selectCommand.ExecuteReader(System.Data.CommandBehavior.SingleRow);
+                if (reader.Read())
+                {
+                    data.Id = Guid.Parse(reader["Id"].ToString());
+                    data.Index = Int32.Parse(reader["Index"].ToString());
+                    data.Name = reader["Name"].ToString();
+                    data.Faction = reader["Faction"].ToString();
+                    data.Set = reader["Set"].ToString();
+                    data.PointValue = Int32.Parse(reader["PointValue"].ToString());
+                    data.Range = Int32.Parse(reader["Range"].ToString());
+                    data.FrontArc = Int32.Parse(reader["FrontArc"].ToString());
+                    data.Targets = Int32.Parse(reader["Targets"].ToString());
+                    data.Rank = reader["Rank"].ToString();
+                    data.Faction = reader["Faction"].ToString();
+                    data.ModelImage = reader["ModelImage"] as byte[];
+                    data.Dial = GetDialStats(data);
+                    mage = new MageKnightData(data);
+                }
+
+                connection.Close();
+
+                return mage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"something is wrong GetMageKnight:{ex.ToString()}");
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return null;
+        }
+
+        public static MageKnightData GetMageKnight(Guid id)
+        {
+            SqlConnection connection = MageKnightDataDB.GetConnection();
+            string selectStatment
+               = "SELECT Id, [Index], [Set], Name, PointValue, Faction, FrontArc, Targets, Range, Rank, Rarity, ModelImage "
                 + "FROM AllMageKnights "
                 + "WHERE Id = @Id";
-            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
-            selectCommand.Parameters.AddWithValue("@Id", Id);
+            SqlCommand selectCommand = new SqlCommand(selectStatment, connection);
+
+            selectCommand.Parameters.AddWithValue("@Id", id);
 
             try
             {
@@ -404,8 +553,9 @@ namespace MKModel
                 SqlDataReader reader = selectCommand.ExecuteReader(System.Data.CommandBehavior.SingleRow);
                 if (reader.Read())
                 {
+                    data.Id = Guid.Parse(reader["Id"].ToString());
                     data.Index = Int32.Parse(reader["Index"].ToString());
-                    data.Name= reader["Name"].ToString();
+                    data.Name = reader["Name"].ToString();
                     data.Faction = reader["Faction"].ToString();
                     data.Set = reader["Set"].ToString();
                     data.PointValue = Int32.Parse(reader["PointValue"].ToString());
@@ -413,12 +563,14 @@ namespace MKModel
                     data.FrontArc = Int32.Parse(reader["FrontArc"].ToString());
                     data.Targets = Int32.Parse(reader["Targets"].ToString());
                     data.Rank = reader["Rank"].ToString();
-                    data.Id = Guid.Parse(reader["Id"].ToString());
+                    data.Faction = reader["Faction"].ToString();
+                    data.ModelImage = reader["ModelImage"] as byte[];
+                    data.Dial = GetDialStats(data);
                 }
 
                 connection.Close();
 
-                return new MageKnight(data);
+                return new MageKnightData(data);
             }
             catch (Exception ex)
             {

@@ -154,8 +154,105 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.g.cs
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.baml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MageKnightData_log.ldf
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.g.cs
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.baml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
+C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MageKnightData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MageKnightData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKUserData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKUserData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKView.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKView.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKView.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\CommonServiceLocator.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKViewModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\System.Windows.Interactivity.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\Unity.Abstractions.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\Unity.Container.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\ZoomAndPan.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKViewModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\MKViewModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\Unity.Abstractions.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\Unity.Container.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\ZoomAndPan.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\bin\Debug\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\BattleCanvas.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designArc.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MainView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ArcControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\BattleGround.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Click.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Dashboard.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Dial.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\LoginView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageDataView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnight.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnightGenerator.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MainMenu.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\RangeSector.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\SharedResourceDictionary.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\SpeedBoundary.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Stat.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\UserControlFrame.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ZoomControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView_MarkupCompile.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView_MarkupCompile.lref
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\BattleCanvas.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designArc.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MainView.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ArcControl.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\BattleGround.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Click.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Dashboard.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Dial.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\LoginView.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageDataView.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnight.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MageKnightGenerator.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\MainMenu.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\RangeSector.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\SharedResourceDictionary.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\SpeedBoundary.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\Stat.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\UserControlFrame.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\Views\ZoomControl.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.g.resources
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Debug\MKView.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.dll.config
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKView.pdb
@@ -163,39 +260,53 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\CommonServi
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Microsoft.Practices.Unity.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKService.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Abstractions.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Container.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\ZoomAndPan.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\log4net.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Abstractions.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKModel.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKService.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKViewModel.dll.config
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Abstractions.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Container.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\ZoomAndPan.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.Contract.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Service.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\log4net.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\Unity.Abstractions.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csprojAssemblyReference.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\BattleCanvas.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designArc.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\BattleGround.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Click.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dial.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\LoginView.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnight.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.g.cs
@@ -205,7 +316,6 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Range
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\SharedResourceDictionary.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\SpeedBoundary.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Stat.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\UserControlFrame.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView_MarkupCompile.cache
@@ -215,13 +325,14 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector10.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designRangeSector4.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\DesignViews\designSpeedBoundry.baml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MainView.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArcControl.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ArmyBuilder.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\BattleGround.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Click.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dial.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\LoginView.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageDataView.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnight.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\MageKnightBattleView.baml
@@ -231,19 +342,9 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Range
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\SharedResourceDictionary.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\SpeedBoundary.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Stat.baml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\UserControlFrame.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.baml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.g.resources
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csproj.CoreCompileInputs.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\MKView.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.g.cs
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.g.cs
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.g.cs
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\Dashboard.baml
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\DiceControl.baml
-C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Debug\Views\ZoomControl.baml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\bin\Debug\MKViewModel.dll.config

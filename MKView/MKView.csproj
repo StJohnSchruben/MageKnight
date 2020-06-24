@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MKView</RootNamespace>
     <AssemblyName>MKView</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <PublishUrl>publish\</PublishUrl>
@@ -59,8 +59,12 @@
     <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="ReDefNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -76,11 +80,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Unity.Abstractions, Version=5.11.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.11.6\lib\net45\Unity.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Container, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.11.6\lib\net45\Unity.Container.dll</HintPath>
+    <Reference Include="Unity.Container">
+      <HintPath>..\packages\Unity.5.11.6\lib\net47\Unity.Container.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="ZoomAndPan">
@@ -110,10 +111,12 @@
     <Compile Include="Views\DiceControl.xaml.cs">
       <DependentUpon>DiceControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MageDataView.xaml.cs">
       <DependentUpon>MageDataView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ScaleToPercentConverter.cs" />
     <Compile Include="Views\AbilityToColor.cs" />
     <Compile Include="Views\ArcControl.xaml.cs">
       <DependentUpon>ArcControl.xaml</DependentUpon>
@@ -121,9 +124,6 @@
     <Compile Include="Views\BattleCanvas.cs" />
     <Compile Include="Views\BoolToVisibility.cs" />
     <Compile Include="Views\DraggableExtender.cs" />
-    <Compile Include="MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -144,7 +144,6 @@
     <Compile Include="Views\Dial.xaml.cs">
       <DependentUpon>Dial.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\HalfDouble.cs" />
     <Compile Include="Views\MageKnight.xaml.cs">
       <DependentUpon>MageKnight.xaml</DependentUpon>
     </Compile>
@@ -160,7 +159,6 @@
     <Compile Include="Views\RangeSector.xaml.cs">
       <DependentUpon>RangeSector.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RangeToLeftLinePoint1.cs" />
     <Compile Include="Views\SharedResourceDictionary.xaml.cs">
       <DependentUpon>SharedResourceDictionary.xaml</DependentUpon>
     </Compile>
@@ -169,10 +167,6 @@
     </Compile>
     <Compile Include="Views\Stat.xaml.cs">
       <DependentUpon>Stat.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StatToDoubleReturnHighConverter.cs" />
-    <Compile Include="Views\UserControlFrame.xaml.cs">
-      <DependentUpon>UserControlFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ZoomControl.xaml.cs">
       <DependentUpon>ZoomControl.xaml</DependentUpon>
@@ -196,10 +190,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DesignViews\designSpeedBoundry.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,13 +221,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MageDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MageKnight.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MageKnightBattleView.xaml">
       <SubType>Designer</SubType>
@@ -267,10 +261,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UserControlFrame.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ZoomControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +271,10 @@
     <ProjectReference Include="..\MKModel\MKModel.csproj">
       <Project>{FA8FA3F3-E09F-4CA7-A12B-8CF5E3D1A2A1}</Project>
       <Name>MKModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKService\MKService.csproj">
+      <Project>{4646e9fc-62b8-43df-9d33-77bacd631892}</Project>
+      <Name>MKService</Name>
     </ProjectReference>
     <ProjectReference Include="..\MKViewModel\MKViewModel.csproj">
       <Project>{101f3574-3a27-47cb-a816-38563a765644}</Project>
@@ -296,7 +290,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Dungeon.jpg" />
+    <Resource Include="Views\Dungeon.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -314,7 +308,7 @@
     <Resource Include="MageKnightGenerator.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ArmyBuilder.jpg" />
+    <Resource Include="Views\ArmyBuilder.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

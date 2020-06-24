@@ -1,0 +1,11 @@
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Service.Contract.XML
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Service.Contract.dll
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Service.Contract.pdb
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\log4net.dll
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Lwi.Wst.Service.dll
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\log4net.xml
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Lwi.Wst.Service.pdb
+C:\projects\Reuse\Service.Contract\Service.Contract\bin\Release\Lwi.Wst.Service.xml
+C:\projects\Reuse\Service.Contract\Service.Contract\obj\Release\Service.Contract.csprojResolveAssemblyReference.cache
+C:\projects\Reuse\Service.Contract\Service.Contract\obj\Release\Service.Contract.dll
+C:\projects\Reuse\Service.Contract\Service.Contract\obj\Release\Service.Contract.pdb

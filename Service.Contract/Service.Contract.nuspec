@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Service.Contract</id>
+    <version>1.0.0</version>
+    <description>The service contract for the unified server host.</description>
+    <authors>$authors$</authors>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Runtime.Serialization"
+                         targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.ServiceModel"
+                         targetFramework="net40" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="log4net"
+                  version="2.0.8" />
+      <dependency id="Service"
+                  version="[2018,)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Service.Contract.dll"
+          target="lib\net45" />
+    <file src="bin\Release\Service.Contract.pdb"
+          target="lib\net45" />
+    <file src="bin\Release\Service.Contract.xml"
+          target="lib\net45" />
+  </files>
+</package>

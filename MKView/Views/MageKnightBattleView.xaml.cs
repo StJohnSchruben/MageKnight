@@ -22,27 +22,33 @@ namespace MKView.Views
     /// </summary>
     public partial class MageKnightBattleView : UserControl
     {
+        private Canvas canvas;
         public MageKnightBattleView()
         {
             InitializeComponent();
-            this.dial.MouseDown += Dial_MouseDown;
+            this.Loaded += MageKnightBattleView_Loaded;
         }
 
-        private void Dial_MouseDown(object sender, MouseButtonEventArgs e)
+        private void MageKnightBattleView_Loaded(object sender, RoutedEventArgs e)
         {
-            int index = (int)this.GetValue(Canvas.ZIndexProperty);
-            Canvas.SetZIndex(this, ++index);
+           this.canvas = this.FindAncestor<Canvas>();
+            IMageKnightBattleViewModel data = this.DataContext as IMageKnightBattleViewModel;
         }
 
-
-        private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        public Point GetPoint(Visual element)
         {
-            var dial = this.DataContext as IDial;
-            this.SetValue(Canvas.LeftProperty, 1800);
-            this.SetValue(Canvas.TopProperty, 200);
+            var positionTransform = element.TransformToAncestor(canvas);
+            var areaPosition = positionTransform.Transform(new Point(0, 0));
+            return areaPosition;
         }
 
         private void UserControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var data = this.DataContext as IMageKnightBattleViewModel;
+            data.IsSelected = !data.IsSelected;
+        }
+
+        private void UserControl_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             var data = this.DataContext as IMageKnightBattleViewModel;
             data.ToggleRangeView = !data.ToggleRangeView;

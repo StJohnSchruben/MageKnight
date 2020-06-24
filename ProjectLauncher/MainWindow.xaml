@@ -1,0 +1,205 @@
+﻿<Window x:Class="ProjectLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:wpf="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectLauncher"
+        mc:Ignorable="d"
+            Width="300"
+    Height="450"
+        Title="MainWindow" >
+    <Window.Resources>
+        <local:BoolToEnumConverter x:Key="BoolToEnumConverter" />
+    </Window.Resources>
+    <Window.DataContext>
+        <local:StartUpController />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15" />
+            <RowDefinition />
+            <RowDefinition Height="15" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="15" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0">
+                <GroupBox.Header>
+                    <Grid HorizontalAlignment="Stretch">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Text="MageKnight2D" />
+                    </Grid>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Row="2" Grid.ColumnSpan="2">
+                        <GroupBox.Header>
+                            <Grid HorizontalAlignment="Stretch">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="10"
+                                    FontWeight="Bold"
+                                    Text="GameService without Workstation" />
+                            </Grid>
+                        </GroupBox.Header>
+                        <Grid>
+                            <Button
+                                Name="TxpaButton"
+                                Grid.Column="1"
+                                Width="120"
+                                Height="25"
+                                Command="{Binding StartGameServiceDomainCommand}"
+                                Content="Open MageKnight2D"
+                                IsEnabled="{Binding IsGameServiceButtonEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="2">
+                <GroupBox.Header>
+                    <Grid HorizontalAlignment="Stretch">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="16"
+                            FontWeight="DemiBold"
+                            Text="Start up Service" />
+                    </Grid>
+                </GroupBox.Header>
+                <StackPanel Orientation="Vertical">
+                    <RadioButton
+                        x:Name="NoService"
+                        Margin="25,10,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Content="No service"
+                        GroupName="ServiceGroup"
+                        IsChecked="{Binding HostingServiceType, Converter={StaticResource BoolToEnumConverter}, ConverterParameter={x:Static local:MyServiceMode.NoService}}" />
+                    <RadioButton
+                        x:Name="HostService"
+                        Margin="25,10,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Content="Host Local service"
+                        GroupName="ServiceGroup"
+                        IsChecked="{Binding HostingServiceType, Converter={StaticResource BoolToEnumConverter}, ConverterParameter={x:Static local:MyServiceMode.Local}}"
+                        IsEnabled="{Binding StartServiceButtonEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <StackPanel Margin="50,5,0,0" Orientation="Horizontal">
+                        <Label Name="LocalIpTitle" Content="Host IP:" />
+                        <Label Name="LocalIpLabel" Content="{Binding ServiceSelector.LocalIP}" />
+                    </StackPanel>
+                    <StackPanel Margin="50,5,0,0" Orientation="Horizontal">
+                        <Label Name="serviceStatusLabel" Content="Service Status" />
+                        <Ellipse
+                            Name="serviceLed"
+                            Width="15"
+                            Height="15"
+                            Margin="2,0"
+                            Fill="{Binding InitializeLed}"
+                            Stroke="Black" />
+                    </StackPanel>
+                    <RadioButton
+                        x:Name="ServiceSelectorRadioButton"
+                        Margin="25,10,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Content="Connect to a running service"
+                        GroupName="ServiceGroup"
+                        IsChecked="{Binding HostingServiceType, Converter={StaticResource BoolToEnumConverter}, ConverterParameter={x:Static local:MyServiceMode.Remote}}"
+                        IsEnabled="{Binding StartServiceButtonEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <Grid Margin="50,5,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <wpf:ByteUpDown
+                                x:Name="firstIpTextbox"
+                                Width="30"
+                                Height="25"
+                                Margin="5,0"
+                                ClipValueToMinMax="True"
+                                DefaultValue="126"
+                                IsReadOnly="True"
+                                Maximum="255"
+                                Minimum="1"
+                                ShowButtonSpinner="False"
+                                Text="{Binding ServiceSelector.FirstOctet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <Label x:Name="ipDot1" Content="." />
+                            <wpf:ByteUpDown
+                                x:Name="secondIpTextbox"
+                                Width="30"
+                                Margin="1,0"
+                                ClipValueToMinMax="True"
+                                DefaultValue="0"
+                                IsReadOnly="True"
+                                ShowButtonSpinner="False"
+                                Text="{Binding ServiceSelector.SecondOctet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <Label x:Name="ipDot2" Content="." />
+                            <wpf:ByteUpDown
+                                x:Name="thirdIpTextbox"
+                                Width="30"
+                                Height="25"
+                                Margin="5,0"
+                                ClipValueToMinMax="True"
+                                DefaultValue="0"
+                                Maximum="255"
+                                Minimum="0"
+                                ShowButtonSpinner="False"
+                                Text="{Binding ServiceSelector.ThirdOctet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <Label Name="ipDot3" Content="." />
+                            <wpf:ByteUpDown
+                                x:Name="fourthIpTextbox"
+                                Width="30"
+                                Height="25"
+                                Margin="5,0"
+                                ClipValueToMinMax="True"
+                                DefaultValue="1"
+                                Maximum="255"
+                                Minimum="0"
+                                ShowButtonSpinner="False"
+                                Text="{Binding ServiceSelector.ForthOctet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel IsEnabled="{Binding IsServiceTypeSelectable}" Orientation="Horizontal">
+                        <Button
+                            Name="StartServiceButton"
+                            Width="100"
+                            Height="30"
+                            Margin="15,0,15,0"
+                            Command="{Binding StartServiceButtonCommand}"
+                            Content="Start Service"
+                            IsEnabled="{Binding StartServiceButtonEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <Button
+                            Name="StopServiceButton"
+                            Width="100"
+                            Height="30"
+                            Margin="0,15,15,15"
+                            Command="{Binding StopServiceButtonCommand}"
+                            Content="Stop Service"
+                            IsEnabled="{Binding StopServiceButtonEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,6 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\bin\Release\ReDefNet.XML
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\bin\Release\ReDefNet.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\bin\Release\ReDefNet.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\obj\Release\Reuse.Net.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\obj\Release\ReDefNet.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ReDefNet\obj\Release\ReDefNet.pdb

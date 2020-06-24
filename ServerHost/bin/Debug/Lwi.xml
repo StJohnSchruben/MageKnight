@@ -1,0 +1,1191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lwi</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Annotations.ContractAnnotationAttribute">
+            <summary>
+            A ReSharper annotation attribute that aids in code analysis. See ReSharper code annotation documentation for details.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Annotations.ContractAnnotationAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JetBrains.Annotations.ContractAnnotationAttribute" /> class.
+            </summary>
+            <param name="contract">The contract.</param>
+        </member>
+        <member name="M:JetBrains.Annotations.ContractAnnotationAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JetBrains.Annotations.ContractAnnotationAttribute" /> class.
+            </summary>
+            <param name="contract">The contract.</param>
+            <param name="forceFullStates"><c>true</c>, if full states should be forced; otherwise, <c>false</c>.</param>
+        </member>
+        <member name="P:JetBrains.Annotations.ContractAnnotationAttribute.Contract">
+            <summary>
+            Gets the contract.
+            </summary>
+            <value>
+            The contract.
+            </value>
+        </member>
+        <member name="P:JetBrains.Annotations.ContractAnnotationAttribute.ForceFullStates">
+            <summary>
+            Gets a value indicating whether full states should be forced.
+            </summary>
+            <value>
+            <c>true</c>, if full states should be forced; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:JetBrains.Annotations.NoEnumerationAttribute">
+            <summary>
+            A ReSharper annotation attribute that aids in code analysis. See ReSharper code annotation documentation for details.
+            </summary>
+        </member>
+        <member name="T:Lwi.Exceptions.ConfigurationException">
+            <summary>
+            Exception that occurs when the configuration is invalid.
+            </summary>
+        </member>
+        <member name="M:Lwi.Exceptions.ConfigurationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Exceptions.ConfigurationException" /> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Exceptions.ConfigurationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Exceptions.ConfigurationException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Lwi.Exceptions.ConfigurationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Exceptions.ConfigurationException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no
+            inner exception is specified.
+            </param>
+        </member>
+        <member name="M:Lwi.Exceptions.ConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Exceptions.ConfigurationException" /> class.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data
+            about the exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about
+            the source or destination.
+            </param>
+        </member>
+        <member name="T:Lwi.EventHandlerExtensions">
+            <summary>
+            Extension methods for working with event handlers.
+            </summary>
+        </member>
+        <member name="M:Lwi.EventHandlerExtensions.RaiseEvent(System.EventHandler,System.Object)">
+            <summary>
+            Raises the event.
+            </summary>
+            <param name="e">The event.</param>
+            <param name="sender">The event sender.</param>
+        </member>
+        <member name="M:Lwi.EventHandlerExtensions.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Raises the event.
+            </summary>
+            <typeparam name="TArgs">The event arguments type.</typeparam>
+            <param name="e">The event.</param>
+            <param name="sender">The event sender.</param>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="T:Lwi.Extensions.EventHandlerExtensions">
+            <summary>
+            Extension methods for working with event handlers.
+            </summary>
+        </member>
+        <member name="M:Lwi.Extensions.EventHandlerExtensions.RaiseEvent(System.EventHandler,System.Object)">
+            <summary>
+            Raises the event.
+            </summary>
+            <param name="e">The event.</param>
+            <param name="sender">The event sender.</param>
+        </member>
+        <member name="M:Lwi.Extensions.EventHandlerExtensions.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Raises the event.
+            </summary>
+            <typeparam name="TArgs">The event arguments type.</typeparam>
+            <param name="e">The event.</param>
+            <param name="sender">The event sender.</param>
+            <param name="args">The event arguments.</param>
+        </member>
+        <member name="T:Lwi.Extensions.ValidationExtensions">
+            <summary>
+            Extension methods for argument validation.
+            </summary>
+        </member>
+        <member name="M:Lwi.Extensions.ValidationExtensions.ValidateNotNull``1(``0,System.String)">
+            <summary>
+            Validates the argument is not null.
+            </summary>
+            <typeparam name="TArgument">The argument type.</typeparam>
+            <param name="argument">The argument value.</param>
+            <param name="name">The argument name.</param>
+        </member>
+        <member name="T:Lwi.IPEndPointExtensions">
+            <summary>
+            Extension methods for working with <see cref="T:System.Net.IPEndPoint" />.
+            </summary>
+        </member>
+        <member name="M:Lwi.IPEndPointExtensions.TryParseIPEndPoint(System.String,System.Net.IPEndPoint@,System.Nullable{System.Int32})">
+            <summary>
+            Attempts to parse an <see cref="T:System.Net.IPEndPoint" /> from the string.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="endpoint">The parsed endpoint.</param>
+            <param name="defaultPort">The default port to use if no port is specified. If <c>null</c>, no port will be specified.</param>
+            <returns>
+            <c>true</c>, if the string was parsed successfully; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Lwi.IPEndPointTypeConverter">
+            <summary>
+            A type converter that supports converting from a string to an <see cref="T:System.Net.IPEndPoint" /> and from an
+            <see cref="T:System.Net.IPEndPoint" /> to a string.
+            </summary>
+        </member>
+        <member name="M:Lwi.IPEndPointTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Determines whether the converter can convert from the specified source type to an <see cref="T:System.Net.IPEndPoint" /> using the
+            specified context.
+            </summary>
+            <param name="context">The format context.</param>
+            <param name="sourceType">The source type.</param>
+            <returns>
+            <c>true</c>, if the converter can convert from the specified source type to an <see cref="T:System.Net.IPEndPoint" />; otherwise,
+            <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.IPEndPointTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the specified object to an <see cref="T:System.Net.IPEndPoint" /> using the specified context and culture information.
+            </summary>
+            <param name="context">The format context.</param>
+            <param name="culture">The current culture information.</param>
+            <param name="value">The value to convert.</param>
+            <returns>
+            An <see cref="T:System.Net.IPEndPoint" /> that represents the converted value.
+            </returns>
+        </member>
+        <member name="T:Lwi.Net.EndPointProvider">
+            <summary>
+            EndPoint provider.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.EndPointProvider.savedAddress">
+            <summary>
+            The saved address.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.EndPointProvider.startingPort">
+            <summary>
+            The starting port.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.EndPointProvider.endingPort">
+            <summary>
+            The ending port.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.EndPointProvider.masterPort">
+            <summary>
+            The master port.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.EndPointProvider.endPointCollection">
+            <summary>
+            The end point collection.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Net.EndPointProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.#ctor(System.Net.IPAddress,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Net.EndPointProvider"/> class.
+            </summary>
+            <param name="address">The address.</param>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.GetIPAddress">
+            <summary>
+            Gets the ip address.
+            </summary>
+            <returns>Returns the IpAddress.</returns>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.SetPort">
+            <summary>
+            Ports this instance.
+            </summary>
+            <returns>The correct Port Value.</returns>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.SetPort(System.Int32)">
+            <summary>
+            Ports this instance.
+            </summary>
+            <returns>The correct Port Value.</returns>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.GetIPEndPoint">
+            <summary>
+            Gets the ip end point.
+            </summary>
+            <param name="address">The address.</param>
+            <returns> The Ip Endpoint.</returns>
+        </member>
+        <member name="M:Lwi.Net.EndPointProvider.GetIPEndPoint(System.Int32)">
+            <summary>
+            Gets the ip end point.
+            </summary>
+            <param name="port">The port.</param>
+            <returns>The IPEndpoint.</returns>
+        </member>
+        <member name="T:Lwi.Net.IEndPointProvider">
+            <summary>
+            IPEndpoint Provider Interface.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.IEndPointProvider.GetIPEndPoint">
+            <summary>
+            Gets the ip end point.
+            </summary>
+            <returns>Returns the IpEndpoint.</returns>
+        </member>
+        <member name="M:Lwi.Net.IEndPointProvider.GetIPEndPoint(System.Int32)">
+            <summary>
+            Gets the ip end point.
+            </summary>
+            <param name="port">The port.</param>
+            <returns>Returns the IpEndpoint.</returns>
+        </member>
+        <member name="T:Lwi.Net.LocalEndPointProvider">
+            <summary>
+            Represents a provider for local endpoints.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.LocalEndPointProvider.GetFirstAvailableLocalEndPoint">
+            <summary>
+            Gets the first available local endpoint.
+            </summary>
+            <returns>The first available local endpoint.</returns>
+            <exception cref="T:System.InvalidOperationException">Cannot find local IP address.</exception>
+        </member>
+        <member name="T:Lwi.Net.IEndpointAddressProvider">
+            <summary>
+            Represents a provider of an endpoint address.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.IEndpointAddressProvider.GetEndpointAddress(System.Net.IPEndPoint)">
+            <summary>
+            Gets the endpoint address for the specified endpoint.
+            </summary>
+            <param name="endPoint">The endpoint.</param>
+            <returns>
+            The endpoint address.
+            </returns>
+        </member>
+        <member name="T:Lwi.Net.IEndPoint">
+            <summary>
+            Represents a provider of an endpoint.
+            </summary>
+        </member>
+        <member name="P:Lwi.Net.IEndPoint.EndPoint">
+            <summary>
+            Gets the endpoint.
+            </summary>
+            <value>
+            The endpoint.
+            </value>
+        </member>
+        <member name="T:Lwi.Net.IUdpClient">
+            <summary>
+            Represents a type that provides UDP network services.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.IUdpClient.Bind(System.Net.IPEndPoint)">
+            <summary>
+            Binds to the specified network endpoint.
+            </summary>
+            <param name="endpoint">An endpoint that specifies the network endpoint on which you intend to receive data.</param>
+        </member>
+        <member name="M:Lwi.Net.IUdpClient.Close">
+            <summary>
+            Closes the UDP connection.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.IUdpClient.Connect(System.Net.IPEndPoint)">
+            <summary>
+            Establishes a default remote host using the specified network endpoint.
+            </summary>
+            <param name="endpoint">An endpoint that specifies the network endpoint to which you intend to send data.</param>
+        </member>
+        <member name="M:Lwi.Net.IUdpClient.Receive(System.Net.IPEndPoint@)">
+            <summary>
+            Gets a UDP datagram that was sent by a remote host.
+            </summary>
+            <param name="endpoint">The remote endpoint.</param>
+            <returns>The UDP datagram data.</returns>
+        </member>
+        <member name="M:Lwi.Net.IUdpClient.SendAsync(System.Byte[],System.Int32)">
+            <summary>
+            Asynchronously sends a UDP datagram to a remote host.
+            </summary>
+            <param name="datagram">The datagram.</param>
+            <param name="bytes">The number of bytes in the datagram.</param>
+            <returns>
+            A task representing the asynchronous operation. The task result contains the number of bytes that were sent
+            to the remote host.
+            </returns>
+        </member>
+        <member name="T:Lwi.Net.SystemUdpClient">
+            <summary>
+            A type that provides UDP network services.
+            </summary>
+        </member>
+        <member name="F:Lwi.Net.SystemUdpClient.client">
+            <summary>
+            The UDP client.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Net.SystemUdpClient" /> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.#ctor(System.Net.IPEndPoint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Net.SystemUdpClient"/> class.
+            </summary>
+            <param name="endPoint">The end point.</param>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.Bind(System.Net.IPEndPoint)">
+            <summary>
+            Binds to the specified network endpoint.
+            </summary>
+            <param name="endpoint">An endpoint that specifies the network endpoint on which you intend to receive data.</param>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.Close">
+            <summary>
+            Closes the UDP connection.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.Connect(System.Net.IPEndPoint)">
+            <summary>
+            Establishes a default remote host using the specified network endpoint.
+            </summary>
+            <param name="endpoint">An endpoint that specifies the network endpoint to which you intend to send data.</param>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.Receive(System.Net.IPEndPoint@)">
+            <summary>
+            Gets a UDP datagram that was sent by a remote host.
+            </summary>
+            <param name="endpoint">The remote endpoint.</param>
+            <returns>The UDP datagram data.</returns>
+        </member>
+        <member name="M:Lwi.Net.SystemUdpClient.SendAsync(System.Byte[],System.Int32)">
+            <summary>
+            Asynchronously sends a UDP datagram to a remote host.
+            </summary>
+            <param name="datagram">The datagram.</param>
+            <param name="bytes">The number of bytes in the datagram.</param>
+            <returns>
+            A task representing the asynchronous operation. The task result contains the number of bytes that were sent
+            to the remote host.
+            </returns>
+        </member>
+        <member name="T:Lwi.ValidationExtensions">
+            <summary>
+            Extension methods for argument validation.
+            </summary>
+        </member>
+        <member name="M:Lwi.ValidationExtensions.ValidateNotNull``1(``0,System.String)">
+            <summary>
+            Validates the argument is not null.
+            </summary>
+            <typeparam name="TArgument">The argument type.</typeparam>
+            <param name="argument">The argument value.</param>
+            <param name="name">The argument name.</param>
+        </member>
+        <member name="T:Lwi.ILifetimeManager">
+            <summary>
+            Represents a type responsible for the asynchronous creation and destruction of an item instance or instances.
+            </summary>
+        </member>
+        <member name="M:Lwi.ILifetimeManager.DestroyAsync">
+            <summary>
+            Asynchronously destroys the instance(s).
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Lwi.ILifetimeManager.InitializeAsync">
+            <summary>
+            Asynchronously initializes the instance(s).
+            </summary>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="T:Lwi.InitializationStatus">
+            <summary>
+            The initialization status of a component.
+            </summary>
+        </member>
+        <member name="F:Lwi.InitializationStatus.Destroyed">
+            <summary>
+            The component is destroyed.
+            </summary>
+        </member>
+        <member name="F:Lwi.InitializationStatus.Initializing">
+            <summary>
+            The component is transitioning to the initialized state.
+            </summary>
+        </member>
+        <member name="F:Lwi.InitializationStatus.Initialized">
+            <summary>
+            The component is initialized.
+            </summary>
+        </member>
+        <member name="F:Lwi.InitializationStatus.Destroying">
+            <summary>
+            The component is transitioning to the destroyed state.
+            </summary>
+        </member>
+        <member name="T:Lwi.IObservableCollection`1">
+            <summary>
+            Represents a dynamic data collection that provides notifications when items get added, removed, or when the entire
+            collection is refreshed.
+            </summary>
+            <typeparam name="T">The type of elements in the collection.</typeparam>
+        </member>
+        <member name="P:Lwi.IObservableCollection`1.Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+            <value>
+            The number of elements in the collection.
+            </value>
+        </member>
+        <member name="P:Lwi.IObservableCollection`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+            <value>
+            <c>true</c>, if the collection is read-only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Lwi.IObservableCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the specified range of items to the collection.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:Lwi.IObservableCollection`1.Move(System.Int32,System.Int32)">
+            <summary>
+            Moves the item at the specified index to a new location in the collection.
+            </summary>
+            <param name="oldIndex">The old index.</param>
+            <param name="newIndex">The new index.</param>
+        </member>
+        <member name="T:Lwi.IObservableCollectionFactory">
+            <summary>
+            Represents a factory for creating instances of <see cref="T:Lwi.IObservableCollection`1" />.
+            </summary>
+        </member>
+        <member name="M:Lwi.IObservableCollectionFactory.Create``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates an instance of the <see cref="T:Lwi.IObservableCollection`1" /> object filled with the given
+            <paramref name="collection" />.
+            </summary>
+            <typeparam name="T">The type of object in the collection.</typeparam>
+            <param name="collection">The collection.</param>
+            <returns>
+            Returns an instance of the <see cref="T:Lwi.IObservableCollection`1" /> object filled with the given
+            <paramref name="collection" />.
+            </returns>
+        </member>
+        <member name="M:Lwi.IObservableCollectionFactory.Create``1">
+            <summary>
+            Creates an empty instance of the <see cref="T:Lwi.IObservableCollection`1" /> object.
+            </summary>
+            <typeparam name="T">The type of object in the collection.</typeparam>
+            <returns>
+            Returns an empty instance of the <see cref="T:Lwi.IObservableCollection`1" /> object.
+            </returns>
+        </member>
+        <member name="T:Lwi.IReadOnlyObservableCollection`1">
+            <summary>
+            Represents a read-only dynamic data collection that provides notifications when items get added, removed, or when
+            the entire collection is refreshed. If the type given does not implement <see cref="T:System.Collections.Specialized.INotifyCollectionChanged" />,
+            this event will not work.
+            </summary>
+            <typeparam name="T">The type of elements in the collection.</typeparam>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.Added">
+            <summary>
+            Occurs when an item is added to the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.CollectionChanged">
+            <summary>
+            Occurs when the collection changes. To only listen for more specific collection changes, use the
+            <see cref="E:Lwi.IReadOnlyObservableCollection`1.Added" />, <see cref="E:Lwi.IReadOnlyObservableCollection`1.Removed" />, <see cref="E:Lwi.IReadOnlyObservableCollection`1.Replaced" />, <see cref="E:Lwi.IReadOnlyObservableCollection`1.Moved" />, or
+            <see cref="E:Lwi.IReadOnlyObservableCollection`1.Reset" /> events.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.ItemChanged">
+            <summary>
+            Occurs when an item changed in the collection has changed. If the type given does not implement
+            <see cref="T:System.Collections.Specialized.INotifyCollectionChanged" />, this event will not work.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.Moved">
+            <summary>
+            Occurs when items are moved in the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.Removed">
+            <summary>
+            Occurs when an item is removed from the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.Replaced">
+            <summary>
+            Occurs when an item is replaced in the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.IReadOnlyObservableCollection`1.Reset">
+            <summary>
+            Occurs when the collection is reset/cleared.
+            </summary>
+        </member>
+        <member name="P:Lwi.IReadOnlyObservableCollection`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+            <value><c>true</c>, if the collection is read-only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Lwi.IReadOnlyObservableCollection`1.SuppressNotifications">
+            <summary>
+            Gets or sets a value indicating whether collection changed-related notification events should be suppressed.
+            </summary>
+            <value>
+            <c>true</c>, if collection changed-related notification events should be suppressed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Lwi.NotifyPropertyChangedExtensions">
+            <summary>
+            Extension methods for working with types that implement <see cref="T:System.ComponentModel.INotifyPropertyChanged" />.
+            </summary>
+        </member>
+        <member name="M:Lwi.NotifyPropertyChangedExtensions.SubscribeToChanges``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.ComponentModel.PropertyChangedEventHandler)">
+            <summary>
+            Subscribes to property changes for the property referred to by the specified property expression.
+            </summary>
+            <typeparam name="T">The type containing the property.</typeparam>
+            <typeparam name="TProperty">The property.</typeparam>
+            <param name="observable">The observable object.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="handler">The property changed handler.</param>
+        </member>
+        <member name="M:Lwi.NotifyPropertyChangedExtensions.GetPropertyName``1(System.ComponentModel.INotifyPropertyChanged,System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the name of the property referred to by the specified property expression.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="observable">The observable object.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <returns>The property name.</returns>
+        </member>
+        <member name="M:Lwi.NotifyPropertyChangedExtensions.GetPropertyName``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Gets the name of the property referred to by the specified property expression.
+            </summary>
+            <typeparam name="T">The type containing the property.</typeparam>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="observable">The observable object.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <returns>The property name.</returns>
+        </member>
+        <member name="T:Lwi.SerializableObservableCollection`1">
+            <summary>
+            A serializable dynamic data collection that provides notifications when items get added, removed, or when the entire
+            collection is refreshed. Essentially a wrapper around the built-in <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> type, but
+            that allows serialization. If the type given does not implement <see cref="T:System.Collections.Specialized.INotifyCollectionChanged" />, this event
+            will not work.
+            </summary>
+            <typeparam name="T">The type of elements in the collection.</typeparam>
+        </member>
+        <member name="F:Lwi.SerializableObservableCollection`1.CountPropertyName">
+            <summary>
+            The count property name.
+            </summary>
+        </member>
+        <member name="F:Lwi.SerializableObservableCollection`1.IndexerPropertyName">
+            <summary>
+            The name of the indexer property.
+            </summary>
+        </member>
+        <member name="F:Lwi.SerializableObservableCollection`1.SerializationCollectionName">
+            <summary>
+            The name of the underlying observable collection in the <see cref="T:System.Runtime.Serialization.SerializationInfo" />.
+            </summary>
+        </member>
+        <member name="F:Lwi.SerializableObservableCollection`1.monitor">
+            <summary>
+            The monitor used to prevent reentrant calls to the collection.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.SerializableObservableCollection`1" /> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.SerializableObservableCollection`1" /> class.
+            </summary>
+            <param name="initialItems">The initial items.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.SerializableObservableCollection`1" /> class. This special constructor is
+            used for deserialization only.
+            </summary>
+            <param name="info">The serialization information.</param>
+            <param name="context">The serialization streaming context.</param>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.Added">
+            <summary>
+            Occurs when an item is added to the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.CollectionChanged">
+            <summary>
+            Occurs when the collection changes. To only listen for more specific collection changes, use the <see cref="E:Lwi.SerializableObservableCollection`1.Added" />,
+            <see cref="E:Lwi.SerializableObservableCollection`1.Removed" />, <see cref="E:Lwi.SerializableObservableCollection`1.Replaced" />, <see cref="E:Lwi.SerializableObservableCollection`1.Moved" />, or <see cref="E:Lwi.SerializableObservableCollection`1.Reset" /> events.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.ItemChanged">
+            <summary>
+            Occurs when an item changed in the collection has changed. If the type given does not implement
+            <see cref="T:System.Collections.Specialized.INotifyCollectionChanged" />, this event will not work.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.Moved">
+            <summary>
+            Occurs when items are moved in the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.Removed">
+            <summary>
+            Occurs when an item is removed from the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.Replaced">
+            <summary>
+            Occurs when an item is replaced in the collection.
+            </summary>
+        </member>
+        <member name="E:Lwi.SerializableObservableCollection`1.Reset">
+            <summary>
+            Occurs when the collection is reset/cleared.
+            </summary>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+            <value>
+            <c>true</c>, if the collection is read-only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.SuppressNotifications">
+            <summary>
+            Gets or sets a value indicating whether collection changed-related notification events should be suppressed.
+            </summary>
+            <value>
+            <c>true</c>, if collection changed-related notification events should be suppressed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.Lwi#IObservableCollection{T}#Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+            <value>
+            The number of elements in the collection.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.System#Collections#Generic#ICollection{T}#Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+            <value>
+            The number of elements in the collection.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.System#Collections#Generic#IReadOnlyCollection{T}#Count">
+            <summary>
+            Gets the number of elements in the collection.
+            </summary>
+            <value>
+            The number of elements in the collection.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.Lwi#IReadOnlyObservableCollection{T}#IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+            <value>
+            <c>true</c>, if the collection is read-only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.CanRaisePropertyChanged">
+            <summary>
+            Gets a value indicating whether the types held can raise property changed.
+            </summary>
+            <value>
+            <c>true</c> if the types held can raise property changed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the item at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>
+            The item at the specified index.
+            </returns>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.Add(`0)">
+            <summary>
+            Adds the specified item to the collection.
+            </summary>
+            <param name="item">The object to add.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the specified range of items to the collection.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Populates a <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with the data needed to serialize the
+            target object.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> to populate with data.</param>
+            <param name="context">
+            The destination (see <see cref="T:System.Runtime.Serialization.StreamingContext" />) for this
+            serialization.
+            </param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an item in the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index.</param>
+            <param name="item">The object to insert.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.Move(System.Int32,System.Int32)">
+            <summary>
+            Moves the item at the specified index to a new location in the collection.
+            </summary>
+            <param name="oldIndex">The old index.</param>
+            <param name="newIndex">The new index.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specific object from the collection.
+            </summary>
+            <param name="item">The object to remove.</param>
+            <returns>
+            <c>true</c>, if <paramref name="item" /> was successfully removed from the collection; otherwise, <c>false</c>. This
+            method also returns <c>false</c> if <paramref name="item" /> is not found in the collection.
+            </returns>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.ClearItems">
+            <summary>
+            Clears the items.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.InsertItem(System.Int32,`0)">
+            <summary>
+            Inserts the specified item at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.SetItem(System.Int32,`0)">
+            <summary>
+            Sets the specified item at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.BlockReentrancy">
+            <summary>
+            Blocks reentrant calls for the life of the return value. This method is designed to be used in a using statement.
+            </summary>
+            <returns>
+            The monitor.
+            </returns>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.CheckForReentrancy">
+            <summary>
+            Checks and asserts for reentrant attempts to change the collection. A reentrant call is when the collection is updated
+            while it is still notifying listeners of a previous update.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.MoveItem(System.Int32,System.Int32)">
+            <summary>
+            Moves the item at the specified old index to the specified new index.
+            </summary>
+            <param name="oldIndex">The old index.</param>
+            <param name="newIndex">The new index.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.OnDeserialized(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Called immediately after deserialization by the .NET Framework.
+            </summary>
+            <param name="context">The serialization streaming context.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.OnItemPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when a property changes on an item in the collection.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.RaiseEvent(System.EventHandler{System.Collections.Specialized.NotifyCollectionChangedEventArgs},System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the specified specialized event along with the general <see cref="E:Lwi.SerializableObservableCollection`1.CollectionChanged" /> event.
+            </summary>
+            <param name="eventHandler">The event handler.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:Lwi.SerializableObservableCollection`1.PropertyChanged" /> event for the specified property.
+            </summary>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="T:Lwi.SerializableObservableCollection`1.SimpleMonitor">
+            <summary>
+            A simple monitor that helps prevent reentrant calls to the collection.
+            </summary>
+        </member>
+        <member name="F:Lwi.SerializableObservableCollection`1.SimpleMonitor.busyCount">
+            <summary>
+            The number of times <see cref="M:Lwi.SerializableObservableCollection`1.SimpleMonitor.Enter" /> was called.
+            </summary>
+        </member>
+        <member name="P:Lwi.SerializableObservableCollection`1.SimpleMonitor.IsBusy">
+            <summary>
+            Gets a value indicating whether the monitor is busy.
+            </summary>
+            <value>
+            <c>true</c>, if the monitor is busy; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.SimpleMonitor.Dispose">
+            <summary>
+            Signals that the monitor is no longer busy.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollection`1.SimpleMonitor.Enter">
+            <summary>
+            Signals that the monitor is busy.
+            </summary>
+        </member>
+        <member name="T:Lwi.SerializableObservableCollectionFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:Lwi.IObservableCollection`1" />.
+            </summary>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollectionFactory.Create``1">
+            <summary>
+            Creates an empty instance of the <see cref="T:Lwi.IObservableCollection`1" /> object.
+            </summary>
+            <typeparam name="T">The type of object in the collection.</typeparam>
+            <returns>
+            Returns an empty instance of the <see cref="T:Lwi.IObservableCollection`1" /> object.
+            </returns>
+        </member>
+        <member name="M:Lwi.SerializableObservableCollectionFactory.Create``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates an instance of the <see cref="T:Lwi.IObservableCollection`1" /> object filled with the given
+            <paramref name="collection" />.
+            </summary>
+            <typeparam name="T">The type of object in the collection.</typeparam>
+            <param name="collection">The collection.</param>
+            <returns>
+            Returns an instance of the <see cref="T:Lwi.IObservableCollection`1" /> object filled with the given
+            <paramref name="collection" />.
+            </returns>
+        </member>
+        <member name="T:Lwi.ObservableObject">
+            <summary>
+            Base class for an object that implements <see cref="T:System.ComponentModel.INotifyPropertyChanged" />.
+            </summary>
+        </member>
+        <member name="E:Lwi.ObservableObject.PropertyChanged">
+            <summary>
+            Occurs when a property has changed.
+            </summary>
+        </member>
+        <member name="E:Lwi.ObservableObject.PropertyChanging">
+            <summary>
+            Occurs when a property value is changing.
+            </summary>
+        </member>
+        <member name="M:Lwi.ObservableObject.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanged" /> event for the specified property.
+            <para>
+            If <paramref name="propertyName" /> does not refer to a valid property on the current object, an exception is
+            thrown in DEBUG configuration only.
+            </para>
+            </summary>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.ObservableObject.RaisePropertyChanging(System.String)">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanging" /> event for the specified property.
+            <para>
+            If <paramref name="propertyName" /> does not refer to a valid property on the current object, an exception is
+            thrown in DEBUG configuration only.
+            </para>
+            </summary>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.ObservableObject.RaisePropertyChanging``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanging" /> event for the specified property.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+        </member>
+        <member name="M:Lwi.ObservableObject.VerifyPropertyName(System.String)">
+            <summary>
+            Verifies that the specified property name exists on the current object. This method can be called before the
+            property is used, for instance before calling <see cref="M:Lwi.ObservableObject.RaisePropertyChanged(System.String)" />.
+            <para>This method is only active in DEBUG configuration.</para>
+            </summary>
+            <param name="propertyName">The property name to verify.</param>
+        </member>
+        <member name="M:Lwi.ObservableObject.RaisePropertyChanged``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanged" /> event for the property referred to by the specified property expression.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+        </member>
+        <member name="M:Lwi.ObservableObject.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the name of the property referred to by the specified property expression.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <returns>
+            The property name.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">If <paramref name="propertyExpression" /> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentException">
+            If <paramref name="propertyExpression" /> does not refer to a valid property.
+            </exception>
+        </member>
+        <member name="M:Lwi.ObservableObject.Set``1(System.Linq.Expressions.Expression{System.Func{``0}},``0@,``0)">
+            <summary>
+            Sets the backing field for the specified property expression if the new value is different than the current value.
+            </summary>
+            <typeparam name="TProperty">The property and field type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="field">The field.</param>
+            <param name="newValue">The new value.</param>
+            <returns>
+            <c>true</c>, if the backing field was set; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.ObservableObject.Set``1(System.String,``0@,``0)">
+            <summary>
+            Sets the backing field for the specified property and raises the <see cref="E:Lwi.ObservableObject.PropertyChanging" /> and 
+            <see cref="E:Lwi.ObservableObject.PropertyChanged" /> events if the new value is different than the current value.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyName">The property name.</param>
+            <param name="field">The backing field.</param>
+            <param name="newValue">The new value.</param>
+            <returns>
+            <c>true</c>, if the backing field was set and the events were raised; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.ObservableObject.Set``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Func{``0},System.Action{``0},``0)">
+            <summary>
+            Calls the specified value setter related to the specified property expression if the new value is different
+            than the current value. This method overload allows you to set other properties in addition to just fields.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="getter">The delegate used to get the current value.</param>
+            <param name="setter">The delegate used to set a new value.</param>
+            <param name="newValue">The new value.</param>
+            <returns>
+            <c>true</c>, if the specified value setter was called; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Lwi.Sys.IClock">
+            <summary>
+            Represents a source of date and time.
+            </summary>
+        </member>
+        <member name="P:Lwi.Sys.IClock.Now">
+            <summary>
+            Gets the current date and time.
+            </summary>
+            <value>
+            The date and time.
+            </value>
+        </member>
+        <member name="T:Lwi.Sys.ITimer">
+            <summary>
+            Represents a component that generates recurring events.
+            </summary>
+        </member>
+        <member name="E:Lwi.Sys.ITimer.Elapsed">
+            <summary>
+            Occurs when the timer has elapsed.
+            </summary>
+        </member>
+        <member name="P:Lwi.Sys.ITimer.AutoReset">
+            <summary>
+            Gets or sets a value indicating whether the timer should raise the elapsed event each time after the
+            configured interval elapses or only after the first time it elapses.
+            </summary>
+            <value>
+            <c>true</c>, if it should continue to raise the elapsed event; <c>false</c>, to only raise it the first time.
+            </value>
+        </member>
+        <member name="P:Lwi.Sys.ITimer.Interval">
+            <summary>
+            Gets or sets the interval, in milliseconds, at which to raise the elapsed event.
+            </summary>
+            <value>
+            The interval, in milliseconds.
+            </value>
+        </member>
+        <member name="M:Lwi.Sys.ITimer.Start">
+            <summary>
+            Starts the timer with the specified interval.
+            </summary>
+        </member>
+        <member name="M:Lwi.Sys.ITimer.Stop">
+            <summary>
+            Stops the timer.
+            </summary>
+        </member>
+        <member name="T:Lwi.Sys.SystemClock">
+            <summary>
+            The system clock.
+            </summary>
+        </member>
+        <member name="P:Lwi.Sys.SystemClock.Now">
+            <summary>
+            Gets the current date and time.
+            </summary>
+            <value>
+            The date and time.
+            </value>
+        </member>
+        <member name="T:Lwi.Sys.SystemTimer">
+            <summary>
+            A component that generates recurring events.
+            </summary>
+            <remarks>A simple wrapper around <see cref="T:System.Timers.Timer" /> for testability.</remarks>
+        </member>
+        <member name="F:Lwi.Sys.SystemTimer.timer">
+            <summary>
+            The underlying system timer.
+            </summary>
+        </member>
+        <member name="M:Lwi.Sys.SystemTimer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Sys.SystemTimer" /> class.
+            </summary>
+        </member>
+        <member name="E:Lwi.Sys.SystemTimer.Elapsed">
+            <summary>
+            Occurs when the timer has elapsed.
+            </summary>
+        </member>
+        <member name="P:Lwi.Sys.SystemTimer.AutoReset">
+            <summary>
+            Gets or sets a value indicating whether the timer should raise the elapsed event each time after the
+            configured interval elapses or only after the first time it elapses.
+            </summary>
+            <value>
+            <c>true</c>, if it should continue to raise the elapsed event; <c>false</c>, to only raise it the first time.
+            </value>
+        </member>
+        <member name="P:Lwi.Sys.SystemTimer.Interval">
+            <summary>
+            Gets or sets the interval, in milliseconds, at which to raise the elapsed event.
+            </summary>
+            <value>
+            The interval, in milliseconds.
+            </value>
+        </member>
+        <member name="M:Lwi.Sys.SystemTimer.Dispose">
+            <summary>
+            Releases all resources.
+            </summary>
+        </member>
+        <member name="M:Lwi.Sys.SystemTimer.Start">
+            <summary>
+            Starts the timer with the specified interval.
+            </summary>
+        </member>
+        <member name="M:Lwi.Sys.SystemTimer.Stop">
+            <summary>
+            Stops the timer.
+            </summary>
+        </member>
+    </members>
+</doc>

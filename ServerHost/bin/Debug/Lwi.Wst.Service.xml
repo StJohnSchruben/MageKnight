@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lwi.Wst.Service</name>
+    </assembly>
+    <members>
+        <member name="T:Lwi.Wst.Service.IDeviceServiceBootstrapper">
+            <summary>
+            Represents the service necessities needed at runtime to start up a service.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.IDeviceServiceBootstrapper.KnownTypeAssemblies">
+            <summary>
+            Gets the known type assemblies.
+            </summary>
+            <value>The known type assemblies.</value>
+        </member>
+        <member name="M:Lwi.Wst.Service.IDeviceServiceBootstrapper.GetCommandHandlers(Lwi.Wst.Service.ICommandContract)">
+            <summary>
+            Gets the command handlers.
+            </summary>
+            <param name="commandContract">The command contract.</param>
+            <returns>A list of objects which subscribe to the <see cref="T:Lwi.Wst.Service.ICommandContract" />.</returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.IDeviceServiceBootstrapper.GetQueryHandlers(Lwi.Wst.Service.IQueryContract,Lwi.Wst.Service.ICommandContract,Lwi.Wst.Service.IQueryHandler)">
+            <summary>
+            Gets the query handlers.
+            </summary>
+            <param name="queryContract">The query contract.</param>
+            <param name="commandContract">The command contract.</param>
+            <param name="rootHandler">The root handler.</param>
+            <returns>
+            The list of the <see cref="T:Lwi.Wst.Service.IQueryHandler" /> for the device.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.IQueryHandler">
+            <summary>
+            Represents a handler of queries.
+            </summary>
+            <remarks>
+            This type is designed to use the chain of responsibility pattern.
+            </remarks>
+        </member>
+        <member name="M:Lwi.Wst.Service.IQueryHandler.AddHandler(Lwi.Wst.Service.IQueryHandler)">
+            <summary>
+            Adds the specified query handler.
+            </summary>
+            <param name="handler">The query handler.</param>
+            <remarks>
+            If the internal next handler is <c>null</c>, this method should set the next internal handler to the specified handler;
+            otherwise, it should pass the specified handler to the next internal handler's <see cref="M:Lwi.Wst.Service.IQueryHandler.AddHandler(Lwi.Wst.Service.IQueryHandler)" /> method.
+            </remarks>
+        </member>
+        <member name="M:Lwi.Wst.Service.IQueryHandler.Handle(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Handles the specified query.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+            <returns>
+            The query response of the specified query type.
+            </returns>
+            <remarks>
+            This method should handle the message. If the internal next handler is <c>null</c>, this method should also return
+            <c>null</c>; otherwise, it should return the result from the next internal handler's <see cref="M:Lwi.Wst.Service.IQueryHandler.Handle(System.String,Lwi.Wst.Service.IQueryDef)" /> method.
+            </remarks>
+        </member>
+        <member name="T:Lwi.Wst.Service.ISnapshotAdapterDeviceServiceBootstrapper">
+            <summary>
+            Represents a special <see cref="T:Lwi.Wst.Service.IDeviceServiceBootstrapper" /> that translates received Block II service commands
+            related to snapshot into events that can be listened to by the Block II service. Only one of these should ever exist
+            within the entire Block II system.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.ISnapshotAdapterDeviceServiceBootstrapper.CreateSnapshotRequested">
+            <summary>
+            Occurs when a request to create a snapshot is received.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.ISnapshotAdapterDeviceServiceBootstrapper.LoadSnapshotRequested">
+            <summary>
+            Occurs when a request to load a snapshot is received.
+            </summary>
+        </member>
+        <member name="T:Lwi.Wst.Service.IDeviceServiceBootstrapperWithSnapshot">
+            <summary>
+            Represents a <see cref="T:Lwi.Wst.Service.IDeviceServiceBootstrapper" /> that can participate in snapshot. This is a separate interface
+            to prevent breaking components that only implement <see cref="T:Lwi.Wst.Service.IDeviceServiceBootstrapper" />. Once all components
+            implement this interface and <see cref="T:Lwi.Wst.Service.IDeviceServiceBootstrapper" />, both interfaces may be merged.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.IDeviceServiceBootstrapperWithSnapshot.GetSnapshot">
+            <summary>
+            Gets a snapshot for the model that this bootstrapper manages.
+            </summary>
+            <returns>
+            The snapshot data as a string.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.IDeviceServiceBootstrapperWithSnapshot.LoadSnapshot(System.String)">
+            <summary>
+            Loads a snapshot of the model that this bootstrapper manages.
+            </summary>
+            <param name="snapshot">The snapshot data as a string.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.KnownAssemblyAttribute">
+            <summary>
+            An attribute used to indicate one or more assemblies that contain types that should be dynamically added as known types
+            for the service.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.KnownAssemblyAttribute.resolver">
+            <summary>
+            The data contract resolver.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.KnownAssemblyAttribute" /> class.
+            </summary>
+            <param name="assemblyNames">The names of the assemblies to scan for known types.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds the binding parameters.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="bindingParameters">The binding parameters.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Applies the client behavior.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="clientRuntime">The client runtime.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)">
+            <summary>
+            Applies the dispatch behavior.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="dispatchRuntime">The dispatch runtime.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Validates the specified contract description.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.CreateMyDataContractSerializerOperationBehaviors(System.ServiceModel.Description.ContractDescription)">
+            <summary>
+            Creates my data contract serializer operation behaviors.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.KnownAssemblyAttribute.CreateMyDataContractSerializationOperationBehavior(System.ServiceModel.Description.OperationDescription)">
+            <summary>
+            Creates my data contract serialization operation behavior.
+            </summary>
+            <param name="operation">The operation.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.LwiDataContractResolver">
+            <summary>
+            A custom data contract resolver that scans all the declared types in one or more assemblies and adds them to a list of
+            known types for the service.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.LwiDataContractResolver.DefaultNamespace">
+            <summary>
+            The default namespace for types without a namespace.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.LwiDataContractResolver.namesToTypeMap">
+            <summary>
+            The names to type map.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.LwiDataContractResolver.typeToNamesMap">
+            <summary>
+            The type to names map.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.LwiDataContractResolver.dictionary">
+            <summary>
+            The dictionary
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.LwiDataContractResolver" /> class.
+            </summary>
+            <param name="assemblyNames">The names of the assemblies to scan for known types.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver)">
+            <summary>
+            Override this method to map the specified xsi:type name and namespace to a data contract type during deserialization.
+            </summary>
+            <param name="typeName">The xsi:type name to map.</param>
+            <param name="typeNamespace">The xsi:type namespace to map.</param>
+            <param name="declaredType">The type declared in the data contract.</param>
+            <param name="knownTypeResolver">The known type resolver.</param>
+            <returns>
+            The type the xsi:type name and namespace is mapped to.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.TryResolveType(System.Type,System.Type,System.Runtime.Serialization.DataContractResolver,System.Xml.XmlDictionaryString@,System.Xml.XmlDictionaryString@)">
+            <summary>
+            Override this method to map a data contract type to an xsi:type name and namespace during serialization.
+            </summary>
+            <param name="type">The type to map.</param>
+            <param name="declaredType">The type declared in the data contract.</param>
+            <param name="knownTypeResolver">The known type resolver.</param>
+            <param name="typeName">The xsi:type name.</param>
+            <param name="typeNamespace">The xsi:type namespace.</param>
+            <returns>
+            <c>true</c>, if mapping succeeded; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.GetAssemblyKnownTypes(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the known types from the specified assembly names.
+            </summary>
+            <param name="assemblyNames">The names of the assemblies to scan for known types.</param>
+            <returns>
+            A collection of known types.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.GetAssemblyKnownTypes(System.Reflection.Assembly)">
+            <summary>
+            Gets the known types from the specified assembly.
+            </summary>
+            <param name="assembly">The assembly.</param>
+            <returns>
+            A collection of known types.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.LwiDataContractResolver.AddKnownType(System.String,System.String,System.Type)">
+            <summary>
+            Adds a known type to the collection of known types.
+            </summary>
+            <param name="typeNamespace">The xsi:type namespace to map.</param>
+            <param name="typeName">The xsi:type name to map.</param>
+            <param name="type">The type to map.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.MessageExtensions">
+            <summary>
+            Provides extension methods for working with <see cref="T:Lwi.Wst.Service.IMessage" />
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.MessageExtensions.Dump(Lwi.Wst.Service.IMessage)">
+            <summary>
+            Dumps the message and the values of it's public properties to a string, if possible.
+            </summary>
+            <param name="message">The message.</param>
+            <returns>
+            The name and contents of the message as a string. If an error occurs, just the name of the message.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.QueryContractBase">
+            <summary>
+            Base class for query service contracts.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.QueryContractBase.queryHandler">
+            <summary>
+            The query handler.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.QueryContractBase.QuerySubmitted">
+            <summary>
+            Occurs when a new query is submitted.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.QueryContractBase.AddHandler(Lwi.Wst.Service.IQueryHandler)">
+            <summary>
+            Adds the handler.
+            </summary>
+            <param name="handler">The handler.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.QueryContractBase.DirectQuery(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Executes a direct query which does not utilize callbacks.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+            <returns>
+            The query response of the specified query type.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.QueryContractBase.Handle(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Handles the specified query.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+            <returns>
+            The query response of the specified query type.
+            </returns>
+            <remarks>
+            This method should handle the message. If the internal next handler is <c>null</c>, this method should also return
+            <c>null</c>; otherwise, it should return the result from the next internal handler's <see cref="M:Lwi.Wst.Service.QueryContractBase.Handle(System.String,Lwi.Wst.Service.IQueryDef)" /> method.
+            </remarks>
+        </member>
+        <member name="M:Lwi.Wst.Service.QueryContractBase.Query(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Executes a query using callbacks.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.IQueryContract">
+            <summary>
+            Represents the service contract for queries.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.IQueryContract.QuerySubmitted">
+            <summary>
+            Occurs when a new query is submitted.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.IQueryContract.DirectQuery(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Executes a direct query which does not utilize callbacks.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+            <returns>
+            The query response of the specified query type.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.IQueryContract.Query(System.String,Lwi.Wst.Service.IQueryDef)">
+            <summary>
+            Executes a query using callbacks.
+            </summary>
+            <param name="queryType">The query type.</param>
+            <param name="queryDef">The query definition.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.IQueryCallbackContract">
+            <summary>
+            Represents the service contract for query callbacks.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.IQueryCallbackContract.HandleQueryResponse(Lwi.Wst.Service.IQueryResponse)">
+            <summary>
+            Handles the specified query.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.ICommandCallbackContract">
+            <summary>
+            Represents the service contract for command message callbacks.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.ICommandCallbackContract.HandleSubscribe(Lwi.Wst.Service.IMessage)">
+            <summary>
+            Handles the subscription of the specified command message.
+            </summary>
+            <param name="message">The command message.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.CommandContractBase">
+            <summary>
+            Base class for command service contracts.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.CommandContractBase.MessagePublished">
+            <summary>
+            Occurs when a new command message is published.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.CommandContractBase.MessageSubscribed">
+            <summary>
+            Occurs when a new client subscribes to new command messages.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.CommandContractBase.Publish(Lwi.Wst.Service.IMessage)">
+            <summary>
+            Publishes the specified command message.
+            </summary>
+            <param name="message">The command message.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.CommandContractBase.Subscribe(System.String)">
+            <summary>
+            Subscribes to the specified command message type.
+            </summary>
+            <param name="messageType">The command message type.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.ICommandContract">
+            <summary>
+            Represents the service contract for command messages.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.ICommandContract.MessagePublished">
+            <summary>
+            Occurs when a new command message is published.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.ICommandContract.MessageSubscribed">
+            <summary>
+            Occurs when a new client subscribes to new command messages.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.ICommandContract.Publish(Lwi.Wst.Service.IMessage)">
+            <summary>
+            Publishes the specified command message.
+            </summary>
+            <param name="message">The command message.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.ICommandContract.Subscribe(System.String)">
+            <summary>
+            Subscribes to the specified command message type.
+            </summary>
+            <param name="messageType">The command message type.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.IMessage">
+            <summary>
+            Represents a command message, which typically represents some system state change.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.IMessage.OriginationHash">
+            <summary>
+            Gets or sets the hash used to determine the sender of the message and to prevent feedback loops.
+            </summary>
+            <value>
+            The origination hash.
+            </value>
+        </member>
+        <member name="T:Lwi.Wst.Service.IQueryDef">
+            <summary>
+            Represents query filtering and criteria information.
+            </summary>
+        </member>
+        <member name="T:Lwi.Wst.Service.IQueryResponse">
+            <summary>
+            Represents the response to a query.
+            </summary>
+        </member>
+        <member name="T:Lwi.Wst.Service.PublishedEventArgs">
+            <summary>
+            Event data for a published command message.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.PublishedEventArgs.Message">
+            <summary>
+            Gets or sets the command message.
+            </summary>
+            <value>
+            The command message.
+            </value>
+        </member>
+        <member name="T:Lwi.Wst.Service.PublishedEventHandler">
+            <summary>
+            Delegate handler of a command message publishing event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Lwi.Wst.Service.PublishedEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.QueryArgs">
+            <summary>
+            Event data for a query event.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.QueryArgs.Callback">
+            <summary>
+            Gets or sets the query callback.
+            </summary>
+            <value>
+            The query callback.
+            </value>
+        </member>
+        <member name="P:Lwi.Wst.Service.QueryArgs.QueryDefinition">
+            <summary>
+            Gets or sets the query definition.
+            </summary>
+            <value>
+            The query definition.
+            </value>
+        </member>
+        <member name="P:Lwi.Wst.Service.QueryArgs.QueryType">
+            <summary>
+            Gets or sets the query type.
+            </summary>
+            <value>
+            The query type.
+            </value>
+        </member>
+        <member name="T:Lwi.Wst.Service.QueryEventHandler">
+            <summary>
+            Delegate handler of a query event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Lwi.Wst.Service.QueryArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.ServiceConstants">
+            <summary>
+            Service-related constants.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.ServiceConstants.CommandNamespace">
+            <summary>
+            The command namespace.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.ServiceConstants.QueryNamespace">
+            <summary>
+            The query namespace.
+            </summary>
+        </member>
+        <member name="T:Lwi.Wst.Service.SnapshotEventArgs">
+            <summary>
+            Provides data for snapshot-related events.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.SnapshotEventArgs.Path">
+            <summary>
+            Gets or sets the path where the snapshot should be loaded from or saved to. This is typically a UNC path and will need
+            to be converted to a local file path on the file server.
+            </summary>
+            <value>
+            The path from where the snapshot should be loaded from or saved to.
+            </value>
+        </member>
+        <member name="T:Lwi.Wst.Service.SubscribedEventArgs">
+            <summary>
+            Event data for a command message subscription.
+            </summary>
+        </member>
+        <member name="P:Lwi.Wst.Service.SubscribedEventArgs.Callback">
+            <summary>
+            Gets or sets the command callback.
+            </summary>
+            <value>
+            The command callback.
+            </value>
+        </member>
+        <member name="P:Lwi.Wst.Service.SubscribedEventArgs.MessageType">
+            <summary>
+            Gets or sets the command message type.
+            </summary>
+            <value>
+            The command message type.
+            </value>
+        </member>
+        <member name="T:Lwi.Wst.Service.SubscriptionEventHandler">
+            <summary>
+            Delegate handler for a command message subscription event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Lwi.Wst.Service.SubscribedEventArgs" /> instance containing the event data.</param>
+        </member>
+    </members>
+</doc>

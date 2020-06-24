@@ -6,8 +6,10 @@
              xmlns:local="clr-namespace:MKView.Views"
              xmlns:m="clr-namespace:MKModel;assembly=MKModel" 
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel" 
+             xmlns:view="clr-namespace:MKView"
+             DataContext="{Binding ArmyBuilder, Source={x:Static view:SharedResources.ViewModelLocator}}"
              mc:Ignorable="d" 
-             Height="1000" Width="1500">
+             d:DesignHeight="1200" d:DesignWidth="1600">
     <UserControl.Resources>
         <ImageBrush ImageSource="ArmyBuilder.jpg" x:Key="background" />
         <DataTemplate DataType="{x:Type vm:Army}">
@@ -19,28 +21,93 @@
         <DataTemplate DataType="{x:Type m:IClick}">
             <local:Click />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type m:MageKnight}">
+        <DataTemplate DataType="{x:Type m:IMageKnightModel}">
             <TextBlock Text="{Binding Name}" />
         </DataTemplate>
+        <DataTemplate x:Key="ModelImage">
+            <Image Source="{Binding}" Height="100" Width="100"/>
+        </DataTemplate>
+        <local:GameIdToDisplayString x:Key="GameIdToDisplayString" />
     </UserControl.Resources>
-    <Grid Background="DarkGray">
-        <ListBox SelectionChanged="ListBox_SelectionChanged" x:Name="lba" ItemsSource="{Binding User.Armies}" SelectedItem="{Binding SelectedArmy, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" HorizontalAlignment="Left" Height="775" VerticalAlignment="Top" Width="205" Margin="30,105,0,0"/>
-        <Label Content="My Armies" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,69,0,0" Foreground="Red"/>
-        <ListBox x:Name="models" ItemTemplate="{StaticResource MageKnight}" ItemsSource="{Binding CurrentModels, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  HorizontalAlignment="Left" Height="770" VerticalAlignment="Top" Width="670" Margin="275,105,0,0">
+    <Grid Background="{StaticResource background}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="models" ItemTemplate="{StaticResource ModelImage}" ItemsSource="{Binding CurrentModels, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="7">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel IsItemsHost="True" MaxWidth="{Binding ActualWidth, ElementName=models}" />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
-        <Label Content="Edit Army" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="284,74,0,0" Foreground="Red"/>
-        <ListBox SelectionChanged="ListBox_SelectionChanged_1" x:Name="lbm" ItemsSource="{Binding User.MageKnights}" SelectedItem="{Binding SelectedMageKnight}"  HorizontalAlignment="Left" Height="920" VerticalAlignment="Top" Width="210" Margin="1105,20,0,0"/>
-        <Label Content="My Pieces" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1017,25,0,0" Foreground="Red"/>
-        <Button Command="{Binding NewArmy}" Content="New" HorizontalAlignment="Left" Margin="35,900,0,0" VerticalAlignment="Top" Width="125" Height="80"/>
-        <Button Command="{Binding AddToArmy}" Content="&lt;-" HorizontalAlignment="Left" Margin="965,350,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Command="{Binding RemoveFromArmy}" Content="->" HorizontalAlignment="Left" Margin="965,385,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Army Builder" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,10,0,0" Foreground="Red" FontSize="24" Height="41" Width="150"/>
-        <Button Command="{Binding ApplyToBoard}" Content="Apply To Board" HorizontalAlignment="Left" Margin="275,880,0,0" VerticalAlignment="Top" Width="670" Height="25"/>
+
+        <ListBox SelectionChanged="Games_SelectionChanged" MouseDoubleClick="lbm_MouseDoubleClick" x:Name="Games" ItemsSource="{Binding Games.Games}" SelectedItem="{Binding SelectedGame}"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="17"  Grid.Column="1" Grid.ColumnSpan="3">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Converter={StaticResource GameIdToDisplayString}}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Edit Army" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0" FontSize="20" Foreground="Silver" Grid.Row="3" Grid.RowSpan="3" Grid.Column="1" Height="37" Width="96" Grid.ColumnSpan="2"/>
+        <ListBox SelectionChanged="ListBox_SelectionChanged_1" MouseDoubleClick="lbm_MouseDoubleClick" x:Name="lbm" ItemsSource="{Binding User.Inventory}" SelectedItem="{Binding SelectedMageKnight}"  HorizontalAlignment="Left" Height="455" VerticalAlignment="Top" Width="210" Margin="2,5,0,0" Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="5" Grid.RowSpan="9" Grid.Column="7" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="My Pieces"  FontSize="20" Foreground="Silver" Grid.Row="3" Grid.RowSpan="3" Grid.Column="7" Margin="6,16"/>
+        <Button Command="{Binding AddToArmy}" Content="&lt;-"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="8" Grid.Column="5"/>
+        <Button Command="{Binding RemoveFromArmy}" Content="->"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="10" Grid.Column="5"/>
+        <Label Content="Army Builder"  FontSize="30"  Foreground="Silver" BorderThickness="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="0,4"/>
+        <Label Content="My Boosters" VerticalAlignment="Top" FontSize="20" Foreground="Silver" Grid.Row="3" Grid.RowSpan="2" Grid.Column="10" Height="37" Grid.ColumnSpan="2" Margin="48,0" />
+        <Button Command="{Binding OpenBoosters}" Content="Open Booster" Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="5" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="3,8,2,8"/>
+        <ListBox x:Name="boosterpacks" ItemsSource="{Binding Boosters}"   Height="420" VerticalAlignment="Top"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="7" Grid.RowSpan="7" Grid.Column="10" Grid.ColumnSpan="2" Margin="3,0,2,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Rebellion Booster" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Command="{Binding LoginViewModel.LogOut, Source={x:Static view:SharedResources.ViewModelLocator}}" Content="Log Out" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Width="210" Height="25" Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Column="13" Grid.Row="1"/>
+
+        <Button Command="{Binding HostGame}" Content="Host Game"  Click="Button_Click"  Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="13" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button Command="{Binding JoinGame}" Content="Join Game" Click="Button_Click" Background="Black" Foreground="Silver" BorderBrush="Cornsilk" BorderThickness="1" Grid.Row="15" Grid.ColumnSpan="3" Grid.Column="1"/>
     </Grid>
 </UserControl>
  

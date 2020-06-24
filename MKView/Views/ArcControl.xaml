@@ -10,13 +10,16 @@
             <ResourceDictionary.MergedDictionaries>
                 <x:Static Member="local:SharedResourceDictionary.Instance" />
             </ResourceDictionary.MergedDictionaries>
+            <local:BoolToVisibility x:Key="BoolToVisibility" />
+            <local:InverseBoolToVisibility x:Key="InverseBoolToVisibility" />
+            <local:HighStatCenterOffsetToDouble x:Key="HighStatCenterOffsetToDouble" />
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
-        <local:SpeedBoundary />
-        <local:RangeSector />
+        <local:SpeedBoundary x:Name="speedBoundary" />
+        <local:RangeSector x:Name="rangeSelector"/>
         <Grid.RenderTransform>
-            <RotateTransform CenterX="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" x:Name="Angle" CenterY="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" Angle="0"  />
+            <RotateTransform CenterX="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" x:Name="Angle" CenterY="{Binding Model, Converter={StaticResource HighStatCenterOffsetToDouble}}" Angle="{Binding FacingAngle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"  />
         </Grid.RenderTransform>
     </Grid>
 </UserControl>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ReDefNet</id>
+    <version>1.0.0</version>
+    <description>Long Wave common library.</description>
+    <authors>$authors$</authors>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Runtime.Serialization" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.ServiceModel" targetFramework="net45" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="bin\Release\ReDefNet.dll" target="lib\net45" />
+    <file src="bin\Release\ReDefNet.pdb" target="lib\net45" />
+    <file src="bin\Release\ReDefNet.xml" target="lib\net45" />
+  </files>
+</package>

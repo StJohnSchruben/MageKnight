@@ -1,4 +1,5 @@
-﻿using MKViewModel;
+﻿using MKService;
+using MKViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,23 +25,17 @@ namespace MKView.Views
         public BattleGround()
         {
             InitializeComponent();
-            this.IsVisibleChanged += BattleGround_IsVisibleChanged;
+            this.Loaded += BattleGround_Loaded;
         }
 
-        private void BattleGround_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void BattleGround_Loaded(object sender, RoutedEventArgs e)
         {
-            var user = this.DataContext as IUser;
-            foreach (var m in user.ActiveArmy)
+            IGameViewModel game = this.DataContext as IGameViewModel;
+            if (game.User1.Id != ServiceTypeProvider.Instance.LoggedInUserId)
             {
-                m.PropertyChanged += M_PropertyChanged;
-            }
-        }
-
-        private void M_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "XCord")
-            {
-                ;
+                this.Angle.CenterX = this.ActualHeight / 2;
+                this.Angle.CenterY = this.ActualHeight / 2;
+                this.Angle.Angle = 180;
             }
         }
     }

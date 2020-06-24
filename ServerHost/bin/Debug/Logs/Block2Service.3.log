@@ -1,0 +1,6 @@
+﻿2020-06-02 18:29:51,408 [19336] [1] INFO  ServerHost.TheService - Starting Block II service in interactive mode.
+2020-06-02 18:29:51,424 [19336] [1] DEBUG ServerHost.CommandLineParser - Parsing command line arguments: --config=C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config.
+2020-06-02 18:29:51,425 [19336] [1] DEBUG ServerHost.CommandLineParser - Detected config file command line argument.
+2020-06-02 18:29:51,426 [19336] [1] DEBUG ServerHost.CommandLineParser - Successfully parsed all command line arguments.
+2020-06-02 18:29:51,426 [19336] [1] DEBUG ServerHost.TheService - Using application configuration file 'C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config'.
+2020-06-02 18:29:54,229 [19336] [1] INFO  ServerHost.Server - Initializing Block II server.

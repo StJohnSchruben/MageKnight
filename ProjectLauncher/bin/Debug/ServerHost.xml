@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServerHost</name>
+    </assembly>
+    <members>
+        <member name="T:ServerHost.CommandLineParser">
+            <summary>
+            A parser of command line arguments.
+            </summary>
+        </member>
+        <member name="F:ServerHost.CommandLineParser.ConfigFileOption">
+            <summary>
+            The command line option for the configuration file.
+            </summary>
+        </member>
+        <member name="F:ServerHost.CommandLineParser.HelpOption1">
+            <summary>
+            The command line option for the first help option.
+            </summary>
+        </member>
+        <member name="F:ServerHost.CommandLineParser.HelpOption2">
+            <summary>
+            The command line option for the second help option.
+            </summary>
+        </member>
+        <member name="F:ServerHost.CommandLineParser.log">
+            <summary>
+            The log.
+            </summary>
+        </member>
+        <member name="P:ServerHost.CommandLineParser.ConfigFile">
+            <summary>
+            Gets the name of the configuration file to use for the application.
+            </summary>
+            <value>
+            If the command line argument was specified, the name of the configuration file to use for the application; otherwise,
+            <c>null</c>.
+            </value>
+        </member>
+        <member name="P:ServerHost.CommandLineParser.Error">
+            <summary>
+            Gets the error detected by the parser. Only applies if <see cref="P:ServerHost.CommandLineParser.HasError" /> is <c>true</c>.
+            </summary>
+            <value>
+            If the parser detected an error while parsing the command line arguments, the error; otherwise, <c>null</c>.
+            </value>
+        </member>
+        <member name="P:ServerHost.CommandLineParser.HasError">
+            <summary>
+            Gets a value indicating whether the parser detected an error while parsing command line arguments.
+            </summary>
+            <value>
+            <c>true</c>, the parser detected an error; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:ServerHost.CommandLineParser.Help">
+            <summary>
+            Gets the command line argument help screen. Only available if <see cref="P:ServerHost.CommandLineParser.ShowHelp" /> is <c>true</c>.
+            </summary>
+            <value>
+            If help was requested on the command line, the help screen; otherwise, <c>null</c>.
+            </value>
+        </member>
+        <member name="P:ServerHost.CommandLineParser.ShowHelp">
+            <summary>
+            Gets a value indicating whether help was requested on the command line.
+            </summary>
+            <value>
+            <c>true</c>, if help was requested on the command line; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:ServerHost.CommandLineParser.Parse(System.String[])">
+            <summary>
+            Parses the specified command line arguments.
+            </summary>
+            <param name="args">The command line arguments.</param>
+        </member>
+        <member name="M:ServerHost.CommandLineParser.BuildHelp">
+            <summary>
+            Builds the command line arguments help screen.
+            </summary>
+        </member>
+        <member name="M:ServerHost.CommandLineParser.ParseQuotedStringOption(System.String,System.String)">
+            <summary>
+            Parses an quoted string command line argument option.
+            </summary>
+            <param name="option">The command line option name.</param>
+            <param name="arg">The actual command line argument.</param>
+            <returns>
+            If an error occurred, <c>null</c>; otherwise, the parsed quoted string command line argument option.
+            </returns>
+        </member>
+        <member name="T:ServerHost.LoggingMessageInspector">
+            <summary>
+            A server-side message inspector that logs all incoming and outgoing messages.
+            </summary>
+        </member>
+        <member name="F:ServerHost.LoggingMessageInspector.log">
+            <summary>
+            The log.
+            </summary>
+        </member>
+        <member name="M:ServerHost.LoggingMessageInspector.AfterReceiveRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel,System.ServiceModel.InstanceContext)">
+            <summary>
+            Called after an inbound message has been received but before the message is dispatched to the
+            intended operation.
+            </summary>
+            <param name="request">The request message.</param>
+            <param name="channel">The incoming channel.</param>
+            <param name="instanceContext">The current service instance.</param>
+            <returns>
+            The object used to correlate state. This object is passed back in the <see cref="M:ServerHost.LoggingMessageInspector.BeforeSendReply(System.ServiceModel.Channels.Message@,System.Object)" /> method.
+            </returns>
+        </member>
+        <member name="M:ServerHost.LoggingMessageInspector.BeforeSendReply(System.ServiceModel.Channels.Message@,System.Object)">
+            <summary>
+            Called after the operation has returned but before the reply message is sent.
+            </summary>
+            <param name="reply">The reply message. This value is <c>null</c> if the operation is one way.</param>
+            <param name="correlationState">The correlation object returned from the <see cref="M:ServerHost.LoggingMessageInspector.AfterReceiveRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel,System.ServiceModel.InstanceContext)" /> method.</param>
+        </member>
+        <member name="T:ServerHost.LoggingSerializer">
+            <summary>
+            A custom serializer that logs all serialization errors. It is a simple wrapper around the default WCF
+            <see cref="T:System.Runtime.Serialization.DataContractSerializer" />.
+            </summary>
+        </member>
+        <member name="F:ServerHost.LoggingSerializer.log">
+            <summary>
+            The log.
+            </summary>
+        </member>
+        <member name="F:ServerHost.LoggingSerializer.serializer">
+            <summary>
+            The underlying serializer.
+            </summary>
+        </member>
+        <member name="F:ServerHost.LoggingSerializer.type">
+            <summary>
+            The type that will be serialized or deserialized.
+            </summary>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.#ctor(System.Type,System.String,System.String,System.Collections.Generic.IEnumerable{System.Type},System.Int32,System.Boolean,System.Boolean,System.Runtime.Serialization.IDataContractSurrogate,System.Runtime.Serialization.DataContractResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.LoggingSerializer" /> class.
+            </summary>
+            <param name="type">The type that will be serialized or deserialized.</param>
+            <param name="rootName">
+            The name of the XML element that encloses the content to serialize or
+            deserialize.
+            </param>
+            <param name="rootNamespace">The XML namespace of <paramref name="rootName" />.</param>
+            <param name="knownTypes">The collection of types that may be present in the object graph.</param>
+            <param name="maxItemsInObjectGraph">The maximum number of items in the object graph to serialize or deserialize.</param>
+            <param name="ignoreExtensionDataObject">
+            <c>true</c>, to ignore the data supplied by an extension of the
+            <paramref name="type" /> upon serialization or deserialization; otherwise, <c>false</c>.
+            </param>
+            <param name="preserveObjectReferences">
+            <c>true</c>, to use non-standard XML constructs to preserve object reference
+            data; otherwise, <c>false</c>.
+            </param>
+            <param name="dataContractSurrogate">The data contract surrogate used to customize the serialization process.</param>
+            <param name="dataContractResolver">The data contract resolver used to map xsi:type declarations to data contract types.</param>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.#ctor(System.Type,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString,System.Collections.Generic.IEnumerable{System.Type},System.Int32,System.Boolean,System.Boolean,System.Runtime.Serialization.IDataContractSurrogate,System.Runtime.Serialization.DataContractResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.LoggingSerializer" /> class.
+            </summary>
+            <param name="type">The type that will be serialized or deserialized.</param>
+            <param name="rootName"> The name of the XML element that encloses the content to serialize or deserialize.</param>
+            <param name="rootNamespace">The XML namespace of <paramref name="rootName" />.</param>
+            <param name="knownTypes">The collection of types that may be present in the object graph.</param>
+            <param name="maxItemsInObjectGraph">The maximum number of items in the object graph to serialize or deserialize.</param>
+            <param name="ignoreExtensionDataObject">
+            <c>true</c>, to ignore the data supplied by an extension of the
+            <paramref name="type" /> upon serialization or deserialization; otherwise, <c>false</c>.
+            </param>
+            <param name="preserveObjectReferences">
+            <c>true</c>, to use non-standard XML constructs to preserve object reference
+            data; otherwise, <c>false</c>.
+            </param>
+            <param name="dataContractSurrogate">The data contract surrogate used to customize the serialization process.</param>
+            <param name="dataContractResolver">The data contract resolver used to map xsi:type declarations to data contract types.</param>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.IsStartObject(System.Xml.XmlDictionaryReader)">
+            <summary>
+            Gets a value that specifies whether the specified reader is positioned over an XML element that can be read.
+            </summary>
+            <param name="reader"> An <see cref="T:System.Xml.XmlDictionaryReader" /> used to read the XML stream or document.</param>
+            <returns>
+            <c>true</c>, if the specified reader can read the data; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.ReadObject(System.Xml.XmlDictionaryReader,System.Boolean)">
+            <summary>
+            Reads the XML stream or document with the specified reader and returns the deserialized object.
+            </summary>
+            <param name="reader">An <see cref="T:System.Xml.XmlDictionaryReader" /> used to read the XML document.</param>
+            <param name="verifyObjectName">
+            <c>true</c>, if the enclosing XML element name and namespace should be checked to see if they correspond to the root
+            name and root namespace; otherwise, <c>false</c>.
+            </param>
+            <returns>
+            The deserialized object.
+            </returns>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.WriteEndObject(System.Xml.XmlDictionaryWriter)">
+            <summary>
+            Writes the end of the object data as a closing XML element to the XML document or stream with the specified writer.
+            </summary>
+            <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document or stream.</param>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.WriteObjectContent(System.Xml.XmlDictionaryWriter,System.Object)">
+            <summary>
+            Writes only the content of the object to the XML document or stream using the specified writer.
+            </summary>
+            <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document or stream.</param>
+            <param name="graph">The object that contains the content to write.</param>
+        </member>
+        <member name="M:ServerHost.LoggingSerializer.WriteStartObject(System.Xml.XmlDictionaryWriter,System.Object)">
+            <summary>
+            Writes the start of the object's data as an opening XML element using the specified writer.
+            </summary>
+            <param name="writer">An <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write the XML document.</param>
+            <param name="graph">The object to serialize.</param>
+        </member>
+        <member name="T:ServerHost.SerializationLoggingEndpointBehavior">
+            <summary>
+            An endpoint behavior that logs all serialization errors.
+            </summary>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingEndpointBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds binding parameters during runtime.
+            </summary>
+            <param name="endpoint">The endpoint to modify.</param>
+            <param name="bindingParameters">
+            The objects that binding elements require to support the behavior.
+            </param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingEndpointBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Applies the behavior on the client.
+            </summary>
+            <param name="endpoint">The endpoint that is to be customized.</param>
+            <param name="clientRuntime">The client runtime to be customized.</param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)">
+            <summary>
+            Applies the behavior on the server.
+            </summary>
+            <param name="endpoint">The endpoint that exposes the contract.</param>
+            <param name="endpointDispatcher">The endpoint dispatcher to be modified or extended.</param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingEndpointBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Validates that the endpoint meets some intended criteria.
+            </summary>
+            <param name="endpoint">The endpoint to validate.</param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingEndpointBehavior.ReplaceDefaultSerializerBehavior(System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Replaces the default serialization behavior on each operation on the specified endpoint with the
+            <see cref="T:ServerHost.SerializationLoggingOperationBehavior" />.
+            </summary>
+            <param name="endpoint">The endpoint to modify.</param>
+        </member>
+        <member name="T:ServerHost.SerializationLoggingOperationBehavior">
+            <summary>
+            An operation behavior that replaces the default WCF serializer with the <see cref="T:ServerHost.LoggingSerializer" />.
+            </summary>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.SerializationLoggingOperationBehavior" /> class.
+            </summary>
+            <param name="operation">The operation being examined.</param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription,System.ServiceModel.DataContractFormatAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.SerializationLoggingOperationBehavior" /> class.
+            </summary>
+            <param name="operation">The operation being examined.</param>
+            <param name="dataContractFormatAttribute">
+            The run-time object that exposes customization properties for the operation described by <paramref name="operation" />.
+            </param>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingOperationBehavior.CreateSerializer(System.Type,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString,System.Collections.Generic.IList{System.Type})">
+            <summary>
+            Creates an XML serializer for the specified type.
+            </summary>
+            <param name="type">The type to serialize or deserialize.</param>
+            <param name="name">The name of the serialized type.</param>
+            <param name="ns">The namespace of the serialized type.</param>
+            <param name="knownTypes">The collection of known types.</param>
+            <returns>
+            The XML serializer for the specified type.
+            </returns>
+        </member>
+        <member name="M:ServerHost.SerializationLoggingOperationBehavior.CreateSerializer(System.Type,System.String,System.String,System.Collections.Generic.IList{System.Type})">
+            <summary>
+            Creates an XML serializer for the specified type.
+            </summary>
+            <param name="type">The type to serialize or deserialize.</param>
+            <param name="name">The name of the serialized type.</param>
+            <param name="ns">The namespace of the serialized type.</param>
+            <param name="knownTypes">The collection of known types.</param>
+            <returns>
+            The XML serializer for the specified type.
+            </returns>
+        </member>
+        <member name="T:ServerHost.MessageLoggingEndpointBehavior">
+            <summary>
+            An endpoint behavior that logs all incoming and outgoing messages.
+            </summary>
+        </member>
+        <member name="M:ServerHost.MessageLoggingEndpointBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds binding parameters during runtime.
+            </summary>
+            <param name="endpoint">The endpoint to modify.</param>
+            <param name="bindingParameters">
+            The objects that binding elements require to support the behavior.
+            </param>
+        </member>
+        <member name="M:ServerHost.MessageLoggingEndpointBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Applies the behavior on the client.
+            </summary>
+            <param name="endpoint">The endpoint that is to be customized.</param>
+            <param name="clientRuntime">The client runtime to be customized.</param>
+        </member>
+        <member name="M:ServerHost.MessageLoggingEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)">
+            <summary>
+            Applies the behavior on the server.
+            </summary>
+            <param name="endpoint">The endpoint that exposes the contract.</param>
+            <param name="endpointDispatcher">The endpoint dispatcher to be modified or extended.</param>
+        </member>
+        <member name="M:ServerHost.MessageLoggingEndpointBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Validates that the endpoint meets some intended criteria.
+            </summary>
+            <param name="endpoint">The endpoint to validate.</param>
+        </member>
+        <member name="T:ServerHost.Server">
+            <summary>
+            A hosting server for the services infrastructure. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.snapshotLoadFileName">
+            <summary>
+            The name of the file used to read the name of the snapshot that should be loaded upon startup.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.commandHandlers">
+            <summary>
+            The command handlers.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.deviceBootstrappers">
+            <summary>
+            The device bootstrappers.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.knownTypeAssemblies">
+            <summary>
+            The known type assemblies.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.log">
+            <summary>
+            The log.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.padLock">
+            <summary>
+            The thread-synchronizing object.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.queryHandlers">
+            <summary>
+            The query handlers.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.serviceEndPoint">
+            <summary>
+            The service endpoint.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.snapshotAdapterDeviceServiceBootstrapper">
+            <summary>
+            The special device service bootstrapper that turns snapshot-related command messages into events.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.commandService">
+            <summary>
+            The command service.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.commandServiceHost">
+            <summary>
+            The command service host.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.queryService">
+            <summary>
+            The query service.
+            </summary>
+        </member>
+        <member name="F:ServerHost.Server.queryServiceHost">
+            <summary>
+            The query service host.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.Server" /> class.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.#ctor(System.Net.IPEndPoint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.Server" /> class.
+            </summary>
+            <param name="serviceEndPoint">The service endpoint.</param>
+        </member>
+        <member name="E:ServerHost.Server.Closed">
+            <summary>
+            Occurs when the server is closed.
+            </summary>
+        </member>
+        <member name="E:ServerHost.Server.Faulted">
+            <summary>
+            Occurs when the server is faulted.
+            </summary>
+        </member>
+        <member name="E:ServerHost.Server.Opened">
+            <summary>
+            Occurs when the server is opened.
+            </summary>
+        </member>
+        <member name="P:ServerHost.Server.IsOpen">
+            <summary>
+            Gets a value indicating whether the server is open.
+            </summary>
+            <value><c>true</c>, if the server is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ServerHost.Server.State">
+            <summary>
+            Gets the current server state.
+            </summary>
+            <value>
+            The server state.
+            </value>
+        </member>
+        <member name="M:ServerHost.Server.Close">
+            <summary>
+            Closes the server.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.Open">
+            <summary>
+            Opens the server.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.ChangeState(System.ServiceModel.CommunicationState)">
+            <summary>
+            Changes the current state of the server and raises the appropriate events accordingly.
+            </summary>
+            <param name="updatedState">The new state to change to.</param>
+        </member>
+        <member name="M:ServerHost.Server.ConvertSnapshotPath(System.String)">
+            <summary>
+            Converts the UNC snapshot path received from the snapshot-related events to a local path.
+            </summary>
+            <param name="path">The UNC snapshot path.</param>
+            <returns>
+            The local snapshot path.
+            </returns>
+        </member>
+        <member name="M:ServerHost.Server.CreateConfigFileCommandServiceHost">
+            <summary>
+            Creates the command service host using the WCF configuration from the application configuration file.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.CreateConfigFileQueryServiceHost">
+            <summary>
+            Creates the query service host using the WCF configuration from the application configuration file.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.CreateHardCodedCommandServiceHost">
+            <summary>
+            Creates the command service host using a hard-coded WCF configuration.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.CreateHardCodedQueryServiceHost">
+            <summary>
+            Creates the query service host using a hard-coded WCF configuration.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.LoadSnapshot">
+            <summary>
+            Loads a snapshot, if requested, into the device service bootstrappers.
+            </summary>
+        </member>
+        <member name="M:ServerHost.Server.OnCommandServiceHostFaulted(System.Object,System.EventArgs)">
+            <summary>
+            Called when the command service is faulted.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.Server.OnCreateSnapshotRequested(System.Object,Service.SnapshotEventArgs)">
+            <summary>
+            Called when the a request to create a snapshot has been received.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.Server.OnQueryServiceHostFaulted(System.Object,System.EventArgs)">
+            <summary>
+            Called when the query service is faulted.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.Server.PerformClose">
+            <summary>
+            Closes the server.
+            </summary>
+        </member>
+        <member name="T:ServerHost.IServer">
+            <summary>
+            Represents a hosting server for the services infrastructure.
+            </summary>
+        </member>
+        <member name="E:ServerHost.IServer.Closed">
+            <summary>
+            Occurs when the server is closed.
+            </summary>
+        </member>
+        <member name="E:ServerHost.IServer.Faulted">
+            <summary>
+            Occurs when the server is faulted.
+            </summary>
+        </member>
+        <member name="E:ServerHost.IServer.Opened">
+            <summary>
+            Occurs when the server is opened.
+            </summary>
+        </member>
+        <member name="P:ServerHost.IServer.IsOpen">
+            <summary>
+            Gets a value indicating whether the server is open.
+            </summary>
+            <value><c>true</c>, if the server is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ServerHost.IServer.State">
+            <summary>
+            Gets the current server state.
+            </summary>
+            <value>The server state.</value>
+        </member>
+        <member name="M:ServerHost.IServer.Close">
+            <summary>
+            Closes the server.
+            </summary>
+        </member>
+        <member name="M:ServerHost.IServer.Open">
+            <summary>
+            Opens the server.
+            </summary>
+        </member>
+        <member name="T:ServerHost.TheService">
+            <summary>
+            The Windows service for the Block II WCF service.
+            </summary>
+            <seealso cref="T:System.ServiceProcess.ServiceBase" />
+        </member>
+        <member name="F:ServerHost.TheService.Port">
+            <summary>
+            The port.
+            </summary>
+        </member>
+        <member name="F:ServerHost.TheService.ServiceTimeOutSeconds">
+            <summary>
+            The timeout, in seconds, for the services to startup.
+            </summary>
+        </member>
+        <member name="F:ServerHost.TheService.serverManualResetEvent">
+            <summary>
+            The server manual reset event.
+            </summary>
+        </member>
+        <member name="F:ServerHost.TheService.log">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="F:ServerHost.TheService.applicationConfig">
+            <summary>
+            The application configuration file.
+            </summary>
+        </member>
+        <member name="F:ServerHost.TheService.server">
+            <summary>
+            The server.
+            </summary>
+        </member>
+        <member name="M:ServerHost.TheService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ServerHost.TheService" /> class.
+            </summary>
+        </member>
+        <member name="M:ServerHost.TheService.Main(System.String[])">
+            <summary>
+            Main entry point for the application.
+            </summary>
+            <param name="args">The commandline arguments.</param>
+        </member>
+        <member name="M:ServerHost.TheService.OnShutdown">
+            <summary>
+            Called when the system is shutting down.
+            </summary>
+        </member>
+        <member name="M:ServerHost.TheService.OnStart(System.String[])">
+            <summary>
+            Called when a start command is sent to the service by the Service Control Manager (SCM) or when the operating
+            system starts (for a service that starts automatically).
+            </summary>
+            <param name="args">Data passed by the start command.</param>
+        </member>
+        <member name="M:ServerHost.TheService.OnStop">
+            <summary>
+            Called when a stop command is sent to the service by the Service Control Manager (SCM).
+            </summary>
+        </member>
+        <member name="M:ServerHost.TheService.InitializeLog">
+            <summary>
+            Initializes the application logging.
+            </summary>
+        </member>
+        <member name="M:ServerHost.TheService.OnServerClosed(System.Object,System.EventArgs)">
+            <summary>
+            Called when the server is closed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.TheService.OnServerFaulted(System.Object,System.EventArgs)">
+            <summary>
+            Called when the server is faulted.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.TheService.OnServerOpened(System.Object,System.EventArgs)">
+            <summary>
+            Called when the server is opened.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:ServerHost.TheService.PerformShutdown">
+            <summary>
+            Shuts down the audio router service.
+            </summary>
+        </member>
+    </members>
+</doc>

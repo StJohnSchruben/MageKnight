@@ -1,0 +1,149 @@
+﻿2020-06-20 03:32:34,044 [1] DEBUG MKViewModel.MK2DStartupSettings - our wst endpoint was set to 127.0.0.1:9000
+2020-06-20 03:32:36,008 [1] DEBUG MKService.ServiceClient - Attempting to retrieve query of type 'MKService.Queries.UserCollectionQuery'.
+2020-06-20 03:32:36,148 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,152 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,152 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,153 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,153 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,154 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,155 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,156 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserChanged'.
+2020-06-20 03:32:36,156 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserInventoryAdd'.
+2020-06-20 03:32:36,160 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserAddedMageToArmy'.
+2020-06-20 03:32:36,161 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserInventoryAdd'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserAddedMageToArmy'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserChanged'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserInventoryAdd'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserAddedMageToArmy'.
+2020-06-20 03:32:36,162 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserCollectionAdd'.
+2020-06-20 03:32:36,163 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserSignUp'.
+2020-06-20 03:32:36,178 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.UserSignIn'.
+2020-06-20 03:32:45,310 [1] DEBUG MKService.ModelUpdaters.UserIsSignedInChangedUpdater - Updating model of type 'MKService.Updates.IUpdatableUser' with message of type 'MKService.Messages.UserIsSignedInChanged'.
+2020-06-20 03:32:45,317 [1] DEBUG MKService.ServiceClient - Attempting to retrieve query of type 'MKService.Queries.GamesQuery'.
+2020-06-20 03:32:45,322 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.GameHosted'.
+2020-06-20 03:32:45,323 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.GamesChanged'.
+2020-06-20 03:32:45,342 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.UserIsSignedInChanged' with contents:
+UserIsSignedInChanged:
+{
+	IsSignedIn: True
+	OriginationHash: 16212
+	UserId: d71bee60-75b4-455e-9391-c05fc140edbd
+}.
+2020-06-20 03:32:48,649 [1] DEBUG MKService.ServiceClient - Received published message of type 'MKService.Messages.UserAddedMageToArmy' and contents:
+UserAddedMageToArmy:
+{
+	Id: 169e943b-8ac4-4dda-b682-81f46545e043
+	InstantiatedId: d6e34658-9f47-4a86-b18e-89916f004371
+	OriginationHash: 9476
+	UserId: 2cb6fa2a-4c1c-4f09-bcd1-5228fda8932b
+}.
+2020-06-20 03:32:48,652 [1] DEBUG MKService.ModelUpdaters.UserAddedMageToArmyUpdater - Updating model of type 'MKService.Updates.IUpdatableUser' with message of type 'MKService.Messages.UserAddedMageToArmy'.
+2020-06-20 03:32:48,655 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:48,655 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:48,657 [1] DEBUG MKService.ServiceClient - Received published message of type 'MKService.Messages.GamesChanged' and contents:
+GamesChanged:
+{
+	Id: 2cb6fa2a-4c1c-4f09-bcd1-5228fda8932b
+	OriginationHash: 9476
+}.
+2020-06-20 03:32:48,658 [1] DEBUG MKService.ModelUpdaters.GamesChangedModelUpdater - Updating model of type 'MKService.Updates.IUpdatableGames' with message of type 'MKService.Messages.GamesChanged'.
+2020-06-20 03:32:48,661 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.GameChanged'.
+2020-06-20 03:32:48,662 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.GameJoined'.
+2020-06-20 03:32:48,662 [1] DEBUG MKService.ServiceClient - Attempting to retrieve query of type 'MKService.Queries.UserQuery'.
+2020-06-20 03:32:53,490 [1] DEBUG MKService.ModelUpdaters.UserAddedMageToArmyUpdater - Updating model of type 'MKService.Updates.IUpdatableUser' with message of type 'MKService.Messages.UserAddedMageToArmy'.
+2020-06-20 03:32:53,490 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightChanged'.
+2020-06-20 03:32:53,490 [1] DEBUG MKService.ServiceClient - Subscribing to messages of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:32:53,490 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.UserAddedMageToArmy' with contents:
+UserAddedMageToArmy:
+{
+	Id: 7523e925-0bc1-4ab6-918a-a2c16bf8f760
+	InstantiatedId: b6e11038-e056-4742-a4b9-f0903620a7ca
+	OriginationHash: 16212
+	UserId: d71bee60-75b4-455e-9391-c05fc140edbd
+}.
+2020-06-20 03:32:53,493 [1] DEBUG MKService.ModelUpdaters.GameJoinedUpdater - Updating model of type 'MKService.Updates.IUpdatableGame' with message of type 'MKService.Messages.GameJoined'.
+2020-06-20 03:32:53,534 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.GameJoined' with contents:
+GameJoined:
+{
+	OriginationHash: 16212
+}.
+2020-06-20 03:32:53,536 [1] DEBUG MKService.ServiceClient - Received self-published message of type 'MKService.Messages.UserAddedMageToArmy'. Message will be ignored.
+2020-06-20 03:32:53,556 [1] DEBUG MKService.ServiceClient - Received self-published message of type 'MKService.Messages.GameJoined'. Message will be ignored.
+2020-06-20 03:32:57,393 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.UserSelectedMageChanged' with contents:
+UserSelectedMageChanged:
+{
+	OriginationHash: 16212
+}.
+2020-06-20 03:33:01,949 [1] DEBUG MKService.ModelUpdaters.MageKnightCoordinatesChangedUpdater - Updating model of type 'MKService.Updates.IUpdatableMageKnight' with message of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:33:01,952 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.MageKnightCoordinatesChanged' with contents:
+MageKnightCoordinatesChanged:
+{
+	InstantiatedMageId: b6e11038-e056-4742-a4b9-f0903620a7ca
+	OriginationHash: 16212
+	UserId: d71bee60-75b4-455e-9391-c05fc140edbd
+	XCoordinate: 529.685681024447
+	YCoordinate: -831.049211556778
+}.
+2020-06-20 03:33:01,961 [1] DEBUG MKService.ServiceClient - Received self-published message of type 'MKService.Messages.MageKnightCoordinatesChanged'. Message will be ignored.
+2020-06-20 03:33:05,301 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.UserSelectedMageChanged' with contents:
+UserSelectedMageChanged:
+{
+	OriginationHash: 16212
+}.
+2020-06-20 03:33:11,622 [1] DEBUG MKService.ModelUpdaters.MageKnightCoordinatesChangedUpdater - Updating model of type 'MKService.Updates.IUpdatableMageKnight' with message of type 'MKService.Messages.MageKnightCoordinatesChanged'.
+2020-06-20 03:33:11,623 [1] DEBUG MKService.ServiceClient - Publishing message of type 'MKService.Messages.MageKnightCoordinatesChanged' with contents:
+MageKnightCoordinatesChanged:
+{
+	InstantiatedMageId: d6e34658-9f47-4a86-b18e-89916f004371
+	OriginationHash: 16212
+	UserId: 2cb6fa2a-4c1c-4f09-bcd1-5228fda8932b
+	XCoordinate: 59.096200656154
+	YCoordinate: 787.3866017568
+}.
+2020-06-20 03:33:11,625 [1] DEBUG MKService.ServiceClient - Received self-published message of type 'MKService.Messages.MageKnightCoordinatesChanged'. Message will be ignored.

@@ -9,8 +9,7 @@
              xmlns:vm="clr-namespace:MKViewModel;assembly=MKViewModel"
              xmlns:m="clr-namespace:MKModel;assembly=MKModel"
              mc:Ignorable="d" 
-              DataContext="{Binding User, Source={x:Static view:SharedResources.ViewModelLocator}}"
-             MouseWheel="UserControl_MouseWheel">
+              DataContext="{Binding GameViewModel, Source={x:Static view:SharedResources.ViewModelLocator}}">
     <UserControl.Resources>
         <RoutedUICommand x:Key="Commands.ZoomOut" />
         <RoutedUICommand x:Key="Commands.ZoomIn" />
@@ -27,9 +26,6 @@
 
     <UserControl.InputBindings>
 
-        <!--
-        Bind keys to commands.
-        -->
         <KeyBinding
 			Key="Minus"
 			Command="{StaticResource Commands.ZoomOut}"
@@ -140,13 +136,18 @@
                     -
                 </Button>
 
-                <Button
+                <!--<Button
                 Grid.Column="12"
                 Command="{StaticResource Commands.ZoomIn}"
                 >
                     +
+                </Button>-->
+                <Button
+                Grid.Column="12"
+                Command="{Binding LoginViewModel.LogOut, Source={x:Static view:SharedResources.ViewModelLocator}}"
+                >
+                    LogOut
                 </Button>
-
                 <ResizeGrip
                 Grid.Column="14"
                 />
@@ -164,7 +165,6 @@
 
                 <ZoomAndPan:ZoomAndPanControl
                 x:Name="zoomAndPanControl"
-                
                 ContentViewportWidth="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
                 ContentViewportHeight="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
                 Background="LightGray"
@@ -172,10 +172,10 @@
 	            MouseUp="zoomAndPanControl_MouseUp"
 	            MouseMove="zoomAndPanControl_MouseMove"
 	            MouseWheel="zoomAndPanControl_MouseWheel"
-                MouseDoubleClick="zoomAndPanControl_MouseDoubleClick"
                 >
 
                     <Grid
+                    x:Name="zoomGrid"
                     Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}"
                     Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualWidth}" >
                         <Viewbox x:Name="content">
@@ -194,11 +194,12 @@
                             Opacity="0"
                             />
                         </Canvas>
+                        
                     </Grid>
+                    
+
                 </ZoomAndPan:ZoomAndPanControl>
             </ScrollViewer>
         </DockPanel>
-
-        <views:ArmyBuilder   Grid.Row="1" Grid.ColumnSpan="5" x:Name="ab" Visibility="Hidden" DataContext="{Binding ArmyBuilder, Source={x:Static view:SharedResources.ViewModelLocator}}" Height="Auto" Margin="0,77,-300,78" Width="Auto"/>
     </Grid>
 </UserControl>

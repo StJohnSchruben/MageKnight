@@ -50,3 +50,32 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\MKView.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\MKView.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\MKView.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\MKView.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\MKView.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\DesignViews\BattleCanvas.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\DesignViews\designArc.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\DesignViews\designRangeSector10.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\DesignViews\designRangeSector4.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\DesignViews\designSpeedBoundry.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\MainView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\ArcControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\ArmyBuilder.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\BattleGround.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\Click.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\Dashboard.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\Dial.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\DiceControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\LoginView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\MageDataView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\MageKnight.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\MageKnightBattleView.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\MageKnightGenerator.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\MainMenu.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\RangeSector.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\SharedResourceDictionary.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\SpeedBoundary.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\Stat.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\UserControlFrame.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\Views\ZoomControl.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\GeneratedInternalTypeHelper.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\MKView_MarkupCompile.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\MKView_MarkupCompile.lref

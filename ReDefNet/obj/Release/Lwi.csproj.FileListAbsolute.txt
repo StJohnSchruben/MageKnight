@@ -1,0 +1,32 @@
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\AuxillaryApps.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\CreateBlockIIDrop.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\Deploy.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\DownloadBuildArtifacts.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\IOS_TXPA.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.Wst.ServerHost_FS17.config
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.Wst.ServerHost_FS27.config
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.Wst.ServerHost_FS37.config
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.Wst.ServerHost_FS47.config
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\MasterPortWriter.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\PostBuildServerPrep.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\PrepareBlockIIDrop.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\PullArtifactsFromShareDrive.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\removeExtraConfigFiles.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\SetDefaultAudioDevices.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\StartServerHostAndAudioRouter.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\StopBlockIIServices.ps1
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\WriteSubNetTo17.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\WriteSubNetTo27.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\WriteSubNetTo37.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\WriteSubNetTo47.bat
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.XML
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.dll
+C:\projects\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.pdb
+C:\projects\Reuse\ReDefNet\ReDefNet\obj\Release\ReDefNet.dll
+C:\projects\Reuse\ReDefNet\ReDefNet\obj\Release\ReDefNet.pdb
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.XML
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.dll
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\bin\Release\ReDefNet.pdb
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\obj\Release\ReDefNet.csprojResolveAssemblyReference.cache
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\obj\Release\ReDefNet.dll
+C:\projects\TheIsland\WST 15.2\Dev\CM\BlockIISource\BlockIIWST\Reuse\ReDefNet\ReDefNet\obj\Release\ReDefNet.pdb

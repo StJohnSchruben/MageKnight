@@ -1,0 +1,13 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.XML
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Reuse.Service.Contract.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Reuse.Service.Contract.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Reuse.Service.Contract.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.pdb

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ServerHost</id>
+    <version>1.0.0</version>
+    <description>The Block II WCF service host.</description>
+    <authors>$authors$</authors>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration"
+                         targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization"
+                         targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.ServiceModel"
+                         targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.ServiceProcess"
+                         targetFramework="net45" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="log4net"
+                  version="2.0.8" />
+      <dependency id="Lwi"
+                  version="[2018,)" />
+      <dependency id="Configuration"
+                  version="[2018,)" />
+      <dependency id="Service"
+                  version="[2018,)" />
+      <dependency id="Service.Contract"
+                  version="[2018,)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\ServerHost.exe"
+          target="lib\net45" />
+    <file src="bin\Release\ServerHost.pdb"
+          target="lib\net45" />
+    <file src="bin\Release\ServerHost_FS17.config"
+          target="build" />
+    <file src="bin\Release\ServerHost_FS27.config"
+          target="build" />
+    <file src="bin\Release\ServerHost_FS37.config"
+          target="build" />
+    <file src="bin\Release\ServerHost_FS47.config"
+          target="build" />
+    <file src="bin\Release\ServerHost_FS67.config"
+          target="build" />
+    <file src="bin\Release\SetDefaultAudioDevices.ps1"
+          target="build" />
+    <file src="bin\Release\StartBlockIIServices.ps1"
+          target="build" />
+    <file src="bin\Release\StopBlockIIServices.ps1"
+          target="build" />
+    <file src="bin\Release\WriteICSetPathToFile.ps1"
+          target="build" />
+    <file src="bin\Release\WriteSubNetConfigFiles.bat"
+          target="build" />
+    <file src="bin\Release\AuxillaryApps.bat"
+          target="build" />
+    <file src="bin\Release\GetSubnetForConfigFiles.bat"
+          target="build" />
+    <file src="bin\Release\AudioDeviceCmdlets.dll"
+          target="build" />
+    <file src="bin\Release\ServerHost.targets"
+          target="build" />
+  </files>
+</package>

@@ -1,0 +1,17 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.Contract.XML
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.Contract.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\Service.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Release\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Release\Reuse.Service.Contract.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Release\Reuse.Service.Contract.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Release\Reuse.Service.Contract.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Release\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Release\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Release\Reuse.Service.Contract.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Release\Reuse.Service.Contract.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Release\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Release\Service.Contract.pdb

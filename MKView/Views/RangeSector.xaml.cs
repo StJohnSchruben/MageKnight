@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MKViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace MKView.Views
         public RangeSector()
         {
             InitializeComponent();
+            this.Loaded += RangeSector_Loaded;
+        }
+
+        private void RangeSector_Loaded(object sender, RoutedEventArgs e)
+        {
+            IMageKnightBattleViewModel data = this.DataContext as IMageKnightBattleViewModel;
+            if (data.IsMovingBorder)
+            {
+                this.rangeBorder.Visibility = Visibility.Collapsed;
+                this.rangeSector.Visibility = Visibility.Collapsed;
+                this.dialProxy.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

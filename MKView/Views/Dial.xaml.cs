@@ -1,4 +1,5 @@
 ﻿using MKModel;
+using MKViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,77 +28,16 @@ namespace MKView.Views
         public Dial()
         {
             InitializeComponent();
-            this.IsVisibleChanged += Dial_IsVisibleChanged;
-            this.MouseLeftButtonDown += new MouseButtonEventHandler(Control_MouseLeftButtonDown);
-            this.MouseLeftButtonUp += new MouseButtonEventHandler(Control_MouseLeftButtonUp);
-            this.MouseMove += new MouseEventHandler(Control_MouseMove);
-
+            this.Loaded += Dial_Loaded;
         }
-
-        private void Dial_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+       
+        private void Dial_Loaded(object sender, RoutedEventArgs e)
         {
-            //var dial = this.DataContext as IDial;
-            //Canvas canvas = this.FindAncestor<Canvas>();
-            //var draggableControl = this.FindAncestor<MageKnightBattleView>();
-            //var transform = draggableControl.RenderTransform as TranslateTransform;
-            //if (transform == null)
-            //{
-            //    transform = new TranslateTransform();
-            //    draggableControl.RenderTransform = transform;
-            //}
-            //double offsetX = draggableControl.ActualWidth - this.ActualWidth;
-            //double offsetY = draggableControl.ActualHeight - this.ActualHeight;
-            //transform.X = 1850;
-            //transform.Y = 200;
-        }
-        private void Control_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            isDragging = true;
-            var draggableControl = sender as UserControl;
-            clickPosition = e.GetPosition(this);
-            draggableControl.CaptureMouse();
-            e.Handled = true;
-        }
-
-        private void Control_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            isDragging = false;
-            var draggable = sender as UserControl;
-            draggable.ReleaseMouseCapture();
-        }
-
-        private void Control_MouseMove(object sender, MouseEventArgs e)
-        {
-            var draggableControl = this.FindAncestor<MageKnightBattleView>();
-
-            if (isDragging && draggableControl != null)
+            var mage = this.FindAncestor<MageKnightBattleView>();
+            IMageKnightBattleViewModel data = mage.DataContext as IMageKnightBattleViewModel;
+            if (data.IsMovingBorder)
             {
-                Canvas canvas = this.FindAncestor<Canvas>();
-                Point currentCanvasPosition = e.GetPosition(canvas as UIElement);
-                Point currentControlPosition = e.GetPosition(draggableControl as UIElement);
-                var transform = draggableControl.RenderTransform as TranslateTransform;
-                if (transform == null)
-                {
-                    transform = new TranslateTransform();
-                    draggableControl.RenderTransform = transform;
-                }
-
-                double offsetX = draggableControl.ActualWidth - this.ActualWidth;
-                double offsetY = draggableControl.ActualHeight - this.ActualHeight;
-                double xOffset = currentCanvasPosition.X - clickPosition.X - (offsetX / 2.0);
-                double yOffset = currentCanvasPosition.Y - clickPosition.Y - (offsetY / 2.0);
-                double top = currentCanvasPosition.Y - clickPosition.Y;
-                double bottom = currentCanvasPosition.Y + 100;    
-                double left = currentCanvasPosition.X - clickPosition.X;
-                double right = currentCanvasPosition.X + 100;
-                if (!(top <= 200) && !(bottom >= 3800))
-                {
-                    transform.Y = yOffset;
-                }
-                if (!(left <= 200) && !(right >= 3800))
-                {
-                    transform.X = xOffset;
-                }
+                this.grid.Visibility = Visibility.Hidden;
             }
         }
     }

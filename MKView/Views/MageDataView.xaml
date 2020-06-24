@@ -5,100 +5,181 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
               xmlns:view="clr-namespace:MKView"
-              DataContext="{Binding GameUser.SelectedMageKnight, Source={x:Static view:SharedResources.ViewModelLocator}}"
-             mc:Ignorable="d" >
+              DataContext="{Binding GameViewModel.User1SelectedMageKnight, Source={x:Static view:SharedResources.ViewModelLocator}}"
+             mc:Ignorable="d" Background="DarkGray"   Height="600" Width="200">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <x:Static Member="local:SharedResourceDictionary.Instance" />
             </ResourceDictionary.MergedDictionaries>
             <local:AbilityToVisibility x:Key="AbilityToVisibility" />
+            <local:InverseBoolToVisibility x:Key="InverseBoolToVisibility" />
+            <local:BoolToVisibility x:Key="BoolToVisibility" />
+            <local:ActionModeToVisibility x:Key="ActionModeToVisibility" />
+            <local:InverseActionModeToVisibility x:Key="InverseActionModeToVisibility" />
+            <local:TargetToVisibility x:Key="TargetToVisibility" />
+            <local:InverseActionModeAttackToVisibility x:Key="InverseActionModeAttackToVisibility" />
+            <local:ActionModeMoveFormationToVisibility x:Key="ActionModeMoveFormationToVisibility" />
+            <local:InverseActionModeMoveFormationToVisibility x:Key="InverseActionModeMoveFormationToVisibility" />
+            <local:ActionCountMaxToBool x:Key="ActionCountMaxToBool" />
+            <local:InActionModeToVisibility x:Key="InActionModeToVisibility" />
+            <local:MagePushedToVisibility x:Key="MagePushedToVisibility" />
+            <local:MageActionEnabledBoolToVisibility x:Key="MageActionEnabledBoolToVisibility" />
         </ResourceDictionary>
     </UserControl.Resources>
-    <Viewbox Stretch="UniformToFill">
-        <Grid Height="700" Width="350">
+    <Border BorderBrush="Black" BorderThickness="1" >
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="21*"/>
-                    <ColumnDefinition Width="23*"/>
-                    <ColumnDefinition Width="52*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="8*"/>
-                    <RowDefinition Height="37*"/>
-                </Grid.RowDefinitions>
+        <Grid>
+            <Border BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="32*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="165*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="120*"/>
+                        <RowDefinition Height="180*"/>
+                        <RowDefinition Height="118*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="S" Grid.Column="0" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="A" Grid.Column="1" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="D" Grid.Column="2" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Dam" Grid.Column="3" />
+                    </Grid>
+                    <Grid Grid.Column="2"  Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="1" Grid.Row="0" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="2" Grid.Row="1" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="3" Grid.Row="2" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="4" Grid.Row="3" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="5" Grid.Row="4" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="6" Grid.Row="5" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="7" Grid.Row="6" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="8" Grid.Row="7" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="9" Grid.Row="8" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="10" Grid.Row="9" />
+                        <TextBlock FontSize="6" HorizontalAlignment="Center" VerticalAlignment="Center" Text="11" Grid.Row="10" />
+                    </Grid>
+                    <Border Grid.ColumnSpan="2" Grid.Row="1" >
+                        <ItemsControl x:Name="clicksList" ItemsSource="{Binding Dial.Clicks}" HorizontalAlignment="Left">
+                            <ItemsControl.ItemsPanel >
+                                <ItemsPanelTemplate>
+                                    <StackPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Viewbox Height="14">
+                                        <local:Click />
+                                    </Viewbox>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Border>
 
-                <Viewbox Stretch="None" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top">
-                    <ItemsControl ItemsSource="{Binding Dial.Clicks}" Background="Red">
-                        <ItemsControl.ItemsPanel >
-                            <ItemsPanelTemplate>
-                                <StackPanel />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Viewbox Height="40">
-                                    <local:Click />
-                                </Viewbox>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </Viewbox>
 
-                <Image  Source="{Binding ModelImage}"  VerticalAlignment="Top" Grid.Column="2"  HorizontalAlignment="Left"/>
-                <StackPanel Grid.Row="2" Grid.Column="3" >
-                    <Label Content="{Binding Name}" Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Targets: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
-                        <Label Content="{Binding Targets}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
+                    <Grid x:Name="targetGrid" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="3" Visibility="{Binding TargetedFigures, Converter={StaticResource TargetToVisibility}}" >
+                        <ItemsControl ItemsSource="{Binding TargetedFigures}" >
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding ModelImage}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                    <Grid Grid.Column="3" Grid.RowSpan="4" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="101*"/>
+                            <RowDefinition Height="12*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="125*"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2" Background="White">
+                            <Image  Source="{Binding ModelImage}" Stretch="Uniform" />
+                        </Border>
+                        <TextBlock FontSize="7"  Grid.Row="1" Text="{Binding Name}"  Height="{Binding ActualHeight}" HorizontalAlignment="Center"   />
+                        <TextBlock  FontSize="7" Grid.Row="2" Text="Targets: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"   />
+                        <TextBlock  FontSize="7" Grid.Row="2"   HorizontalAlignment="Left" Text="{Binding Targets}" Height="{Binding ActualHeight}" Grid.Column="1" />
+                        <TextBlock  FontSize="7" Grid.Row="3"  Text="Point Value: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  />
+                        <TextBlock  FontSize="7" Grid.Row="3"   HorizontalAlignment="Left" Text="{Binding PointValue}" Height="{Binding ActualHeight}" Grid.Column="1" />
+                        <TextBlock  FontSize="7" Grid.Row="4"  Text="Faction: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  />
+                        <TextBlock  FontSize="7" Grid.Row="4"  HorizontalAlignment="Left" Text="{Binding Faction}" Height="{Binding ActualHeight}" Grid.Column="1" />
+                        <TextBlock  FontSize="7" Grid.Row="5"  Text="Rank: " Height="{Binding ActualHeight}" HorizontalAlignment="Left" />
+                        <TextBlock  FontSize="7" Grid.Row="5"  HorizontalAlignment="Left" Text="{Binding Rank}" Height="{Binding ActualHeight}" Grid.Column="1"/>
+
+                        <TextBlock Grid.Row="6" FontSize="7" Text="ClickIndex: " HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Row="6" FontSize="7" Text="{Binding Dial.ClickIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, Mode=TwoWay}" HorizontalAlignment="Left" Grid.Column="1" />
+                        
+                        <TextBlock Grid.Row="7" FontSize="7" Text="Action Count: " HorizontalAlignment="Left"/>
+                        <TextBlock Grid.Row="7" FontSize="7" Text="{Binding ActionCount}" HorizontalAlignment="Left" Grid.Column="1" />
+                        <Button  Grid.Row="8" FontSize="7" Grid.ColumnSpan="2" Content="Push" Visibility="{Binding ViewModel, Converter={StaticResource MagePushedToVisibility}, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" Command="{Binding Push}"/>
+                    </Grid>
+                    <StackPanel Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" IsEnabled="{Binding ViewModel, Converter={StaticResource MageActionEnabledBoolToVisibility}}">
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Cancel" Visibility="{Binding ActionMode, Converter={StaticResource InActionModeToVisibility}}" Command="{Binding Cancel}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Move"  Visibility="{Binding ActionMode, Converter={StaticResource InverseActionModeToVisibility}}"  Command="{Binding Move}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Confirm Move"  Visibility="{Binding ActionMode, Converter={StaticResource ActionModeToVisibility}}"  Command="{Binding Move}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Move Formation"  Visibility="{Binding ActionMode, Converter={StaticResource InverseActionModeMoveFormationToVisibility}}"  Command="{Binding MovementFormation}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Confirm Formation"  Visibility="{Binding ActionMode, Converter={StaticResource ActionModeMoveFormationToVisibility}}"  Command="{Binding MovementFormation}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Attack" Command="{Binding Attack}" Visibility="{Binding ActionMode, Converter={StaticResource InverseActionModeAttackToVisibility}}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Roll To Attack" Command="{Binding Attack}" Visibility="{Binding TargetedFigures, Converter={StaticResource TargetToVisibility}}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Capture" Visibility="{Binding IsInBaseContact, Converter={StaticResource BoolToVisibility}}"  Command="{Binding Capture}"/>
+                        <Button Grid.Column="3" Grid.Row="3" FontSize="7" Content="Break Away" Visibility="{Binding IsInBaseContact, Converter={StaticResource BoolToVisibility}}" Command="{Binding BreakAway}"/>
+                        <ItemsControl x:Name="stack" ItemsSource="{Binding Dial.Click.Stats}" >
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Content="{Binding Path=Ability}" FontSize="7" Visibility="{Binding Path=Ability, Converter={StaticResource AbilityToVisibility}}" MouseDown="Button_Click" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Point Value: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
-                        <Label Content="{Binding PointValue}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Faction: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
-                        <Label Content="{Binding Faction}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Rank: " Height="{Binding ActualHeight}" HorizontalAlignment="Left"  Width="{Binding ActualWidth}"/>
-                        <Label Content="{Binding Rank}" Height="{Binding ActualHeight}" Width="{Binding ActualWidth}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="ClickIndex: " HorizontalAlignment="Left"  />
-                        <Label Content="{Binding Dial.ClickIndex, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, Mode=TwoWay}" HorizontalAlignment="Right"  />
-                        <Button Content="Click Down" Command="{Binding ClickUp}" />
-                        <Button Content="Click Up" Command="{Binding ClickDown}"/>
-                    </StackPanel>
-
-                    <Button Content="Move" Command="{Binding Move}"/>
-                    <Button Content="Attack" Command="{Binding Attack}"/>
-                    <Button Content="Capture" Command="{Binding Capture}"/>
-                    <ListBox ItemsSource="{Binding Dial.Click.Stats}">
-                        <ListBox.Style>
-                            <Style TargetType="ListBox">
-                                <Setter Property="ItemsPanel">
-                                    <Setter.Value>
-                                        <ItemsPanelTemplate>
-                                            <StackPanel Orientation="Vertical"/>
-                                        </ItemsPanelTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </ListBox.Style>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Label Content="{Binding Path=Ability}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="{Binding Path=Ability, Converter={StaticResource AbilityToVisibility}}" MouseDown="Button_Click" />
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-
-            </Grid>
-
+                </Grid>
+            </Border>
         </Grid>
-
-    </Viewbox>
+    </Border>
 
 </UserControl>

@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lwi.Wst.Service.Contract</name>
+    </assembly>
+    <members>
+        <member name="T:Lwi.Wst.Service.Contract.ClientChannelProvider">
+            <summary>
+            A provider of channels for a client of the DVS service.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.ClientChannelProvider.deviceServiceBootstrapper">
+            <summary>
+            The device service bootstrapper.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.ClientChannelProvider.endpoint">
+            <summary>
+            The service endpoint.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.ClientChannelProvider.log">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.ClientChannelProvider.#ctor(System.Net.IPEndPoint,Lwi.Wst.Service.IDeviceServiceBootstrapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.Contract.ClientChannelProvider" /> class.
+            </summary>
+            <param name="endpoint">The service endpoint.</param>
+            <param name="deviceServiceBootstrapper">The device service bootstrapper.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.ClientChannelProvider.GetCommandChannel(System.Object)">
+            <summary>
+            Gets the command channel.
+            </summary>
+            <param name="implementation">The client implementation.</param>
+            <returns>
+            The command channel.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.ClientChannelProvider.GetQueryChannel(System.Object)">
+            <summary>
+            Gets the query channel.
+            </summary>
+            <param name="implementation">The client implementation.</param>
+            <returns>
+            The query channel.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.CommandService">
+            <summary>
+            Represents the service host instance for the <see cref="T:Lwi.Wst.Service.ICommandContract" />.
+            </summary>
+            <seealso cref="T:Lwi.Wst.Service.ICommandContract" />
+            <seealso cref="T:Lwi.Wst.Service.CommandContractBase" />
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.DuplexChannelProvider">
+            <summary>
+            A provider of duplex service channels.
+            </summary>
+            <seealso cref="T:Lwi.Wst.Service.Contract.IDuplexChannelProvider" />
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.DuplexChannelProvider.provider">
+            <summary>
+            The provider.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.DuplexChannelProvider.#ctor(Lwi.Wst.Service.IDeviceServiceBootstrapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.Contract.DuplexChannelProvider" /> class.
+            </summary>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.DuplexChannelProvider.GetCommandChannel(System.Object,System.String)">
+            <summary>
+            Gets the command channel.
+            </summary>
+            <param name="implementation">The implementation.</param>
+            <param name="endpointConfigurationName">Name of the endpoint configuration.</param>
+            <returns>
+            The command channel.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.DuplexChannelProvider.GetQueryChannel(System.Object,System.String)">
+            <summary>
+            Gets the query channel.
+            </summary>
+            <param name="implementation">The implementation.</param>
+            <param name="endpointConfigurationName">Name of the endpoint configuration.</param>
+            <returns>
+            The query channel.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.IClientChannelProvider">
+            <summary>
+            Represents a provider of channels for a client of the DVS service.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IClientChannelProvider.GetCommandChannel(System.Object)">
+            <summary>
+            Gets the command channel.
+            </summary>
+            <param name="implementation">The client implementation.</param>
+            <returns>
+            The command channel.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IClientChannelProvider.GetQueryChannel(System.Object)">
+            <summary>
+            Gets the query channel.
+            </summary>
+            <param name="implementation">The client implementation.</param>
+            <returns>
+            The query channel.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.IDuplexChannelProvider">
+            <summary>
+            Represents a duplex channel provider.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IDuplexChannelProvider.GetCommandChannel(System.Object,System.String)">
+            <summary>
+            Gets the command channel.
+            </summary>
+            <param name="implementation">The implementation.</param>
+            <param name="endpointConfigurationName">Name of the endpoint configuration.</param>
+            <returns>A client side proxy of <see cref="T:Lwi.Wst.Service.ICommandContract" />.</returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IDuplexChannelProvider.GetQueryChannel(System.Object,System.String)">
+            <summary>
+            Gets the query channel.
+            </summary>
+            <param name="implementation">The implementation.</param>
+            <param name="endpointConfigurationName">Name of the endpoint configuration.</param>
+            <returns>A client side proxy of <see cref="T:Lwi.Wst.Service.IQueryContract" />.</returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.IServiceClient">
+            <summary>
+            Represents a client of the WST service.
+            </summary>
+        </member>
+        <member name="E:Lwi.Wst.Service.Contract.IServiceClient.MessageReceived">
+            <summary>
+            Occurs when a new message is received.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IServiceClient.PublishAsync``1(``0)">
+            <summary>
+            Asynchronously publishes the specified message.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <param name="message">The message.</param>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IServiceClient.Query``1">
+            <summary>
+            Executes the specified query.
+            </summary>
+            <typeparam name="TQuery">The query type.</typeparam>
+            <returns>
+            The query result.
+            </returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.IServiceClient.SubscribeAsync``1">
+            <summary>
+            Asynchronously subscribes to the specified message type.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <returns>
+            A task representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.KnownTypeContractBehavior">
+            <summary>
+            A known type contract behavior. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.resolver">
+            <summary>
+            The data contract resolver.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.Contract.KnownTypeContractBehavior" /> class.
+            </summary>
+            <param name="assemblies">The assemblies.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds the binding parameters.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="bindingParameters">The binding parameters.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Applies the client behavior.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="clientRuntime">The client runtime.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)">
+            <summary>
+            Applies the dispatch behavior.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="dispatchRuntime">The dispatch runtime.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Validates the specified contract description.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+            <param name="endpoint">The endpoint.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.CreateMyDataContractSerializerOperationBehaviors(System.ServiceModel.Description.ContractDescription)">
+            <summary>
+            Creates my data contract serializer operation behaviors.
+            </summary>
+            <param name="contractDescription">The contract description.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.KnownTypeContractBehavior.CreateMyDataContractSerializationOperationBehavior(System.ServiceModel.Description.OperationDescription)">
+            <summary>
+            Creates my data contract serialization operation behavior.
+            </summary>
+            <param name="operation">The operation.</param>
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.QueryService">
+            <summary>
+            Represents a service host instance for the <see cref="T:Lwi.Wst.Service.IQueryContract" />.
+            </summary>
+            <seealso cref="T:Lwi.Wst.Service.QueryContractBase" />
+        </member>
+        <member name="T:Lwi.Wst.Service.Contract.WstServiceClient">
+            <summary>
+            A client of the DVS service that uses WCF. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.WstServiceClient.log">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.WstServiceClient.originationHash">
+            <summary>
+            The message origination hash.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.WstServiceClient.subscribedMessageTypes">
+            <summary>
+            The message types that have already been subscribed to.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.WstServiceClient.commandChannel">
+            <summary>
+            The command client.
+            </summary>
+        </member>
+        <member name="F:Lwi.Wst.Service.Contract.WstServiceClient.queryChannel">
+            <summary>
+            The query client.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.#ctor(Lwi.Wst.Service.Contract.IClientChannelProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Wst.Service.Contract.WstServiceClient" /> class.
+            </summary>
+            <param name="clientChannelProvider">The client channel provider.</param>
+        </member>
+        <member name="E:Lwi.Wst.Service.Contract.WstServiceClient.MessageReceived">
+            <summary>
+            Occurs when a new message is received.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.HandleQueryResponse(Lwi.Wst.Service.IQueryResponse)">
+            <summary>
+            Handles the specified query.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.HandleSubscribe(Lwi.Wst.Service.IMessage)">
+            <summary>
+            Handles the subscription of the specified command message.
+            </summary>
+            <param name="message">The command message.</param>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.PublishAsync``1(``0)">
+            <summary>
+            Asynchronously publishes the specified message.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <param name="message">The message.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.Query``1">
+            <summary>
+            Executes the specified query.
+            </summary>
+            <typeparam name="TQuery">The query type.</typeparam>
+            <returns>The query result.</returns>
+        </member>
+        <member name="M:Lwi.Wst.Service.Contract.WstServiceClient.SubscribeAsync``1">
+            <summary>
+            Asynchronously subscribes to the specified message type.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+    </members>
+</doc>

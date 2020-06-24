@@ -16,7 +16,7 @@
 
     <Grid Height="4000" Width="4000">
 
-        <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveArmy}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
+        <ItemsControl x:Name="ic"  ItemTemplate="{StaticResource MageKnight}"  ItemsSource="{Binding ActiveMageKnights}"   Height="{Binding ActualHeight}" Width="{Binding ActualWidth}" Grid.Row="1" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <local:BattleCanvas x:Name="renderCanvas" 
@@ -28,6 +28,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemContainerStyle>
                 <Style TargetType="ContentPresenter">
+                    <Setter Property="local:DraggableExtender.CanDrag" Value="True" />
                     <Setter Property="Canvas.Left" Value="{Binding Path=XCord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
                     <Setter Property="Canvas.Top" Value="{Binding Path=YCord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
                 </Style>
@@ -38,6 +39,8 @@
             <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Top"/>
             <Border Height="200" BorderBrush="Yellow" BorderThickness="5" Width="1800" VerticalAlignment="Bottom"/>
         </Grid>
-
+        <Grid.RenderTransform>
+            <RotateTransform x:Name="Angle" />
+        </Grid.RenderTransform>
     </Grid>
 </UserControl>

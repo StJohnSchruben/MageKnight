@@ -6,6 +6,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary >
             <local:BoolToVisibility x:Key="BoolToVisibility" />
+            <local:InverseBoolToVisibility x:Key="InverseBoolToVisibility" />
             <local:SpeedForWidthToDouble x:Key="SpeedForWidthToDouble" />
             <local:RangeForWidthToDouble x:Key="RangeForWidthToDouble" />
             <local:CenterRangePointToDouble x:Key="CenterRangePointToDouble" />

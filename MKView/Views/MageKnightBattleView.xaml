@@ -5,14 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
              mc:Ignorable="d"  
+             MouseRightButtonDown="UserControl_MouseRightButtonDown"
             MouseDoubleClick="UserControl_MouseDoubleClick">
     <UserControl.Resources>
         <local:BoolToVisibility x:Key="BoolToVisibility" />
+        <local:InverseBoolToVisibility x:Key="InverseBoolToVisibility" />
         <local:TotalWidthConverter x:Key="TotalWidthConverter" />
+        <local:ActionCountToVisibility1 x:Key="ActionCountToVisibility1" />
+        <local:ActionCountToVisibility2 x:Key="ActionCountToVisibility2" />
     </UserControl.Resources>
     <Grid >
-        <local:ArcControl  Width="{Binding ViewModel, Converter={StaticResource TotalWidthConverter}}" Height="{Binding Model, Converter={StaticResource TotalWidthConverter}}" />
+        <local:ArcControl x:Name="arcControl" Width="{Binding ViewModel, Converter={StaticResource TotalWidthConverter}}" Height="{Binding Model, Converter={StaticResource TotalWidthConverter}}" />
+        <local:Dial x:Name="dial" DataContext="{Binding Dial}"  />
+        <Ellipse x:Name="CenterOfDial" Fill="Red" Height="5" Width="5" Visibility="{Binding IsInRange, Converter={StaticResource BoolToVisibility}}"/>
 
-        <local:Dial x:Name="dial" DataContext="{Binding Dial}"/>
+        <Ellipse x:Name="Counter1" Fill="Lime" Height="10" Width="10" Visibility="{Binding ActionCount, Converter={StaticResource ActionCountToVisibility1}}" Margin="58,30,37,65"/>
+        <Ellipse x:Name="Counter2" Fill="Lime" Height="10" Width="10" Visibility="{Binding ActionCount, Converter={StaticResource ActionCountToVisibility2}}" Margin="37,30,58,65"/>
     </Grid>
 </UserControl>

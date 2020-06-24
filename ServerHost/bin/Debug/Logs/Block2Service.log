@@ -1,0 +1,37 @@
+﻿2020-06-02 18:31:20,813 [15836] [1] INFO  ServerHost.TheService - Starting Block II service in interactive mode.
+2020-06-02 18:31:20,832 [15836] [1] DEBUG ServerHost.CommandLineParser - Parsing command line arguments: --config=C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config.
+2020-06-02 18:31:20,833 [15836] [1] DEBUG ServerHost.CommandLineParser - Detected config file command line argument.
+2020-06-02 18:31:20,834 [15836] [1] DEBUG ServerHost.CommandLineParser - Successfully parsed all command line arguments.
+2020-06-02 18:31:20,834 [15836] [1] DEBUG ServerHost.TheService - Using application configuration file 'C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config'.
+2020-06-02 18:31:25,114 [15836] [1] INFO  ServerHost.Server - Initializing Block II server.
+2020-06-02 18:31:25,114 [15836] [1] DEBUG ServerHost.Server - Scanning 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug' for assemblies containing device service bootstrappers.
+2020-06-02 18:31:25,115 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\log4net.dll.
+2020-06-02 18:31:25,127 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,128 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.dll.
+2020-06-02 18:31:25,149 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,149 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Configuration.dll.
+2020-06-02 18:31:25,150 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,150 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Service.Contract.dll.
+2020-06-02 18:31:25,160 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,161 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Service.dll.
+2020-06-02 18:31:25,165 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,166 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.Contract.dll.
+2020-06-02 18:31:25,171 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:25,172 [15836] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.dll.
+2020-06-02 18:31:25,173 [15836] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:31:26,171 [15836] [1] DEBUG ServerHost.Server - Attempting to find the snapshot adapter device service bootstrapper.
+2020-06-02 18:31:26,171 [15836] [1] DEBUG ServerHost.Server - No snapshot adapter device service bootstrapper was found.
+2020-06-02 18:31:26,171 [15836] [1] DEBUG ServerHost.Server - The service will NOT participate in snapshot.
+2020-06-02 18:31:26,171 [15836] [1] DEBUG ServerHost.Server - Finished scanning for device service bootstrappers. Known type assemblies are:
+	.
+2020-06-02 18:31:28,637 [15836] [1] INFO  ServerHost.Server - Block II server initialized successfully.
+2020-06-02 18:31:46,633 [15836] [1] INFO  ServerHost.Server - Preparing to open Block II service hosts.
+2020-06-02 18:31:47,780 [15836] [1] DEBUG ServerHost.Server - Service configuration will be read from configuration file.
+2020-06-02 18:31:48,643 [15836] [1] DEBUG ServerHost.Server - Creating service hosts.
+2020-06-02 18:31:52,215 [15836] [1] DEBUG ServerHost.Server - Creating command service host using settings from application configuration file.
+2020-06-02 18:32:32,056 [15836] [1] DEBUG ServerHost.Server - Creating query service host using settings from application configuration file.
+2020-06-02 18:32:44,756 [15836] [1] DEBUG ServerHost.Server - Loading snapshot (if needed).
+2020-06-02 18:32:46,765 [15836] [1] DEBUG ServerHost.Server - Loading Block II model snapshots.
+2020-06-02 18:32:47,816 [15836] [1] DEBUG ServerHost.Server - Checking for presence of snapshot load file at 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\SelectedICSetPath.txt'.
+2020-06-02 18:32:48,854 [15836] [1] DEBUG ServerHost.Server - Snapshot load file 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\SelectedICSetPath.txt' does not exist. Skipping loading snapshots.
+2020-06-02 18:32:50,647 [15836] [1] DEBUG ServerHost.Server - Loading query and service handlers.

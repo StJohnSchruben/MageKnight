@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKView\obj\Release\
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKView\obj\Release\
 MKView
 none
 false
 TRACE
 
-8878259126
+252090896175
 
-1453354095
-74-1942662306
-MainView.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Dial.xaml;Views\MageKnight.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\UserControlFrame.xaml;
+38176686690
+76-1269815595
+DesignViews\BattleCanvas.xaml;DesignViews\designArc.xaml;DesignViews\designRangeSector10.xaml;DesignViews\designRangeSector4.xaml;DesignViews\designSpeedBoundry.xaml;MainView.xaml;Views\ArcControl.xaml;Views\ArmyBuilder.xaml;Views\BattleGround.xaml;Views\Click.xaml;Views\Dashboard.xaml;Views\Dial.xaml;Views\DiceControl.xaml;Views\LoginView.xaml;Views\MageDataView.xaml;Views\MageKnight.xaml;Views\MageKnightBattleView.xaml;Views\MageKnightGenerator.xaml;Views\MainMenu.xaml;Views\RangeSector.xaml;Views\SharedResourceDictionary.xaml;Views\SpeedBoundary.xaml;Views\Stat.xaml;Views\UserControlFrame.xaml;Views\ZoomControl.xaml;
 
-False
+True
 

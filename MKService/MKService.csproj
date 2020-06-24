@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4646E9FC-62B8-43DF-9D33-77BACD631892}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKService</RootNamespace>
+    <AssemblyName>MKService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\lib\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReDefNet">
+      <HintPath>..\lib\ReDefNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Service">
+      <HintPath>..\Service.Contract\bin\Release\Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Service.Contract">
+      <HintPath>..\Service.Contract\bin\Release\Service.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Service\bin\Release\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\Service\bin\Release\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientChannelProvider.cs" />
+    <Compile Include="DefaultModel\DefaultModel.cs" />
+    <Compile Include="DefaultModel\EnumToStringConversions.cs" />
+    <Compile Include="DefaultModel\IDefaultModel.cs" />
+    <Compile Include="DeviceServiceBootstrapper.cs" />
+    <Compile Include="IClientServiceTypeProvider.cs" />
+    <Compile Include="IPEndPointExtensions.cs" />
+    <Compile Include="IServerServiceTypeProvider.cs" />
+    <Compile Include="IServiceClient.cs" />
+    <Compile Include="MessageDumper.cs" />
+    <Compile Include="MessageHandlers\ClickChangedHandler.cs" />
+    <Compile Include="MessageHandlers\DialIndexChangedHandler.cs" />
+    <Compile Include="MessageHandlers\GameChangedHandler.cs" />
+    <Compile Include="MessageHandlers\GameHostedHandler.cs" />
+    <Compile Include="MessageHandlers\GameJoinedHandler.cs" />
+    <Compile Include="MessageHandlers\IServerMessageHandler.cs" />
+    <Compile Include="MessageHandlers\IServerMessageHandlerResolver.cs" />
+    <Compile Include="MessageHandlers\MageKnightChangedHandler.cs" />
+    <Compile Include="MessageHandlers\MageKnightCoordinatesChangedHandler.cs" />
+    <Compile Include="MessageHandlers\ServerMessageHandlerBase.cs" />
+    <Compile Include="MessageHandlers\ServerMessageHandlerResolver.cs" />
+    <Compile Include="MessageHandlers\SessionTimeChangedHandler.cs" />
+    <Compile Include="MessageHandlers\UserAddedMageToArmyHandler.cs" />
+    <Compile Include="MessageHandlers\UserBoosterPackCountChangedHandler.cs" />
+    <Compile Include="MessageHandlers\UserIsSignedInChangedHandler.cs" />
+    <Compile Include="MessageHandlers\UserSignInHandler.cs" />
+    <Compile Include="Messages\GameHosted.cs" />
+    <Compile Include="Messages\GameJoined.cs" />
+    <Compile Include="Messages\MageKnightCoordinatesChanged.cs" />
+    <Compile Include="Messages\UserBooserPackCountChanged.cs" />
+    <Compile Include="MessageHandlers\UserChangedHandler.cs" />
+    <Compile Include="MessageHandlers\UserCollectionAddedHandler.cs" />
+    <Compile Include="MessageHandlers\UserSignUpHandler.cs" />
+    <Compile Include="Messages\ClickChanged.cs" />
+    <Compile Include="Messages\DialIndexChanged.cs" />
+    <Compile Include="Messages\GameChanged.cs" />
+    <Compile Include="Messages\MageKnightChanged.cs" />
+    <Compile Include="Messages\MessageBase.cs" />
+    <Compile Include="Messages\SessionTimeChanged.cs" />
+    <Compile Include="Messages\UserAddedMageToArmy.cs" />
+    <Compile Include="Messages\UserChanged.cs" />
+    <Compile Include="Messages\UserCollectionAdd.cs" />
+    <Compile Include="Messages\UserIsSignedInChanged.cs" />
+    <Compile Include="Messages\UserSelectedMageChanged.cs" />
+    <Compile Include="MessageHandlers\UserSelectedMageChangedHandler.cs" />
+    <Compile Include="Messages\UserSignIn.cs" />
+    <Compile Include="Messages\UserSignUp.cs" />
+    <Compile Include="ModelFactories\ClickFactory.cs" />
+    <Compile Include="ModelFactories\DialFactory.cs" />
+    <Compile Include="ModelFactories\GameFactory.cs" />
+    <Compile Include="ModelFactories\IModelFactory.cs" />
+    <Compile Include="ModelFactories\IModelFactoryResolver.cs" />
+    <Compile Include="ModelFactories\MageKnightFactory.cs" />
+    <Compile Include="ModelFactories\ModelFactoryBase.cs" />
+    <Compile Include="ModelFactories\ModelFactoryResolver.cs" />
+    <Compile Include="ModelFactories\SessionTimeFactory.cs" />
+    <Compile Include="ModelFactories\StatFactory.cs" />
+    <Compile Include="ModelFactories\UserCollectionFactory.cs" />
+    <Compile Include="ModelFactories\UserFactory.cs" />
+    <Compile Include="ModelUpdaters\ClickChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\DialIndexChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\GameChangedModelUpdater.cs" />
+    <Compile Include="ModelUpdaters\GameHostedUpdater.cs" />
+    <Compile Include="ModelUpdaters\GameJoinedUpdater.cs" />
+    <Compile Include="ModelUpdaters\IModelUpdater.cs" />
+    <Compile Include="ModelUpdaters\IModelUpdaterGeneric.cs" />
+    <Compile Include="ModelUpdaters\IModelUpdaterResolver.cs" />
+    <Compile Include="ModelUpdaters\MageKnightChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\MageKnightCoordinatesChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\ModelUpdaterBase.cs" />
+    <Compile Include="ModelUpdaters\ModelUpdaterResolver.cs" />
+    <Compile Include="ModelUpdaters\SessionTimeChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserAddedMageToArmyUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserBoosterPackCountChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserCollectionAddedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserIsSignedInChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserSelectedMageChangedUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserSignInUpdater.cs" />
+    <Compile Include="ModelUpdaters\UserSignUpUpdater.cs" />
+    <Compile Include="NullServiceClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\ClickProxy.cs" />
+    <Compile Include="Proxies\DialProxy.cs" />
+    <Compile Include="Proxies\GameProxy.cs" />
+    <Compile Include="Proxies\MageKnightProxy.cs" />
+    <Compile Include="Proxies\ProxyBase.cs" />
+    <Compile Include="Proxies\SessionTimeProxy.cs" />
+    <Compile Include="Proxies\StatProxy.cs" />
+    <Compile Include="Proxies\UserCollectionProxy.cs" />
+    <Compile Include="Proxies\UserProxy.cs" />
+    <Compile Include="ProxyFactories\ClickProxyFactory.cs" />
+    <Compile Include="ProxyFactories\DialProxyFactory.cs" />
+    <Compile Include="ProxyFactories\GameProxyFactory.cs" />
+    <Compile Include="ProxyFactories\IGamesModelModelProxyFactory.cs" />
+    <Compile Include="ProxyFactories\IMageKnightModelProxyFactory.cs" />
+    <Compile Include="ProxyFactories\ISessionTimeProxyFactory.cs" />
+    <Compile Include="ProxyFactories\IUserModelProxyFactory.cs" />
+    <Compile Include="ProxyFactories\MageKnightModelProxyFactory.cs" />
+    <Compile Include="ProxyFactories\SessionTimeProxyFactory.cs" />
+    <Compile Include="ProxyFactories\StatProxyFactory.cs" />
+    <Compile Include="ProxyFactories\UserCollectionProxyFactory.cs" />
+    <Compile Include="ProxyFactories\UserProxyFactory.cs" />
+    <Compile Include="Queries\ClickQuery.cs" />
+    <Compile Include="Queries\DialQuery.cs" />
+    <Compile Include="Queries\GameQuery.cs" />
+    <Compile Include="Queries\StatQuery.cs" />
+    <Compile Include="QueryFactories\ClickQueryFactory.cs" />
+    <Compile Include="QueryFactories\DialQueryFactory.cs" />
+    <Compile Include="QueryFactories\StatQueryFactory.cs" />
+    <Compile Include="QueryFactories\UserCollectionQueryFactory.cs" />
+    <Compile Include="QueryHandlers\ClickQueryHandler.cs" />
+    <Compile Include="QueryHandlers\DialQueryHandler.cs" />
+    <Compile Include="QueryHandlers\StatQueryHandler.cs" />
+    <Compile Include="QueryHandlers\UserCollectionQueryHandler.cs" />
+    <Compile Include="Updates\IUpdatableClick.cs" />
+    <Compile Include="Updates\IUpdatableDial.cs" />
+    <Compile Include="Updates\IUpdatableStat.cs" />
+    <Compile Include="Updates\IUpdatableUserCollection.cs" />
+    <Compile Include="Queries\MageKnightQuery.cs" />
+    <Compile Include="Queries\SessionTimeQuery.cs" />
+    <Compile Include="Queries\UserCollectionQuery.cs" />
+    <Compile Include="Queries\UserQuery.cs" />
+    <Compile Include="QueryFactories\GameQueryFactory.cs" />
+    <Compile Include="QueryFactories\IQueryFactory.cs" />
+    <Compile Include="QueryFactories\IQueryFactoryGeneric.cs" />
+    <Compile Include="QueryFactories\IQueryFactoryResolver.cs" />
+    <Compile Include="QueryFactories\MageKnightQueryFactory.cs" />
+    <Compile Include="QueryFactories\QueryFactoryBase.cs" />
+    <Compile Include="QueryFactories\QueryFactoryResolver.cs" />
+    <Compile Include="QueryFactories\SessionTimeQueryFactory.cs" />
+    <Compile Include="QueryFactories\UserQueryFactory.cs" />
+    <Compile Include="QueryHandlers\GameQueryHandler.cs" />
+    <Compile Include="QueryHandlers\IQueryHandlerCollectionFactory.cs" />
+    <Compile Include="QueryHandlers\MageKnightQueryHandler.cs" />
+    <Compile Include="QueryHandlers\QueryHandlerBase.cs" />
+    <Compile Include="QueryHandlers\QueryHandlerCollectionFactory.cs" />
+    <Compile Include="QueryHandlers\SessionTimeQueryHandler.cs" />
+    <Compile Include="QueryHandlers\UserQueryHandler.cs" />
+    <Compile Include="ServiceClient.cs" />
+    <Compile Include="ServiceConstants.cs" />
+    <Compile Include="ServiceTypeProvider.cs" />
+    <Compile Include="Updates\IUpdatable.cs" />
+    <Compile Include="Updates\IUpdatableGame.cs" />
+    <Compile Include="Updates\IUpdatableMageKnight.cs" />
+    <Compile Include="Updates\IUpdatableSessionTime.cs" />
+    <Compile Include="Updates\IUpdatableUser.cs" />
+    <Compile Include="UserDataDBService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MKModel\MKModel.csproj">
+      <Project>{fa8fa3f3-e09f-4ca7-a12b-8cf5e3d1a2a1}</Project>
+      <Name>MKModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

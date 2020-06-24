@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Service</id>
+    <version>1.0.0.0</version>
+    <description>Shared service library.</description>
+    <authors>$authors$</authors>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Runtime.Serialization"
+                         targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.ServiceModel"
+                         targetFramework="net45" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Service.dll"
+          target="lib\net45" />
+    <file src="bin\Release\Service.pdb"
+          target="lib\net45" />
+    <file src="bin\Release\Service.xml"
+          target="lib\net45" />
+  </files>
+</package>

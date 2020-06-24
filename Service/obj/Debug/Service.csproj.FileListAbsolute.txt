@@ -1,0 +1,30 @@
+C:\Users\john.schruben\Desktop\Reference\Service\Service\bin\Debug\Service.XML
+C:\Users\john.schruben\Desktop\Reference\Service\Service\bin\Debug\Service.dll
+C:\Users\john.schruben\Desktop\Reference\Service\Service\bin\Debug\Service.pdb
+C:\Users\john.schruben\Desktop\Reference\Service\Service\obj\Debug\Service.dll
+C:\Users\john.schruben\Desktop\Reference\Service\Service\obj\Debug\Service.pdb
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\bin\Debug\Service.XML
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\bin\Debug\Service.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\bin\Debug\Service.pdb
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\obj\Debug\Service.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service\obj\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\obj\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\obj\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\bin\Debug\Service.XML
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service\obj\Debug\Service.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\Service.XML
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\obj\Debug\Service.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\obj\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\obj\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\bin\Debug\System.Threading.Tasks.Extensions.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service\obj\Debug\Service.csproj.CopyComplete

@@ -1,0 +1,5 @@
+C:\projects\Reuse\Service\Service\bin\Release\Service.XML
+C:\projects\Reuse\Service\Service\bin\Release\Service.dll
+C:\projects\Reuse\Service\Service\bin\Release\Service.pdb
+C:\projects\Reuse\Service\Service\obj\Release\Service.dll
+C:\projects\Reuse\Service\Service\obj\Release\Service.pdb

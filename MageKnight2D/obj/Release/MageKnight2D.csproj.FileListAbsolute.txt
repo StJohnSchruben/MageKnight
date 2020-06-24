@@ -33,3 +33,8 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Release\Mag
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Release\MageKnight2D.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Release\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Release\MageKnight2D.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Release\MageKnight2D.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Release\App.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Release\MageKnight2D_MarkupCompile.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Release\MageKnight2D.exe
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Release\MageKnight2D.pdb

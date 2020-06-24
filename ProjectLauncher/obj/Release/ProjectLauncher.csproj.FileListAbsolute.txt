@@ -1,0 +1,3 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ProjectLauncher\obj\Release\ProjectLauncher.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ProjectLauncher\obj\Release\App.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ProjectLauncher\obj\Release\ProjectLauncher_MarkupCompile.cache

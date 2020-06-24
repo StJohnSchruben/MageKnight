@@ -1,0 +1,6 @@
+C:\projects\Reuse\Service\Service\bin\Debug\Service.XML
+C:\projects\Reuse\Service\Service\bin\Debug\Service.dll
+C:\projects\Reuse\Service\Service\bin\Debug\Service.pdb
+C:\projects\Reuse\Service\Service\obj\Debug\Service.dll
+C:\projects\Reuse\Service\Service\obj\Debug\Service.pdb
+C:\projects\Reuse\Service\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache

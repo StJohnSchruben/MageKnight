@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:MKView.Views"
              mc:Ignorable="d" 
              Height="100" Width="100">
-    <Grid>
+    <UserControl.Resources>
+        <local:BoolToVisibility x:Key="BoolToVisibility" />
+    </UserControl.Resources>
+    <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width=".8*" />
@@ -20,11 +23,7 @@
             <RowDefinition Height="37*" />
             <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
-        <Ellipse Fill="Black" Stroke="Blue" StrokeThickness=".5" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
-        <!--<TextBlock Grid.Row="1" Grid.Column="1" Background="White" />
-        <TextBlock Grid.Row="2" Grid.Column="1" Background="White" />
-        <TextBlock Grid.Row="3" Grid.Column="1" Background="White" />
-        <TextBlock Grid.Row="3" Grid.Column="2" Background="White" />-->
+        <Ellipse x:Name="EdgeOfDial" Fill="Black" Stroke="Blue" StrokeThickness=".5" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
         <TextBlock Text="{Binding Name}"  Foreground="White" HorizontalAlignment="Center"  Grid.ColumnSpan="4" VerticalAlignment="Center"/>
         <local:Stat Grid.Row="1" Grid.Column="1" DataContext="{Binding Click.Speed}" />
 

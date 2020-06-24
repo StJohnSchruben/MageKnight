@@ -1,0 +1,44 @@
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ServerHost.targets
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ServerHost.exe.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ServerHost.exe
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ServerHost.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ReDefNet.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\ReDefNet.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.Contract.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.Contract.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\Service.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\obj\Debug\ServerHost.exe
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\ServerHost\obj\Debug\ServerHost.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\obj\Debug\ServerHost.exe
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\obj\Debug\ServerHost.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ServerHost.targets
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ServerHost.exe.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ServerHost.exe
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ServerHost.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\log4net.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ReDefNet.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\log4net.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\ReDefNet.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\obj\Debug\Reuse.ServerHost.csproj.CopyComplete

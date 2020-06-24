@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MKView.Views"
              mc:Ignorable="d" 
-                   d:DesignHeight="1200" d:DesignWidth="1600">
+             xmlns:view="clr-namespace:MKView"
+             d:DesignHeight="1200" d:DesignWidth="1600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
@@ -13,10 +14,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="11*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="3.6*"/>
         </Grid.ColumnDefinitions>
-        <local:ZoomControl Grid.RowSpan="2" />
-        <local:MageDataView Grid.Column="2"/>
-        <local:DiceControl Grid.Column="1" Grid.Row="2"/>
+
+
+        <local:ZoomControl x:Name="zoom" Grid.RowSpan="2" />
+        <Viewbox Grid.Column="2" Grid.RowSpan="2" Stretch="UniformToFill" >
+            <local:MageDataView Grid.Column="2" Grid.RowSpan="2"/>
+        </Viewbox>
+        
     </Grid>
 </UserControl>

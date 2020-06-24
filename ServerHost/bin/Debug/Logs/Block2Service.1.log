@@ -1,0 +1,60 @@
+﻿2020-06-02 18:27:28,218 [4080] [1] INFO  ServerHost.TheService - Starting Block II service in interactive mode.
+2020-06-02 18:27:28,234 [4080] [1] DEBUG ServerHost.CommandLineParser - Parsing command line arguments: --config=C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config.
+2020-06-02 18:27:28,235 [4080] [1] DEBUG ServerHost.CommandLineParser - Detected config file command line argument.
+2020-06-02 18:27:28,235 [4080] [1] DEBUG ServerHost.CommandLineParser - Successfully parsed all command line arguments.
+2020-06-02 18:27:28,236 [4080] [1] DEBUG ServerHost.TheService - Using application configuration file 'C:\projects\Reuse\ServerHost\ServerHost\bin\Debug\ServerHost.exe.config'.
+2020-06-02 18:27:28,285 [4080] [1] INFO  ServerHost.Server - Initializing Block II server.
+2020-06-02 18:27:28,286 [4080] [1] DEBUG ServerHost.Server - Scanning 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug' for assemblies containing device service bootstrappers.
+2020-06-02 18:27:28,286 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\log4net.dll.
+2020-06-02 18:27:28,300 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,301 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.dll.
+2020-06-02 18:27:28,350 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,350 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Configuration.dll.
+2020-06-02 18:27:28,351 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,351 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Service.Contract.dll.
+2020-06-02 18:27:28,383 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,383 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Lwi.Wst.Service.dll.
+2020-06-02 18:27:28,389 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,389 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.Contract.dll.
+2020-06-02 18:27:28,409 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,409 [4080] [1] DEBUG ServerHost.Server - Attempting to load assembly: C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\Service.dll.
+2020-06-02 18:27:28,411 [4080] [1] DEBUG ServerHost.Server - Made it past bootstrapperTypes.
+2020-06-02 18:27:28,412 [4080] [1] DEBUG ServerHost.Server - Attempting to find the snapshot adapter device service bootstrapper.
+2020-06-02 18:27:28,412 [4080] [1] DEBUG ServerHost.Server - No snapshot adapter device service bootstrapper was found.
+2020-06-02 18:27:28,412 [4080] [1] DEBUG ServerHost.Server - The service will NOT participate in snapshot.
+2020-06-02 18:27:28,412 [4080] [1] DEBUG ServerHost.Server - Finished scanning for device service bootstrappers. Known type assemblies are:
+	.
+2020-06-02 18:27:28,413 [4080] [1] INFO  ServerHost.Server - Block II server initialized successfully.
+2020-06-02 18:27:28,422 [4080] [1] INFO  ServerHost.Server - Preparing to open Block II service hosts.
+2020-06-02 18:27:28,422 [4080] [1] DEBUG ServerHost.Server - Service configuration will be read from configuration file.
+2020-06-02 18:27:28,422 [4080] [1] DEBUG ServerHost.Server - Creating service hosts.
+2020-06-02 18:27:28,437 [4080] [1] DEBUG ServerHost.Server - Creating command service host using settings from application configuration file.
+2020-06-02 18:27:28,544 [4080] [1] DEBUG ServerHost.Server - Creating query service host using settings from application configuration file.
+2020-06-02 18:27:28,546 [4080] [1] DEBUG ServerHost.Server - Loading snapshot (if needed).
+2020-06-02 18:27:28,548 [4080] [1] DEBUG ServerHost.Server - Loading Block II model snapshots.
+2020-06-02 18:27:28,548 [4080] [1] DEBUG ServerHost.Server - Checking for presence of snapshot load file at 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\SelectedICSetPath.txt'.
+2020-06-02 18:27:28,548 [4080] [1] DEBUG ServerHost.Server - Snapshot load file 'C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\bin\Debug\SelectedICSetPath.txt' does not exist. Skipping loading snapshots.
+2020-06-02 18:27:28,548 [4080] [1] DEBUG ServerHost.Server - Loading query and service handlers.
+2020-06-02 18:27:28,549 [4080] [1] DEBUG ServerHost.Server - Opening command service host.
+2020-06-02 18:27:28,628 [4080] [1] ERROR ServerHost.Server - The command service has faulted. The service hosts will shut down now.
+2020-06-02 18:27:28,629 [4080] [1] ERROR ServerHost.TheService - The service is now faulted.
+2020-06-02 18:27:28,629 [4080] [1] INFO  ServerHost.TheService - Stopping Block II service.
+2020-06-02 18:27:28,630 [4080] [1] INFO  ServerHost.Server - Preparing to close Block II service hosts.
+2020-06-02 18:27:28,631 [4080] [1] DEBUG ServerHost.Server - Closing command service host.
+2020-06-02 18:27:28,641 [4080] [1] DEBUG ServerHost.Server - Closing query service host.
+2020-06-02 18:27:28,642 [4080] [1] INFO  ServerHost.Server - Block II service hosts closed successfully.
+2020-06-02 18:27:28,642 [4080] [1] INFO  ServerHost.TheService - Block II service stopped successfully.
+2020-06-02 18:27:28,686 [4080] [1] DEBUG ServerHost.Server - Closing command service host.
+2020-06-02 18:27:28,686 [4080] [1] DEBUG ServerHost.Server - Closing query service host.
+2020-06-02 18:27:28,687 [4080] [1] ERROR ServerHost.Server - Opening command service host threw an exception.
+System.InvalidOperationException: Service 'Service.Contract.CommandService' has zero application (non-infrastructure) endpoints. This might be because no configuration file was found for your application, or because no service element matching the service name could be found in the configuration file, or because no endpoints were defined in the service element.
+   at System.ServiceModel.Description.DispatcherBuilder.EnsureThereAreApplicationEndpoints(ServiceDescription description)
+   at System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   at System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   at System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open()
+   at ServerHost.Server.Open() in C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\ServerHost\Server.cs:line 408
+2020-06-02 18:27:28,694 [4080] [1] DEBUG ServerHost.Server - Closing command service host.
+2020-06-02 18:27:28,694 [4080] [1] DEBUG ServerHost.Server - Closing query service host.

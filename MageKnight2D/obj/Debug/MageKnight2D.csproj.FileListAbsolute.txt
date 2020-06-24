@@ -39,28 +39,6 @@ C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageK
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\obj\Debug\MageKnight2D.pdb
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData.mdf
 C:\Users\johns\OneDrive\Documents\Visual Studio 2019\Projects\MageKnight2d\MageKnight2D\bin\Debug\MageKnightData_log.ldf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData.mdf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnightData_log.ldf
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe.config
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Unity.Container.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Unity.Abstractions.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKViewModel.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.dll
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.dll.config
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Unity.Container.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Unity.Abstractions.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKViewModel.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.dll.config
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.pdb
-C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.xml
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MainWindow.g.cs
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\App.g.cs
@@ -74,9 +52,67 @@ C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\hipai\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MageKnightData.mdf
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MageKnightData_log.ldf
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MKUserData.mdf
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MKUserData_log.ldf
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MageKnight2D.exe.config
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MageKnight2D.exe
+\\lwi-okc-fs3\User Data\MageKnightDatabase\App\MageKnight2D.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MainWindow.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\App.g.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D_MarkupCompile.lref
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MainWindow.baml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.g.resources
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.Properties.Resources.resources
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.GenerateResource.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
 C:\MageKnightDatabase\App\MageKnight2D.exe.config
 C:\MageKnightDatabase\App\MageKnight2D.exe
 C:\MageKnightDatabase\App\MageKnight2D.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.exe
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MageKnight2D.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\CommonServiceLocator.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKViewModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\ReDefNet.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\log4net.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKService.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\ZoomAndPan.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKViewModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKViewModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKView.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKModel.dll.config
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\ReDefNet.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\log4net.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\MKService.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\ZoomAndPan.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\bin\Debug\Service.Contract.xml
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csprojAssemblyReference.cache
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MainWindow.g.cs
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\App.g.cs
@@ -90,5 +126,3 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageK
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.exe
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MageKnight2D\obj\Debug\MageKnight2D.pdb
-C:\MageKnightDatabase\App\MageKnightData.mdf
-C:\MageKnightDatabase\App\MageKnightData_log.ldf

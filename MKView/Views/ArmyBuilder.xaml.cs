@@ -26,18 +26,40 @@ namespace MKView.Views
         public ArmyBuilder()
         {
             InitializeComponent();
+            this.Loaded += ArmyBuilder_Loaded;
+        }
+
+        private void ArmyBuilder_Loaded(object sender, RoutedEventArgs e)
+        {
+            ab = this.DataContext as IArmyBuilder;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ab = this.DataContext as IArmyBuilder;
-            ab.SelectedArmy = lba.SelectedItem as IArmy;
+            //ab.SelectedArmy = lba.SelectedItem as IArmy;
         }
 
         private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             ab = this.DataContext as IArmyBuilder;
-            ab.SelectedMageKnight = lbm.SelectedItem as IMageKnightModel;
+            //ab.SelectedMageKnight = lbm.SelectedItem as IMageKnightModel;
+        }
+
+        private void lbm_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ab = this.DataContext as IArmyBuilder;
+          //  this.lbm.ItemsSource = ab.User.MageKnights;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Visibility = Visibility.Collapsed;
+        }
+
+        private void Games_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

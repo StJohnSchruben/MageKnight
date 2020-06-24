@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" >
     <Grid>
-        <views:Dashboard />
+        <ContentControl x:Name="cc" />
+        <views:LoginView x:Name="lv"/>
     </Grid>
 </Window>

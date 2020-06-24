@@ -1,18 +1,20 @@
 ﻿using MKModel;
+using ReDefNet;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
 namespace MKModel
 {
-    public interface IDial
+    public interface IDial : INotifyPropertyChanged
     {
-        System.Collections.Generic.List<IClick> Clicks { get; set; }
+        IReadOnlyObservableCollection<IClick> Clicks { get; }
         int ClickIndex { get; set; }
 
-        IClick Click { get; }
+        IClick Click { get; set; }
 
-        string Name { get; }
+        string Name { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MKViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,12 +30,17 @@ namespace MKView.Views
             this.MouseLeftButtonUp += new MouseButtonEventHandler(Control_MouseLeftButtonUp);
             this.MouseMove += new MouseEventHandler(Control_MouseMove);
             this.MouseLeave += ArcControl_MouseLeave;
+            this.Loaded += ArcControl_Loaded;
+        }
+
+        private void ArcControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            IMageKnightBattleViewModel data = this.DataContext as IMageKnightBattleViewModel;
         }
 
         private void ArcControl_MouseLeave(object sender, MouseEventArgs e)
         {
             Point p = e.GetPosition(this);
-
             if (p.X < this.Width && p.X > 0 && p.Y > 0 && p.Y < this.Height)
             {
                 return;
@@ -48,7 +54,7 @@ namespace MKView.Views
         private void Control_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var data = this.DataContext as MKViewModel.IMageKnightBattleViewModel;
-            if (!data.ToggleRangeView)
+            if (!data.ToggleRangeView || !data.IsMoving)
             {
                 return;
             }
@@ -80,13 +86,10 @@ namespace MKView.Views
 
         private void Control_MouseMove(object sender, MouseEventArgs e)
         {
-          
-            // this.Angle.Angle = 90.0;
             var draggableControl = this.FindAncestor<MageKnightBattleView>();
-
-            if (isDragging && draggableControl != null)
+            var data = this.DataContext as MKViewModel.IMageKnightBattleViewModel;
+            if (isDragging && draggableControl != null && data.IsMoving)
             {
-                // Get the current mouse position relative to the volume control
                 Point currentLocation = e.GetPosition(draggableControl as UIElement);
                 double mouseMovedAngle = this.GetAngle(currentLocation);
                 double newAngle = mouseDownAngle - mouseMovedAngle;

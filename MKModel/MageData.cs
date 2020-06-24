@@ -23,12 +23,16 @@ namespace MKModel
         private Guid id;
         private byte[] image;
         private string priceValue;
-        private IDial dial;
-
+        private DialData dial;
         public MageData()
         {
-
         }
+
+        public MageData(string name)
+        {
+            this.Name = name;
+        }
+        
         public string PriceValue
         {
             get
@@ -177,7 +181,7 @@ namespace MKModel
                 this.click = value;
             }
         }
-        public IDial Dial { get => this.dial; set => this.dial = value; }
+        public DialData Dial { get => this.dial; set => this.dial = value; }
 
         public string Rank
         {

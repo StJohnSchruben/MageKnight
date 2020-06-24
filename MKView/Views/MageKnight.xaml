@@ -8,6 +8,5 @@
              DataContext="{Binding}">
     <Grid>
         <Image Source="{Binding ModelImage}" />
-       
     </Grid>
 </UserControl>

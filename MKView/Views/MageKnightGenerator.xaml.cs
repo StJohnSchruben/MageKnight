@@ -26,8 +26,6 @@ namespace MKView.Views
         public MageKnightGenerator()
         {
             InitializeComponent();
-            
-            
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

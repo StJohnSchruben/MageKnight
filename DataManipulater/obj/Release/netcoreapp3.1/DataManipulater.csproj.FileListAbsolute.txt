@@ -17,3 +17,27 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Release\
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.pdb
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.genruntimeconfig.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MageKnightData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MageKnightData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.exe
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MKUserData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MKUserData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.deps.json
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.runtimeconfig.json
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.runtimeconfig.dev.json
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\DataManipulater.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MKModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\GalaSoft.MvvmLight.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MKModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\MKModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\GalaSoft.MvvmLight.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\bin\Release\netcoreapp3.1\GalaSoft.MvvmLight.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.AssemblyInfoInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.AssemblyInfo.cs
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\DataManipulater\obj\Release\netcoreapp3.1\DataManipulater.genruntimeconfig.cache

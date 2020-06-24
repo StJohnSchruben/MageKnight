@@ -1,0 +1,1350 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lwi.Mvvm</name>
+    </assembly>
+    <members>
+        <member name="T:Lwi.Mvvm.ICleanup">
+            <summary>
+            Defines a common interface for classes that should be cleaned up, but without the implications that
+            <see cref="T:System.IDisposable" /> presupposes. An instance implementing this interface can be cleaned up without being
+            disposed and garbage collected.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.ICleanup.Cleanup">
+            <summary>
+            Cleans up the instance, for example by saving its state, removing resources, etc.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.IExecuteWithObjectAndResult">
+            <summary>
+            This interface is meant for the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> class and can be useful if you store multiple
+            <see cref="T:Lwi.Mvvm.WeakFunc`1" /> instances but don't know in advance what type TResult represents.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.IExecuteWithObjectAndResult.ExecuteWithObject(System.Object)">
+            <summary>
+            Executes one of the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> instances and returns the result.
+            </summary>
+            <param name="parameter">
+            A parameter passed as an object to one of the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> instances, to be casted to the
+            appropriate type.
+            </param>
+            <returns>
+            The result of the operation.
+            </returns>
+        </member>
+        <member name="T:Lwi.Mvvm.IExecuteWithObject">
+            <summary>
+            This interface is meant for the <see cref="T:Lwi.Mvvm.WeakAction`1" /> class and can be useful if you store multiple
+            <see cref="T:Lwi.Mvvm.WeakAction`1" /> instances but don't know in advance what type T represents.
+            </summary>
+        </member>
+        <member name="P:Lwi.Mvvm.IExecuteWithObject.Target">
+            <summary>
+            Gets the target of the <see cref="T:Lwi.Mvvm.WeakAction`1" />.
+            </summary>
+            <value>
+            The target.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.IExecuteWithObject.ExecuteWithObject(System.Object)">
+            <summary>
+            Executes one of the <see cref="T:Lwi.Mvvm.WeakAction`1" /> instances.
+            </summary>
+            <param name="parameter">
+            A parameter passed as an object to one of the <see cref="T:Lwi.Mvvm.WeakAction`1" /> instances, to be
+            casted to the appropriate type.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IExecuteWithObject.MarkForDeletion">
+            <summary>
+            Deletes all references, which notifies the cleanup method that this entry must be deleted.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.IMessenger">
+            <summary>
+            Represents an event aggregator which allows objects to exchange messages.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Register``1(System.Object,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Register``1(System.Object,System.Object,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <see cref="M:Lwi.Mvvm.IMessenger.Register``1(System.Object,System.Object,System.Boolean,System.Action{``0})" /> method for details on how
+            messages deriving from <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface,
+            messages implementing <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Register``1(System.Object,System.Object,System.Boolean,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <paramref name="receiveDerivedMessagesToo" /> parameter for details on how messages deriving from
+            <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface, messages implementing
+            <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+            <param name="receiveDerivedMessagesToo">
+            If <c>true</c>, message types deriving from <typeparamref name="TMessage" /> will also be transmitted to the recipient.
+            <para>
+            Also, if <typeparamref name="TMessage" /> is an interface, message types implementing <typeparamref name="TMessage" />
+            will also be transmitted to the recipient.
+            </para>
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Register``1(System.Object,System.Boolean,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <paramref name="receiveDerivedMessagesToo" /> parameter for details on how messages deriving from
+            <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface, messages implementing
+            <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="receiveDerivedMessagesToo">
+            If <c>true</c>, message types deriving from <typeparamref name="TMessage" /> will also be transmitted to the recipient.
+            <para>
+            Also, if <typeparamref name="TMessage" /> is an interface, message types implementing <typeparamref name="TMessage" />
+            will also be transmitted to the recipient.
+            </para>
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Send``1(``0)">
+            <summary>
+            Sends the specified message to registered recipients. The message will reach all recipients that registered for this
+            message type.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Send``2(``0)">
+            <summary>
+            Sends the specified message to registered recipients. The message will only reach recipients that registered for this
+            message type and that are of type <typeparamref name="TTarget" />.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <typeparam name="TTarget">
+            The type of recipients that will receive the message. The message won't be sent to recipients of another type.
+            </typeparam>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Send``1(``0,System.Object)">
+            <summary>
+            Sends the specified message to registered recipients. The message will reach all recipients that registered for this
+            message type.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Unregister(System.Object)">
+            <summary>
+            Unregisters the specified message recipient completely. After this method is executed, the recipient will not receive
+            anymore messages.
+            </summary>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Unregister``1(System.Object)">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> only. After this
+            method is executed, the recipient will not receive messages of type <typeparamref name="TMessage" /> anymore, but will
+            still receive other message types (if it registered for them previously).
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Unregister``1(System.Object,System.Object)">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> and for a given
+            token. After this method is executed, the recipient will not receive messages of type <typeparamref name="TMessage" />
+            anymore with the given token, but will still receive other message types or messages with other tokens (if it
+            registered for them previously).
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="token">The token.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Unregister``1(System.Object,System.Action{``0})">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> and for the specified
+            action. Other message types will still be transmitted to the recipient (if it registered for them previously). Other
+            actions that have been registered for the message type <typeparamref name="TMessage" /> and for the given recipient (if
+            available) will also remain available.
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.IMessenger.Unregister``1(System.Object,System.Object,System.Action{``0})">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" />, for the specified
+            token and for the specified action. Other message types will still be transmitted to the recipient (if it registered
+            for them previously). Other actions that have been registered for the message type <typeparamref name="TMessage" />,
+            for the given recipient (if available), and other tokens will also remain available.
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="token">The token.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="T:Lwi.Mvvm.MessageBase">
+            <summary>
+            Base class for all messages broadcast by <see cref="T:Lwi.Mvvm.IMessenger" />. You can create your own message types by
+            extending this class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.MessageBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.MessageBase" /> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.MessageBase.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.MessageBase" /> class.
+            </summary>
+            <param name="sender">The message's original sender.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.MessageBase.#ctor(System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.MessageBase" /> class.
+            </summary>
+            <param name="sender">The message's original sender.</param>
+            <param name="target">
+            The message's intended target. This parameter can be used to give an indication as to whom the message was intended
+            for. Of course this is only an indication, amd may be <c>null</c>.
+            </param>
+        </member>
+        <member name="P:Lwi.Mvvm.MessageBase.Sender">
+            <summary>
+            Gets or sets the message's original sender.
+            </summary>
+            <value>
+            The message's original sender.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.MessageBase.Target">
+            <summary>
+            Gets or sets the message's intended target. This property can be used to give an indication as to whom the message was
+            intended for. Of course this is only an indication, and may be <c>null</c>.
+            </summary>
+            <value>
+            The message's intended target.
+            </value>
+        </member>
+        <member name="T:Lwi.Mvvm.Messenger">
+            <summary>
+            An event aggregator which allows objects to exchange messages.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.creationLock">
+            <summary>
+            The thread synchronizing object used when creating the default <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.instance">
+            <summary>
+            The default messenger instance.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.registerLock">
+            <summary>
+            The thread synchronizing object used when creating registering recipients for messages.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.isCleanupRequested">
+            <summary>
+            <c>true</c>, if a pending request has been made to clean up the list of recipients for "dead" instances and removed
+            them.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.recipientsOfSubclassesAction">
+            <summary>
+            A dictionary of message types and the list of registered recipients (and tokens, if any). This dictionary is used for
+            recipients that want to receive subclasses of the specified message type.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.recipientsStrictAction">
+            <summary>
+            A dictionary of message types and the list of registered recipients (and tokens, if any). This dictionary is used for
+            recipients that only want to receive the specified message type.
+            </summary>
+        </member>
+        <member name="P:Lwi.Mvvm.Messenger.Default">
+            <summary>
+            Gets the <see cref="T:Lwi.Mvvm.IMessenger" />'s default instance, allowing to register and send messages in a static manner.
+            </summary>
+            <value>
+            The default <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.OverrideDefault(Lwi.Mvvm.IMessenger)">
+            <summary>
+            Provides a way to override the <see cref="P:Lwi.Mvvm.Messenger.Default" /> instance with a custom instance, for example for unit testing
+            purposes.
+            </summary>
+            <param name="newMessenger">The instance that will be used for <see cref="P:Lwi.Mvvm.Messenger.Default" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Reset">
+            <summary>
+            Sets the <see cref="P:Lwi.Mvvm.Messenger.Default" /> to <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Register``1(System.Object,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Register``1(System.Object,System.Boolean,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <paramref name="receiveDerivedMessagesToo" /> parameter for details on how messages deriving from
+            <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface, messages implementing
+            <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="receiveDerivedMessagesToo">
+            If <c>true</c>, message types deriving from <typeparamref name="TMessage" /> will also be transmitted to the recipient.
+            <para>
+            Also, if <typeparamref name="TMessage" /> is an interface, message types implementing <typeparamref name="TMessage" />
+            will also be transmitted to the recipient.
+            </para>
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Register``1(System.Object,System.Object,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <see cref="M:Lwi.Mvvm.Messenger.Register``1(System.Object,System.Object,System.Boolean,System.Action{``0})" /> method for details on how
+            messages deriving from <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface,
+            messages implementing <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Register``1(System.Object,System.Object,System.Boolean,System.Action{``0})">
+            <summary>
+            Registers the specified recipient for messages of type <typeparamref name="TMessage" />. The specified action parameter
+            will be executed when a corresponding message is received of the specified message type.
+            <para>
+            See the <paramref name="receiveDerivedMessagesToo" /> parameter for details on how messages deriving from
+            <typeparamref name="TMessage" /> (or, if <typeparamref name="TMessage" /> is an interface, messages implementing
+            <typeparamref name="TMessage" />) can be received too.
+            </para>
+            <para>
+            Registering a recipient does not create a hard reference to it, so if this recipient is deleted, no memory leak is
+            caused.
+            </para>
+            </summary>
+            <typeparam name="TMessage">The message type in which the recipient is interested.</typeparam>
+            <param name="recipient">The recipient that will receive the messages.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+            <param name="receiveDerivedMessagesToo">
+            If <c>true</c>, message types deriving from <typeparamref name="TMessage" /> will also be transmitted to the recipient.
+            <para>
+            Also, if <typeparamref name="TMessage" /> is an interface, message types implementing <typeparamref name="TMessage" />
+            will also be transmitted to the recipient.
+            </para>
+            </param>
+            <param name="action">
+            The action that will be executed when a message of type <typeparamref name="TMessage" /> is
+            received.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Send``1(``0)">
+            <summary>
+            Sends the specified message to registered recipients. The message will reach all recipients that registered for this
+            message type.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Send``2(``0)">
+            <summary>
+            Sends the specified message to registered recipients. The message will only reach recipients that registered for this
+            message type and that are of type <typeparamref name="TTarget" />.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <typeparam name="TTarget">
+            The type of recipients that will receive the message. The message won't be sent to recipients
+            of another type.
+            </typeparam>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Send``1(``0,System.Object)">
+            <summary>
+            Sends the specified message to registered recipients. The message will reach all recipients that registered for this
+            message type.
+            </summary>
+            <typeparam name="TMessage">The type of message that will be sent.</typeparam>
+            <param name="message">The message to send.</param>
+            <param name="token">
+            A token for a messaging channel. If a recipient registers using a token, and a sender sends a message using the same
+            token, then this message will be delivered to the recipient. Other recipients who did not use a token when registering
+            (or who used a different token) will not get the message. Similarly, messages sent without any token, or with a
+            different token, will not be delivered to that recipient.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Unregister(System.Object)">
+            <summary>
+            Unregisters the specified message recipient completely. After this method is executed, the recipient will not receive
+            anymore messages.
+            </summary>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Unregister``1(System.Object)">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> only. After this
+            method is executed, the recipient will not receive messages of type <typeparamref name="TMessage" /> anymore, but will
+            still receive other message types (if it registered for them previously).
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Unregister``1(System.Object,System.Object)">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> and for a given
+            token. After this method is executed, the recipient will not receive messages of type <typeparamref name="TMessage" />
+            anymore with the given token, but will still receive other message types or messages with other tokens (if it
+            registered for them previously).
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="token">The token.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Unregister``1(System.Object,System.Action{``0})">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" /> and for the specified
+            action. Other message types will still be transmitted to the recipient (if it registered for them previously). Other
+            actions that have been registered for the message type <typeparamref name="TMessage" /> and for the given recipient (if
+            available) will also remain available.
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Unregister``1(System.Object,System.Object,System.Action{``0})">
+            <summary>
+            Unregisters the specified message recipient for messages of type <typeparamref name="TMessage" />, for the specified
+            token and for the specified action. Other message types will still be transmitted to the recipient (if it registered
+            for them previously). Other actions that have been registered for the message type <typeparamref name="TMessage" />,
+            for the given recipient (if available), and other tokens will also remain available.
+            </summary>
+            <typeparam name="TMessage">The type of messages that the recipient wants to unregister from.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="token">The token.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.Cleanup">
+            <summary>
+            Scans the recipients' lists for "dead" instances and removes them.
+            <para>
+            Since recipients are stored as <see cref="T:System.WeakReference" />s, recipients can be garbage collected even though the
+            <see cref="T:Lwi.Mvvm.Messenger" /> keeps them in a list. During the cleanup operation, all "dead" recipients are removed from the
+            lists.
+            </para>
+            <para>
+            Since this operation can take a moment, it is only executed when the application is idle. For this reason, a user of
+            the <see cref="T:Lwi.Mvvm.Messenger" /> class should use <see cref="M:Lwi.Mvvm.Messenger.RequestCleanup" /> instead of forcing one with the
+            <see cref="M:Lwi.Mvvm.Messenger.Cleanup" /> method.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.RequestCleanup">
+            <summary>
+            Notifies the <see cref="T:Lwi.Mvvm.Messenger" /> that the lists of recipients should be scanned and cleaned up.
+            <para>
+            Since recipients are stored as <see cref="T:System.WeakReference" />s, recipients can be garbage collected even though the
+            <see cref="T:Lwi.Mvvm.Messenger" /> keeps them in a list. During the cleanup operation, all "dead" recipients are removed from the
+            lists.
+            </para>
+            <para>
+            Since this operation can take a moment, it is only executed when the application is idle. For this reason, a user of
+            the <see cref="T:Lwi.Mvvm.Messenger" /> class should use <see cref="M:Lwi.Mvvm.Messenger.RequestCleanup" /> instead of forcing one with the
+            <see cref="M:Lwi.Mvvm.Messenger.Cleanup" /> method.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.ResetAll">
+            <summary>
+            Sets the <see cref="P:Lwi.Mvvm.Messenger.Default" /> to <c>null</c> in a non-static way.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.CleanupList(System.Collections.Generic.IDictionary{System.Type,System.Collections.Generic.List{Lwi.Mvvm.Messenger.WeakActionAndToken}})">
+            <summary>
+            Cleans the specified dictionary of message types and registered recipients for "dead" instances.
+            </summary>
+            <param name="lists">The dictionary of message types and registered recipients.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.SendToList``1(``0,System.Collections.Generic.IEnumerable{Lwi.Mvvm.Messenger.WeakActionAndToken},System.Type,System.Object)">
+            <summary>
+            Sends the specified message to the specified recipients.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <param name="message">The message.</param>
+            <param name="weakActionsAndTokens">The list of recipients.</param>
+            <param name="messageTargetType">The message target type.</param>
+            <param name="token">The token.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.UnregisterFromLists(System.Object,System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{Lwi.Mvvm.Messenger.WeakActionAndToken}})">
+            <summary>
+            Unregisters the specified recipient from the specified dictionary of message types and registered recipients.
+            </summary>
+            <param name="recipient">The recipient.</param>
+            <param name="lists">The dictionary of message types and registered recipients.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.UnregisterFromLists``1(System.Object,System.Object,System.Action{``0},System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{Lwi.Mvvm.Messenger.WeakActionAndToken}})">
+            <summary>
+            Unregisters the specified recipient, token, and action from the specified dictionary of message types and registered
+            recipients.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <param name="recipient">The recipient.</param>
+            <param name="token">The token.</param>
+            <param name="action">The action.</param>
+            <param name="lists">The dictionary of message types and registered recipients.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.Messenger.SendToTargetOrType``1(``0,System.Type,System.Object)">
+            <summary>
+            Sends the specified message.
+            </summary>
+            <typeparam name="TMessage">The message type.</typeparam>
+            <param name="message">The message.</param>
+            <param name="messageTargetType">The message target type.</param>
+            <param name="token">The token.</param>
+        </member>
+        <member name="T:Lwi.Mvvm.Messenger.WeakActionAndToken">
+            <summary>
+            A combination of a weak action and a token.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.WeakActionAndToken.Action">
+            <summary>
+            The weak action.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.Messenger.WeakActionAndToken.Token">
+            <summary>
+            The token.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.PropertyChangedMessage`1">
+            <summary>
+            Message that is sent when a property has changed. This is typically done by <see cref="T:Lwi.Mvvm.ViewModelBase" /> when the
+            property change was accompanied by a request to broadcast the change. This message can be used to essentially propagate
+            a <see cref="T:System.ComponentModel.INotifyPropertyChanged" /> notification to a recipient using the messaging system.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessage`1.#ctor(System.Object,`0,`0,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> class.
+            </summary>
+            <param name="sender">The message's sender.</param>
+            <param name="oldValue">The property's value before the change occurred.</param>
+            <param name="newValue">The property's value after the change occurred.</param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessage`1.#ctor(`0,`0,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> class.
+            </summary>
+            <param name="oldValue">The property's value before the change occurred.</param>
+            <param name="newValue">The property's value after the change occurred.</param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessage`1.#ctor(System.Object,System.Object,`0,`0,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> class.
+            </summary>
+            <param name="sender">The message's sender.</param>
+            <param name="target">
+            The message's intended target. This parameter can be used to give an indication as to whom the message was intended
+            for. Of course this is only an indication, amd may be <c>null</c>.
+            </param>
+            <param name="oldValue">The property's value before the change occurred.</param>
+            <param name="newValue">The property's value after the change occurred.</param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="P:Lwi.Mvvm.PropertyChangedMessage`1.NewValue">
+            <summary>
+            Gets the value that the property has after the change.
+            </summary>
+            <value>
+            The value that the property has after the change.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.PropertyChangedMessage`1.OldValue">
+            <summary>
+            Gets the value that the property had before the change.
+            </summary>
+            <value>
+            The value that the property had before the change.
+            </value>
+        </member>
+        <member name="T:Lwi.Mvvm.PropertyChangedMessageBase">
+            <summary>
+            Message that is sent when a property has changed. This is typically done by <see cref="T:Lwi.Mvvm.ViewModelBase" /> when the
+            property change was accompanied by a request to broadcast the change. This message can be used to essentially propagate
+            a <see cref="T:System.ComponentModel.INotifyPropertyChanged" /> notification to a recipient using the messaging system.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessageBase.#ctor(System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessageBase" /> class.
+            </summary>
+            <param name="sender">The message's sender.</param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessageBase.#ctor(System.Object,System.Object,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessageBase" /> class.
+            </summary>
+            <param name="sender">The message's sender.</param>
+            <param name="target">
+            The message's intended target. This parameter can be used to give an indication as to whom the message was intended
+            for. Of course this is only an indication, amd may be <c>null</c>.
+            </param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.PropertyChangedMessageBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.PropertyChangedMessageBase" /> class.
+            </summary>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="P:Lwi.Mvvm.PropertyChangedMessageBase.PropertyName">
+            <summary>
+            Gets or sets the name of the property that changed.
+            </summary>
+            <value>
+            The name of the property that changed.
+            </value>
+        </member>
+        <member name="T:Lwi.Mvvm.RelayCommand">
+            <summary>
+            A command whose sole purpose is to relay its functionality to other objects by invoking delegates. The default return
+            value for the <see cref="M:Lwi.Mvvm.RelayCommand.CanExecute(System.Object)" /> method is <c>true</c>. This class does not allow you to accept command
+            parameters in the <see cref="M:Lwi.Mvvm.RelayCommand.Execute(System.Object)" /> and <see cref="M:Lwi.Mvvm.RelayCommand.CanExecute(System.Object)" /> callback methods.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.RelayCommand.canExecute">
+            <summary>
+            A weak reference to the method to invoke to determine if the command can be executed.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.RelayCommand.execute">
+            <summary>
+            A weak reference to the method to invoke when the command is executed.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.RelayCommand.requerySuggestedLocal">
+            <summary>
+            The local event handler that is invoked when the <see cref="T:System.Windows.Input.CommandManager" /> detects conditions that might affect the
+            ability of this command to execute.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.RelayCommand" /> class.
+            </summary>
+            <param name="execute">The method to invoke when the command is executed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.RelayCommand" /> class.
+            </summary>
+            <param name="execute">The method to invoke when the command is executed.</param>
+            <param name="canExecute">The method to invoke to determine if the command can be executed.</param>
+        </member>
+        <member name="E:Lwi.Mvvm.RelayCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">This parameter will always be ignored.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">This parameter will always be ignored.</param>
+            <returns>
+            <c>true</c>, if this command can be executed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand.RaiseCanExecuteChanged">
+            <summary>
+            Raises the <see cref="E:Lwi.Mvvm.RelayCommand.CanExecuteChanged" /> event.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.RelayCommand`1">
+            <summary>
+            A generic command whose sole purpose is to relay its functionality to other objects by invoking delegates. The default
+            return value for the <see cref="M:Lwi.Mvvm.RelayCommand`1.CanExecute(System.Object)" /> method is <c>true</c>. This class allows you to accept command
+            parameters in the <see cref="M:Lwi.Mvvm.RelayCommand`1.Execute(System.Object)" /> and <see cref="M:Lwi.Mvvm.RelayCommand`1.CanExecute(System.Object)" /> callback methods.
+            </summary>
+            <typeparam name="T">The command parameter type.</typeparam>
+        </member>
+        <member name="F:Lwi.Mvvm.RelayCommand`1.canExecute">
+            <summary>
+            A weak reference to the method to invoke to determine if the command can be executed.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.RelayCommand`1.execute">
+            <summary>
+            A weak reference to the method to invoke when the command is executed.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand`1.#ctor(System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.RelayCommand`1" /> class.
+            </summary>
+            <param name="execute">The method to invoke when the command is executed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand`1.#ctor(System.Action{`0},System.Func{`0,System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.RelayCommand`1" /> class.
+            </summary>
+            <param name="execute">The method to invoke when the command is executed.</param>
+            <param name="canExecute">The method to invoke to determine if the command can be executed.</param>
+        </member>
+        <member name="E:Lwi.Mvvm.RelayCommand`1.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand`1.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">
+            Data used by the command. If the command does not require data to be passed, this object can be set to <c>null</c>.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand`1.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">
+            Data used by the command. If the command does not require data to be passed, this object can be set to <c>null</c>.
+            </param>
+            <returns>
+            <c>true</c>, if this command can be executed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.RelayCommand`1.RaiseCanExecuteChanged">
+            <summary>
+            Raises the <see cref="E:Lwi.Mvvm.RelayCommand`1.CanExecuteChanged" /> event.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.ViewModelBase">
+            <summary>
+            Base class for view models in the MVVM pattern.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.ViewModelBase.messenger">
+            <summary>
+            The messenger.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.ViewModelBase" /> class.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.#ctor(Lwi.Mvvm.IMessenger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.ViewModelBase" /> class.
+            </summary>
+            <param name="messenger">
+            An <see cref="T:Lwi.Mvvm.IMessenger" /> used to broadcast messages to other objects. If <c>null</c>, this class will attempt to
+            broadcast using the <see cref="T:Lwi.Mvvm.IMessenger" />'s default instance.
+            </param>
+        </member>
+        <member name="P:Lwi.Mvvm.ViewModelBase.MessengerInstance">
+            <summary>
+            Gets or sets an instance of a <see cref="T:Lwi.Mvvm.IMessenger" /> used to broadcast messages to other objects. If <c>null</c>,
+            this class will attempt to broadcast using the <see cref="T:Lwi.Mvvm.IMessenger" />'s default instance.
+            </summary>
+            <value>
+            The messenger instance.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.Cleanup">
+            <summary>
+            Unregisters this instance from <see cref="T:Lwi.Mvvm.IMessenger" />.
+            <para>
+            To cleanup additional resources, override this method, clean up and then call <c>base.Cleanup()</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.RaisePropertyChanged``1(System.String,``0,``0,System.Boolean)">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanged" /> event for the specified property, and optionally broadcasts
+            a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> using the <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </summary>
+            <typeparam name="TProperty">The type of the property that changed.</typeparam>
+            <param name="propertyName">The name of the property that changed.</param>
+            <param name="oldValue">The property's value before the change occurred.</param>
+            <param name="newValue">The property's value after the change occurred.</param>
+            <param name="broadcast">
+            If <c>true</c>, a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> will be broadcasted; <c>false</c>, if only the event should
+            be raised.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.RaisePropertyChanged``1(System.Linq.Expressions.Expression{System.Func{``0}},``0,``0,System.Boolean)">
+            <summary>
+            Raises the <see cref="E:Lwi.ObservableObject.PropertyChanged" /> event for the specified property, and optionally broadcasts
+            a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> using the <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </summary>
+            <typeparam name="T">The type of the property that changed.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="oldValue">The property's value before the change occurred.</param>
+            <param name="newValue">The property's value after the change occurred.</param>
+            <param name="broadcast">
+            If <c>true</c>, a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> will be broadcasted; <c>false</c>, if only the event
+            should
+            be raised.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.Broadcast``1(``0,``0,System.String)">
+            <summary>
+            Broadcasts a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> using either the instance of the <see cref="T:Lwi.Mvvm.IMessenger" /> that
+            was passed to this class (if available) or the <see cref="T:Lwi.Mvvm.IMessenger" />'s default instance.
+            </summary>
+            <typeparam name="T">The type of the property that changed.</typeparam>
+            <param name="oldValue">The value of the property before it changed.</param>
+            <param name="newValue">The value of the property after it changed.</param>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.Set``1(System.Linq.Expressions.Expression{System.Func{``0}},``0@,``0,System.Boolean)">
+            <summary>
+            Sets the backing field for the specified property expression and raises the
+            <see cref="E:Lwi.ObservableObject.PropertyChanging" /> and <see cref="E:Lwi.ObservableObject.PropertyChanged" /> events if the new
+            value is different than the current value. Optionally, this method also broadcasts a
+            <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> using the <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </summary>
+            <typeparam name="TProperty">The property type.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="field">The backing field.</param>
+            <param name="newValue">The new value.</param>
+            <param name="broadcast">
+            If <c>true</c>, a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> will be broadcasted; <c>false</c>, if only the event
+            should be raised.
+            </param>
+            <returns>
+            <c>true</c>, if the backing field was set and the events were raised; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.ViewModelBase.Set``1(System.String,``0@,``0,System.Boolean)">
+            <summary>
+            Sets the backing field for the specified property and raises the <see cref="E:Lwi.ObservableObject.PropertyChanging" /> and
+            <see cref="E:Lwi.ObservableObject.PropertyChanged" /> events if the new value is different than the current value.
+            Optionally, this method also broadcasts a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> using the
+            <see cref="T:Lwi.Mvvm.IMessenger" /> instance.
+            </summary>
+            <typeparam name="T">The property type.</typeparam>
+            <param name="propertyName">The property name.</param>
+            <param name="field">The backing field.</param>
+            <param name="newValue">The new value.</param>
+            <param name="broadcast">
+            If <c>true</c>, a <see cref="T:Lwi.Mvvm.PropertyChangedMessage`1" /> will be broadcasted; <c>false</c>, if only the event
+            should be raised.
+            </param>
+            <returns>
+            <c>true</c>, if the backing field was set and the events were raised; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Lwi.Mvvm.WeakAction">
+            <summary>
+            Stores an <see cref="T:System.Action" /> without causing a hard reference to its owner. This allows the owner to be garbage
+            collected at any time.
+            </summary>
+        </member>
+        <member name="F:Lwi.Mvvm.WeakAction.staticAction">
+            <summary>
+            If the underlying <see cref="T:System.Action" /> method is static, the <see cref="T:System.Action" />; otherwise, <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakAction" /> class.
+            </summary>
+            <param name="action">The underlying <see cref="T:System.Action" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction.#ctor(System.Object,System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakAction" /> class.
+            </summary>
+            <param name="target">The <see cref="T:System.Action" />'s owner.</param>
+            <param name="action">The underlying <see cref="T:System.Action" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakAction" /> class.
+            </summary>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.IsAlive">
+            <summary>
+            Gets a value indicating whether the underlying <see cref="T:System.Action" />'s owner is still alive, or if it was already
+            collected by the Garbage Collector.
+            </summary>
+            <value>
+            <c>true</c>, if the underlying <see cref="T:System.Action" />'s owner is still alive; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.MethodName">
+            <summary>
+            Gets the name of the underlying <see cref="T:System.Action" />'s method.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Action" />'s method name.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.IsStatic">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Lwi.Mvvm.WeakAction" /> is static or not.
+            </summary>
+            <value>
+            <c>true</c>, if the <see cref="T:Lwi.Mvvm.WeakAction" /> is static; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.Target">
+            <summary>
+            Gets the underlying <see cref="T:System.Action" />'s target. This object is stored as a <see cref="T:System.WeakReference" />.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Action" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.ActionReference">
+            <summary>
+            Gets or sets a <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Action" />'s target. This is not necessarily
+            the same as <see cref="P:Lwi.Mvvm.WeakAction.Reference" />, for example if the method is anonymous.
+            </summary>
+            <value>
+            A <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Action" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.ActionTarget">
+            <summary>
+            Gets the <see cref="T:Lwi.Mvvm.WeakAction" />'s target. This is not necessarily the same thing as <see cref="P:Lwi.Mvvm.WeakAction.Target" />, for
+            example if the method is anonymous.
+            </summary>
+            <value>
+            The <see cref="T:Lwi.Mvvm.WeakAction" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.Method">
+            <summary>
+            Gets or sets the <see cref="T:System.Reflection.MethodInfo" /> for the underlying <see cref="T:System.Action" />'s method.
+            </summary>
+            <value>
+            The <see cref="T:System.Reflection.MethodInfo" /> for the underlying <see cref="T:System.Action" />'s method.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction.Reference">
+            <summary>
+            Gets or sets a <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Action" />'s target. This is not necessarily
+            the same as <see cref="P:Lwi.Mvvm.WeakAction.ActionReference" />, for example if the method is anonymous.
+            </summary>
+            <value>
+            A <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Action" />'s target.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction.Execute">
+            <summary>
+            Executes the underlying <see cref="T:System.Action" />. This only happens if the <see cref="T:System.Action" />'s owner is still alive.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction.MarkForDeletion">
+            <summary>
+            Sets all the references that this instance stores to <c>null</c>.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.WeakAction`1">
+            <summary>
+            Stores an <see cref="T:System.Action`1" /> without causing a hard reference to its owner. This allows the owner to be garbage
+            collected at any time.
+            </summary>
+            <typeparam name="T">The underlying <see cref="T:System.Action`1" />'s type parameter.</typeparam>
+        </member>
+        <member name="F:Lwi.Mvvm.WeakAction`1.staticAction">
+            <summary>
+            If the underlying <see cref="T:System.Action`1" /> method is static, the <see cref="T:System.Action`1" />; otherwise, <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.#ctor(System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakAction`1" /> class.
+            </summary>
+            <param name="action">The underlying <see cref="T:System.Action`1" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.#ctor(System.Object,System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakAction`1" /> class.
+            </summary>
+            <param name="target">The <see cref="T:System.Action`1" />'s owner.</param>
+            <param name="action">The underlying <see cref="T:System.Action`1" />.</param>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction`1.IsAlive">
+            <summary>
+            Gets a value indicating whether the underlying <see cref="T:System.Action`1" />'s owner is still alive, or if it was already
+            collected by the Garbage Collector.
+            </summary>
+            <value>
+            <c>true</c>, if the underlying <see cref="T:System.Action`1" />'s owner is still alive; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakAction`1.MethodName">
+            <summary>
+            Gets the name of the underlying <see cref="T:System.Action`1" />'s method.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Action`1" />'s method name.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.Execute">
+            <summary>
+            Executes the action. This only happens if the <see cref="T:System.Action`1" />'s owner is still alive. The
+            <see cref="T:System.Action`1" />'s parameter is set to default(<typeparamref name="T" />).
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.Execute(`0)">
+            <summary>
+            Executes the underlying <see cref="T:System.Action`1" />. This only happens if the <see cref="T:System.Action`1" />'s owner is still
+            alive.
+            </summary>
+            <param name="parameter">The parameter to be passed to the underlying <see cref="T:System.Action`1" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.ExecuteWithObject(System.Object)">
+            <summary>
+            Executes the underlying <see cref="T:System.Action`1" /> with the specified parameter. This parameter will be casted to
+            <typeparamref name="T" />. This method implements <see cref="M:Lwi.Mvvm.IExecuteWithObject.ExecuteWithObject(System.Object)" /> and can be useful
+            if you store multiple <see cref="T:Lwi.Mvvm.WeakAction`1" /> instances but don't know in advance what type
+            <typeparamref name="T" /> represents.
+            </summary>
+            <param name="parameter">
+            The parameter to be passed to the underlying <see cref="T:System.Action`1" /> after being casted to
+            <typeparamref name="T" />.
+            </param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakAction`1.MarkForDeletion">
+            <summary>
+            Sets all the references that this instance stores to <c>null</c>.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.WeakFunc`1">
+            <summary>
+            Stores an <see cref="T:System.Func`1" /> without causing a hard reference to its owner. This allows the owner to be
+            garbage collected at any time.
+            </summary>
+            <typeparam name="TResult">The underlying <see cref="T:System.Func`1" />'s return type parameter.</typeparam>
+        </member>
+        <member name="F:Lwi.Mvvm.WeakFunc`1.staticFunc">
+            <summary>
+            If the underlying <see cref="T:System.Func`1" /> method is static, the <see cref="T:System.Func`1" />; otherwise,
+            <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`1.#ctor(System.Func{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> class.
+            </summary>
+            <param name="func">The underlying <see cref="T:System.Func`1" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`1.#ctor(System.Object,System.Func{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> class.
+            </summary>
+            <param name="target">The <see cref="T:System.Func`1" />'s owner.</param>
+            <param name="func">The underlying <see cref="T:System.Func`1" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> class.
+            </summary>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.IsAlive">
+            <summary>
+            Gets a value indicating whether the underlying <see cref="T:System.Func`1" />'s owner is still alive, or if it was
+            already collected by the Garbage Collector.
+            </summary>
+            <value>
+            <c>true</c>, if the underlying <see cref="T:System.Func`1" />'s owner is still alive; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.MethodName">
+            <summary>
+            Gets the name of the underlying <see cref="T:System.Func`1" />'s method.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Func`1" />'s method name.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.IsStatic">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> is static or not.
+            </summary>
+            <value>
+            <c>true</c>, if the <see cref="T:Lwi.Mvvm.WeakFunc`1" /> is static; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.Target">
+            <summary>
+            Gets the underlying <see cref="T:System.Func`1" />'s target. This object is stored as a <see cref="T:System.WeakReference" />.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Func`1" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.FuncReference">
+            <summary>
+            Gets or sets a <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Func`1" />'s target. This is not
+            necessarily the same as <see cref="P:Lwi.Mvvm.WeakFunc`1.Reference" />, for example if the method is anonymous.
+            </summary>
+            <value>
+            A <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Func`1" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.FuncTarget">
+            <summary>
+            Gets the <see cref="T:Lwi.Mvvm.WeakFunc`1" />'s target. This is not necessarily the same thing as <see cref="P:Lwi.Mvvm.WeakFunc`1.Target" />,
+            for example if the method is anonymous.
+            </summary>
+            <value>
+            The <see cref="T:Lwi.Mvvm.WeakFunc`1" />'s target.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.Method">
+            <summary>
+            Gets or sets the <see cref="T:System.Reflection.MethodInfo" /> for the underlying <see cref="T:System.Func`1" />'s method.
+            </summary>
+            <value>
+            The <see cref="T:System.Reflection.MethodInfo" /> for the underlying <see cref="T:System.Func`1" />'s method.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`1.Reference">
+            <summary>
+            Gets or sets a <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Func`1" />'s target. This is not
+            necessarily the same as <see cref="P:Lwi.Mvvm.WeakFunc`1.FuncReference" />, for example if the method is anonymous.
+            </summary>
+            <value>
+            A <see cref="T:System.WeakReference" /> to the underlying <see cref="T:System.Func`1" />'s target.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`1.Execute">
+            <summary>
+            Executes the underlying <see cref="T:System.Func`1" />. This only happens if the <see cref="T:System.Func`1" />'s owner is
+            still alive.
+            </summary>
+            <returns>
+            The result of the call to <see cref="T:System.Func`1" />.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`1.MarkForDeletion">
+            <summary>
+            Sets all the references that this instance stores to <c>null</c>.
+            </summary>
+        </member>
+        <member name="T:Lwi.Mvvm.WeakFunc`2">
+            <summary>
+            Stores an <see cref="T:System.Func`2" /> without causing a hard reference to its owner. This allows the owner to be
+            garbage collected at any time.
+            </summary>
+            <typeparam name="T">The underlying <see cref="T:System.Func`2" />'s type parameter.</typeparam>
+            <typeparam name="TResult">The underlying <see cref="T:System.Func`1" />'s return type parameter.</typeparam>
+        </member>
+        <member name="F:Lwi.Mvvm.WeakFunc`2.staticFunc">
+            <summary>
+            If the underlying <see cref="T:System.Func`2" /> method is static, the <see cref="T:System.Func`2" />; otherwise,
+            <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.#ctor(System.Func{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakFunc`2" /> class.
+            </summary>
+            <param name="func">The underlying <see cref="T:System.Func`2" />.</param>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.#ctor(System.Object,System.Func{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lwi.Mvvm.WeakFunc`2" /> class.
+            </summary>
+            <param name="target">The <see cref="T:System.Func`2" />'s owner.</param>
+            <param name="func">The underlying <see cref="T:System.Func`2" />.</param>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`2.IsAlive">
+            <summary>
+            Gets a value indicating whether the underlying <see cref="T:System.Func`2" />'s owner is still alive, or if it was
+            already collected by the Garbage Collector.
+            </summary>
+            <value>
+            <c>true</c>, if the underlying <see cref="T:System.Func`2" />'s owner is still alive; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Lwi.Mvvm.WeakFunc`2.MethodName">
+            <summary>
+            Gets the name of the underlying <see cref="T:System.Func`2" />'s method.
+            </summary>
+            <value>
+            The underlying <see cref="T:System.Func`2" />'s method name.
+            </value>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.Execute">
+            <summary>
+            Executes the action. This only happens if the <see cref="T:System.Func`2" />'s owner is still alive. The
+            <see cref="T:System.Func`2" />'s parameter is set to default(<typeparamref name="T" />).
+            </summary>
+            <returns>
+            The result of the call to <see cref="T:System.Func`2" />.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.Execute(`0)">
+            <summary>
+            Executes the underlying <see cref="T:System.Func`2" />. This only happens if the <see cref="T:System.Func`2" />'s
+            owner is still alive.
+            </summary>
+            <param name="parameter">The parameter to be passed to the underlying <see cref="T:System.Func`2" />.</param>
+            <returns>
+            The result of the call to <see cref="T:System.Func`2" />.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.ExecuteWithObject(System.Object)">
+            <summary>
+            Executes the underlying <see cref="T:System.Func`2" /> with the specified parameter. This parameter will be casted to
+            <typeparamref name="T" />. This method implements <see cref="M:Lwi.Mvvm.IExecuteWithObject.ExecuteWithObject(System.Object)" /> and can be useful
+            if you store multiple <see cref="T:Lwi.Mvvm.WeakFunc`2" /> instances but don't know in advance what type
+            <typeparamref name="T" /> represents.
+            </summary>
+            <param name="parameter">
+            The parameter to be passed to the underlying <see cref="T:System.Func`2" /> after being casted to
+            <typeparamref name="T" />.
+            </param>
+            <returns>
+            The result of the call to <see cref="T:System.Func`2" />, to be casted to <typeparamref name="TResult" />.
+            </returns>
+        </member>
+        <member name="M:Lwi.Mvvm.WeakFunc`2.MarkForDeletion">
+            <summary>
+            Sets all the references that this instance stores to <c>null</c>.
+            </summary>
+        </member>
+    </members>
+</doc>

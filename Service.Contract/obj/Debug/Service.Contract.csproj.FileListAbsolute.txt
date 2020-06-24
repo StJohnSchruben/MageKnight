@@ -1,0 +1,47 @@
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Service.Contract.XML
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Service.Contract.dll
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Service.Contract.pdb
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\log4net.dll
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Lwi.Wst.Service.dll
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\log4net.xml
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Lwi.Wst.Service.pdb
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\bin\Debug\Lwi.Wst.Service.xml
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\obj\Debug\Service.Contract.dll
+C:\Users\john.schruben\Desktop\Reference\Service.Contract\Service.Contract\obj\Debug\Service.Contract.pdb
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Service.Contract.XML
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Service.Contract.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Service.Contract.pdb
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\log4net.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Lwi.Wst.Service.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\log4net.xml
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Lwi.Wst.Service.pdb
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\bin\Debug\Lwi.Wst.Service.xml
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\obj\Debug\Service.Contract.csprojResolveAssemblyReference.cache
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\obj\Debug\Service.Contract.dll
+C:\Users\john.schruben\Desktop\Reference\ServiceTests\Service.Contract\obj\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Debug\Service.Contract.csprojAssemblyReference.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Debug\Service.Contract.csproj.CoreCompileInputs.cache
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.Contract.XML
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.Contract.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.Contract.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\log4net.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.dll
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.pdb
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\Service.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\bin\Debug\log4net.xml
+C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\Service.Contract\obj\Debug\Service.Contract.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.XML
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.Contract.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\Service.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\bin\Debug\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\Service.Contract\obj\Debug\Service.Contract.pdb

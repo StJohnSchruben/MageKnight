@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MKViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace MKView.Views
         public SpeedBoundary()
         {
             InitializeComponent();
+            this.Loaded += SpeedBoundary_Loaded;
+        }
+
+        private void SpeedBoundary_Loaded(object sender, RoutedEventArgs e)
+        {
+            IMageKnightBattleViewModel data = this.DataContext as IMageKnightBattleViewModel;
+            if (data.IsMovingBorder)
+            {
+                this.speedBorder.Visibility = Visibility.Visible;
+                this.IsHitTestVisible = false;
+            }
         }
     }
 }

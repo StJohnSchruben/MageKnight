@@ -31,7 +31,7 @@ namespace MKViewModel
         public MageKnightGenerator( )
         {
             this.mage = new MageData();
-            this.selectedMageKnight = new MageKnight(this.mage);
+           // this.selectedMageKnight = new MageKnightData(this.mage);
             this.EnterClicked();
         }
 
@@ -46,7 +46,7 @@ namespace MKViewModel
         private void EnterClicked()
         {
            
-           this.MageKnights = MageDB.GetMageKnights();
+           //this.MageKnights = MageDB.GetMageKnights();
         }
 
         public void FillDataBase()
@@ -145,81 +145,83 @@ namespace MKViewModel
         // Insert logic for processing found files here.
         public static void ProcessFile(string path)
         {
-            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
-            fs.Seek(0, SeekOrigin.Begin);
+            //FileStream fs = new FileStream(path, FileMode.Open, FileAccess.ReadWrite);
+            //fs.Seek(0, SeekOrigin.Begin);
 
-            StreamReader sw = new StreamReader(fs);
-            int number = Int32.Parse(path.Split('\\').Last());
-            List<IClick> clicks = new List<IClick>();
-            while (sw.Peek() >=0)
-            {
-                var line = sw.ReadLine();
-                var sl = line.Split('\t');
-                int i = 0;
-                IStat speedStat = new Stat();
-                IStat attackStat = new Stat();
-                IStat defenseStat = new Stat();
-                IStat damageStat = new Stat();
-                foreach(var c in sl) 
-                {
-                    i++;
-                    switch (i)
-                    {
-                        case 1:
-                            //click number
-                            break;
-                        case 2:
-                            //attack
-                            attackStat.StatType = StatType.Attack;
-                            attackStat.Value = Int32.Parse(c);
-                            break;
-                        case 3:
-                            //attack special ability
-                            if (c != "----")
-                                attackStat.Ability = c.TrimEnd();
-                            break;
-                        case 4:
-                            //speed
-                            speedStat.StatType = StatType.Speed;
-                            speedStat.Value = Int32.Parse(c);
-                            break;
-                        case 5:
-                            //speed special ability
-                            if (c != "----")
-                                speedStat.Ability = c.TrimEnd();
+            //StreamReader sw = new StreamReader(fs);
+            //int number = Int32.Parse(path.Split('\\').Last());
+            //List<IClick> clicks = new List<IClick>();
+            //while (sw.Peek() >=0)
+            //{
+            //    var line = sw.ReadLine();
+            //    var sl = line.Split('\t');
+            //    int i = 0;
+            //    IStat speedStat = new Stat();
+            //    IStat attackStat = new Stat();
+            //    IStat defenseStat = new Stat();
+            //    IStat damageStat = new Stat();
+            //    foreach(var c in sl) 
+            //    {
+            //        i++;
+            //        switch (i)
+            //        {
+            //            case 1:
+            //                //click number
+            //                break;
+            //            case 2:
+            //                //attack
+            //                attackStat.StatType = StatType.Attack;
+            //                attackStat.Value = Int32.Parse(c);
+            //                break;
+            //            case 3:
+            //                //attack special ability
+            //                if (c != "----")
+            //                    attackStat.Ability = c.TrimEnd();
+            //                break;
+            //            case 4:
+            //                //speed
+            //                speedStat.StatType = StatType.Speed;
+            //                speedStat.Value = Int32.Parse(c);
+            //                break;
+            //            case 5:
+            //                //speed special ability
+            //                if (c != "----")
+            //                    speedStat.Ability = c.TrimEnd();
 
-                            break;
-                        case 6:
-                            //defence
-                            defenseStat.StatType = StatType.Defense;
-                            defenseStat.Value = Int32.Parse(c);
-                            break;
-                        case 7:
-                            //defence special ability
-                            if (c != "----")
-                                defenseStat.Ability = c.TrimEnd();
-                            break;
-                        case 8:
-                            //damage
-                            damageStat.StatType = StatType.Damage;
-                            damageStat.Value = Int32.Parse(c);
-                            break;
-                        case 9:
-                            //damage special ability
-                            if (c != "----")
-                                damageStat.Ability = c.TrimEnd();
-                            break;
-                    }
-                }
+            //                break;
+            //            case 6:
+            //                //defence
+            //                defenseStat.StatType = StatType.Defense;
+            //                defenseStat.Value = Int32.Parse(c);
+            //                break;
+            //            case 7:
+            //                //defence special ability
+            //                if (c != "----")
+            //                    defenseStat.Ability = c.TrimEnd();
+            //                break;
+            //            case 8:
+            //                //damage
+            //                damageStat.StatType = StatType.Damage;
+            //                damageStat.Value = Int32.Parse(c);
+            //                break;
+            //            case 9:
+            //                //damage special ability
+            //                if (c != "----")
+            //                    damageStat.Ability = c.TrimEnd();
+            //                break;
+            //        }
+            //    }
 
-                IClick click = new Click(speedStat, attackStat, defenseStat, damageStat);
-                clicks.Add(click);
-            }
+            //    IClick click = new Click(speedStat, attackStat, defenseStat, damageStat);
+            //    clicks.Add(click);
+            //}
 
-            MageDB.CreateDialStats(clicks, number);
+            //MageDB.CreateDialStats(clicks, number);
 
-            sw.Close();
-            fs.Close();
+            //sw.Close();
+            //fs.Close();
+
+
             //string[] lines = System.IO.File.ReadAllLines(path);
 
             //int i = 0;

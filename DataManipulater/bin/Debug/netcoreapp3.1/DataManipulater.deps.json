@@ -26,6 +26,14 @@
             "fileVersion": "5.4.1.0"
           }
         }
+      },
+      "ReDefNet/1.0.0.0": {
+        "runtime": {
+          "ReDefNet.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -41,6 +49,11 @@
       "sha512": ""
     },
     "GalaSoft.MvvmLight/5.4.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ReDefNet/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

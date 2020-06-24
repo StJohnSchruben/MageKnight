@@ -21,3 +21,31 @@ C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Release\MKVi
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Release\MKViewModel.csproj.CopyComplete
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Release\MKViewModel.dll
 C:\Users\johns\OneDrive\Documents\GitHub\MageKnight\MKViewModel\obj\Release\MKViewModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MageKnightData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MageKnightData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKUserData.mdf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKUserData_log.ldf
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKViewModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKViewModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKViewModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\CommonServiceLocator.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Extras.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Platform.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\log4net.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\System.Windows.Interactivity.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKModel.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\MKModel.dll.config
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Extras.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Extras.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Platform.pdb
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\GalaSoft.MvvmLight.Platform.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\bin\Release\log4net.xml
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\obj\Release\MKViewModel.csprojAssemblyReference.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\obj\Release\MKViewModel.csproj.CoreCompileInputs.cache
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\obj\Release\MKViewModel.csproj.CopyComplete
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\obj\Release\MKViewModel.dll
+\\lwi-okc-fs3\User Data\john.schruben\My Documents\Visual Studio 2019\projects\MageKnight\MKViewModel\obj\Release\MKViewModel.pdb
